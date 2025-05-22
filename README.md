@@ -6,16 +6,16 @@
     ├── public/
     │   └── index.html
     ├── src/
-    │   ├── assets/               # ไฟล์รูปภาพ ไอคอน โลโก้ ฯลฯ
+    │   ├── assets/               
     │   │   ├── images/
     │   │   └── icons/
     │
-    │   ├── components/           # ส่วนประกอบ UI ย่อย (Reusable Components)
+    │   ├── components/           
     │   │   ├── Button.tsx
     │   │   ├── Modal.tsx
     │   │   └── UserCard.tsx
     │
-    │   ├── features/             # แต่ละ feature หรือ module แยกตามหน้าจอ
+    │   ├── features/  
     │   │   ├── dashboard/
     │   │   │   ├── DashboardPage.tsx
     │   │   │   ├── DashboardHeader.tsx
@@ -32,27 +32,27 @@
     │   │       ├── UsersPage.tsx
     │   │       └── UserCard.tsx
     │
-    │   ├── models/               # Interfaces, Types
+    │   ├── models/    
     │   │   └── User.ts
     │   │   └── RepairOrder.ts
     │
-    │   ├── services/             # เรียก API ต่าง ๆ
+    │   ├── services/  
     │   │   ├── api.ts
     │   │   └── repairService.ts
     │
-    │   ├── store/                # Zustand หรือ Redux Store
+    │   ├── store/     
     │   │   └── repairStore.ts
     │
-    │   ├── styles/               # Global styles และ CSS variables
+    │   ├── styles/    
     │   │   ├── App.module.css
     │   │   └── variables.css
     │
-    │   ├── utils/                # ฟังก์ชันช่วยเหลือต่าง ๆ
+    │   ├── utils/     
     │   │   └── formatDate.ts
     │
     │   ├── App.tsx
-    │   ├── main.tsx              # (ถ้าใช้ Vite) หรือ index.tsx (CRA)
-    │   └── router.tsx            # (ถ้ามีระบบ Routing)
+    │   ├── main.tsx   
+    │   └── router.tsx 
     │
     ├── .env
     ├── tsconfig.json
