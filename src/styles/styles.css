@@ -1,0 +1,8 @@
+/* Globle Style */
+
+@import url('./variables.css');
+@import url('./font.css');
+
+* {
+    background-color: var(--main-bg-color);
+}
