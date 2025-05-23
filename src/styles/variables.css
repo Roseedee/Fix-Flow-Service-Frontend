@@ -4,21 +4,21 @@
     --black: #000000;
 
     /* Input */
-    --font-input-size: 16px;
+    --input-font-size: 16px;
     
-    --color-border-input: #E2E2E2;
-    --color-border-input-focus: #C0C0C0;
+    --input-border-color: #E2E2E2;
+    --input-border-color-focus: #C0C0C0;
     
-    --border-input-radius: 1000px;
-    --border-input-size: 2px;
-    --border-input: var(--border-input-size) solid var(--color-border-input);
-    --border-input-focus: var(--border-input-size) solid var(--color-border-input-focus);
+    --input-border-radius: 1000px;
+    --input-border-size: 2px;
+    --input-border: var(--input-border-size) solid var(--input-border-color);
+    --input-border-focus: var(--input-border-size) solid var(--input-border-color-focus);
 
-    --v-pad-input: 15px;
-    --h-pad-input: 20px;
+    --input-pad-v: 15px;
+    --input-pad-h: 20px;
 
-    --transform-input: 0.3s ease;
+    --input-transition: 0.3s ease;
 
     /* Text */
-    --color-text-tag: #AEAEAE;
+    --text-tag-color: #AEAEAE;
 }

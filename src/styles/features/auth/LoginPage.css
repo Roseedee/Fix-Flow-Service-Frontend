@@ -26,23 +26,24 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: var(--v-pad-input) var(--h-pad-input);
-    border: var(--border-input);
-    border-radius: var(--border-input-radius);
-    transition: var(--transform-input);
-    
+    padding: var(--input-pad-v) var(--input-pad-h);
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    transition: var(--input-transition);
+    cursor: text;
+
     .login-input {
         width: 100%;
         border: none;
         background: var(--white);
-        font-size: var(--font-input-size);
+        font-size: var(--input-font-size);
         outline: none;
     }
 }
 
 
 .input-container:has(.login-input:focus) {
-    border: var(--border-input-focus);
+    border: var(--input-border-focus);
 }
 
 .button-container {
@@ -54,14 +55,14 @@
 
     .login-button {
         width: 100%;
-        padding: var(--v-pad-input) var(--h-pad-input);
+        padding: var(--input-pad-v) var(--input-pad-h);
         border: none;
-        border-radius: var(--border-input-radius);
+        border-radius: var(--input-border-radius);
         background: var(--black);
         color: var(--white);
-        font-size: var(--font-input-size);
+        font-size: var(--input-font-size);
         cursor: pointer;
-        transition: var(--transform-input);
+        transition: var(--input-transition);
 
         &:hover {
             background-color: #424242;
@@ -69,7 +70,7 @@
     }
 
     & h3 {
-        color: var(--color-text-tag);
+        color: var(--text-tag-color);
     }
 
 
@@ -80,23 +81,29 @@
         gap: 10px;
 
         & a {
-            text-decoration: none;
             display: block;
             text-align: center;
-            font-size: var(--font-input-size);
-            border-radius: var(--border-input-radius);
+            font-size: var(--input-font-size);
+            font-weight: normal;
+            border-radius: var(--input-border-radius);
             flex-grow: 1;
             flex-basis: 0;
-            padding: var(--v-pad-input) var(--h-pad-input);
+            padding: var(--input-pad-v) var(--input-pad-h);
+            transition: var(--input-transition);
 
             &:first-child {
                 color: #34A853;
                 border: 2px solid #34A853;
             }
-
+            
             &:last-child {
                 color: #1877F2;
                 border: 2px solid #1877F2;
+            }
+
+            &:hover {
+                border-color: var(--black);
+                color: var(--black);
             }
         }
     }
@@ -104,22 +111,10 @@
 
 
 
-.card a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--black);
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.card a:hover {
-    text-decoration: underline;
-}
-
 @media screen and (max-width: 600px) {
     .card {
         width: 100%;
         max-width: 100%;
-        padding: 0 var(--h-pad-input);
+        padding: 0 var(--input-pad-h);
     }
 }

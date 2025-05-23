@@ -6,12 +6,12 @@ export default function SignIn() {
     <form className="login-form">
       <div className="card">
         <h1>ยินดีต้อนรับ</h1>
-        <div className="input-container">
+        <label className="input-container">
           <input type="text" className="login-input" placeholder="Username" />
-        </div>
-        <div className="input-container">
+        </label>
+        <label className="input-container">
           <input type="password" className="login-input" placeholder="Password" />
-        </div>
+        </label>
         <div className="button-container">
           <button type="submit" className="login-button">Login</button>
           <h3>-- or --</h3>
