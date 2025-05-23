@@ -6,6 +6,7 @@ export default function App() {
     <div className="app">
       <h1>Fix Flow Service</h1>
       <p>ระบบงานซ่อมของคุณดี</p>
+      <a href="/login">Login Form</a>
     </div>
   );
 }

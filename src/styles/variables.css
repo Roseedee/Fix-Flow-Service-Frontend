@@ -1,3 +1,24 @@
 :root {
     --main-bg-color: #FEFEFE;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Input */
+    --font-input-size: 16px;
+    
+    --color-border-input: #E2E2E2;
+    --color-border-input-focus: #C0C0C0;
+    
+    --border-input-radius: 1000px;
+    --border-input-size: 2px;
+    --border-input: var(--border-input-size) solid var(--color-border-input);
+    --border-input-focus: var(--border-input-size) solid var(--color-border-input-focus);
+
+    --v-pad-input: 15px;
+    --h-pad-input: 20px;
+
+    --transform-input: 0.3s ease;
+
+    /* Text */
+    --color-text-tag: #AEAEAE;
 }
