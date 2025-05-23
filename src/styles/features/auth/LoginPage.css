@@ -24,13 +24,25 @@
 .input-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     padding: var(--input-pad-v) var(--input-pad-h);
     border: var(--input-border);
     border-radius: var(--input-border-radius);
     transition: var(--input-transition);
     cursor: text;
+
+    & img {
+        opacity: 0.5;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        transition: var(--input-transition);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 
     .login-input {
         width: 100%;
