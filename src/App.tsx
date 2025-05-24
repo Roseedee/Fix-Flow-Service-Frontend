@@ -1,5 +1,6 @@
 import React from 'react';
-import './styles/app.css';
+import '@styles/app.css';
+import img from '@assets/icons/show.png';
 
 export default function App() {
   return (
@@ -7,7 +8,7 @@ export default function App() {
       <h1>Fix Flow Service</h1>
       <p>ระบบงานซ่อมของคุณดี</p>
       <a href="/login">Login Form</a>
-      <img src="/assets/icons/show.png" alt="" />
+      <img src={ img } alt="" />
     </div>
   );
 }

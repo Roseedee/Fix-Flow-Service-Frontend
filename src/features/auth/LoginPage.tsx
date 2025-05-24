@@ -1,5 +1,8 @@
 import React from 'react';
-import '../../styles/features/auth/Auth.css';
+import '@styles/features/auth/Auth.css';
+
+import iconShow from '@assets/icons/show.png';
+import iconHide from '@assets/icons/hide.png';
 
 export default function SignIn() {
   const [isPasswordVisible, setIsPasswordVisible] = React.useState(false);
@@ -17,7 +20,7 @@ export default function SignIn() {
         </label>
         <label className="input-container">
           <input type={isPasswordVisible ? "text" : "password"} className="login-input" placeholder="Password" />
-          <img src={isPasswordVisible ? "/assets/icons/hide.png" : "/assets/icons/show.png"} alt="" onClick={handleTogglePassword} />
+          <img src={isPasswordVisible ? iconHide : iconShow } alt="" onClick={handleTogglePassword} />
         </label>
         <div className="button-container">
           <button type="submit" className="login-button">Login</button>
