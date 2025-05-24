@@ -3,6 +3,8 @@ import '@styles/features/auth/Auth.css';
 
 import iconShow from '@assets/icons/show.png';
 import iconHide from '@assets/icons/hide.png';
+import iconClose from '@assets/icons/cancel.png'
+import imgUser_Test from '@assets/images/test.jpg';
 
 export default function SignIn() {
   const [isPasswordVisible, setIsPasswordVisible] = React.useState(false);
@@ -30,7 +32,35 @@ export default function SignIn() {
             <a href='/' className="">Facebook</a>
           </div>
         </div>
-        <a href="/">Back Home</a>
+      </div>
+      <div className="card users-remember-list">
+        <div className="user-remember-item">
+          <div className="button-cancel-remember">
+            <img src={ iconClose } alt="" />
+          </div>
+          <div className="user-remember-item-img">
+            <img src={ imgUser_Test } alt=""/>
+          </div>
+          <h5>Roseedee Cehlaeh</h5>
+        </div>
+        <div className="user-remember-item">
+          <div className="button-cancel-remember">
+            <img src={ iconClose } alt="" />
+          </div>
+          <div className="user-remember-item-img">
+            <img src={ imgUser_Test } alt=""/>
+          </div>
+          <h5>ซอลาฮุดิน เจ๊ะแล๊ะ</h5>
+        </div>
+        <div className="user-remember-item">
+          <div className="button-cancel-remember">
+            <img src={ iconClose } alt="" />
+          </div>
+          <div className="user-remember-item-img">
+            <img src={ imgUser_Test } alt=""/>
+          </div>
+          <h5>Muhammad Cehlaeh</h5>
+        </div>
       </div>
     </form>
   );

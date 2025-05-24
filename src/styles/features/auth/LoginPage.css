@@ -1,19 +1,38 @@
 @import url('../../styles.css');
 
+:root {
+    --card-max-width: 430px;
+    --component-gap: 30px;
+
+    --card-user-remember-item-w: 150px;
+    --card-user-remember-item-h: 200px;
+    --card-user-remember-item-border: 1px solid var(--input-border-color);
+    
+    --button-facebook-bg-color: #1877F2;
+    --button-google-bg-color: #34A853;
+    
+    --icon-size: 16px;
+    --icon-opacity: 0.4;
+    --icon-cancel-pos: 10px;
+    
+}
+
 .login-form {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--component-gap);
 }
 
 .card {
     width: 100%;
-    max-width: 430px;
+    max-width: var(--card-max-width);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: var(--component-gap);
 }
 
 .card h1 {
@@ -25,7 +44,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 10px;
     padding: var(--input-pad-v) var(--input-pad-h);
     border: var(--input-border);
     border-radius: var(--input-border-radius);
@@ -33,9 +51,9 @@
     cursor: text;
 
     & img {
-        opacity: 0.5;
-        width: 18px;
-        height: 18px;
+        opacity: var(--icon-opacity);
+        width: var(--icon-size);
+        height: auto;
         cursor: pointer;
         transition: var(--input-transition);
 
@@ -51,11 +69,10 @@
         font-size: var(--input-font-size);
         outline: none;
     }
-}
 
-
-.input-container:has(.login-input:focus) {
-    border: var(--input-border-focus);
+    &:has(.login-input:focus) {
+        border: var(--input-border-focus);
+    }
 }
 
 .button-container {
@@ -77,7 +94,7 @@
         transition: var(--input-transition);
 
         &:hover {
-            background-color: #424242;
+            opacity: 0.8;
         }
     }
 
@@ -104,13 +121,13 @@
             transition: var(--input-transition);
 
             &:first-child {
-                color: #34A853;
-                border: 2px solid #34A853;
+                color: var(--button-google-bg-color);
+                border: 2px solid var(--button-google-bg-color);
             }
-            
+
             &:last-child {
-                color: #1877F2;
-                border: 2px solid #1877F2;
+                color: var(--button-facebook-bg-color);
+                border: 2px solid var(--button-facebook-bg-color);
             }
 
             &:hover {
@@ -121,6 +138,74 @@
     }
 }
 
+.users-remember-list {
+    max-width: none;
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 10px;
+    margin-top: 5vh;
+
+    .user-remember-item {
+        position: relative;
+        width: var(--card-user-remember-item-w);
+        height: var(--card-user-remember-item-h);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--white);
+        border-radius: 10px;
+        border: var(--card-user-remember-item-border);
+        transition: var(--input-transition);
+        padding: 0 10px;
+        cursor: pointer;
+
+        &:hover {
+            border-color: var(--input-border-color-focus);
+        }
+
+        .button-cancel-remember {
+            position: absolute;
+            right: var(--icon-cancel-pos);
+            top: var(--icon-cancel-pos);
+
+            & img {
+                width: var(--icon-size);
+                height: auto;
+                opacity: var(--icon-opacity);
+                transition: var(--input-transition);
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .user-remember-item-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 2px solid var(--black);
+            overflow: hidden;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%; 
+                object-fit: cover;
+                object-position: center center;
+                display: block;
+                border: 2px solid var(--white);
+            }
+        }
+
+        & h5 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
 
 
 @media screen and (max-width: 600px) {
