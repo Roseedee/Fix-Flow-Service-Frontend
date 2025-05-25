@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import IndexPage from "../App";
+import IndexPage from "../app";
 import SignIn from "../features/auth/LoginPage";
 
 export default function AppRouter() {

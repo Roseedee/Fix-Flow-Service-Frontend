@@ -5,6 +5,10 @@
     "jsx": "react-jsx",
     "moduleResolution": "node",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@model/*": ["model/*"]
+    }
   }
 }

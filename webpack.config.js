@@ -9,10 +9,11 @@ module.exports = {
     clean: true,
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.json'],
     alias: {
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@assets': path.resolve(__dirname, 'src/assets'),
+      '@model': path.resolve(__dirname, 'src/model'),
     },
   },
   module: {
