@@ -3,7 +3,8 @@ import '@styles/features/auth/Auth.css';
 
 import iconShow from '@assets/icons/show.png';
 import iconHide from '@assets/icons/hide.png';
-import iconClose from '@assets/icons/cancel.png'
+import iconCancel from '@assets/icons/cancel.png'
+import iconClose from '@assets/icons/close.png'
 import imgUser_Test from '@assets/images/test.jpg';
 
 export default function SignIn() {
@@ -17,12 +18,18 @@ export default function SignIn() {
     <form className="login-form">
       <div className="card">
         <h1>ยินดีต้อนรับ</h1>
-        <label className="input-container">
-          <input type="text" className="login-input" placeholder="Username" />
-        </label>
+        <div className="input-username-container">
+          <div className="user-remember-selected">
+            <img src={imgUser_Test} alt="" />
+          </div>
+          <label className="input-container">
+            <input type="text" className="login-input" placeholder="Username" disabled value={"Roseedee Cehlaeh"}/>
+            <img className='button-in-input' src={iconClose} alt=""  />
+          </label>
+        </div>
         <label className="input-container">
           <input type={isPasswordVisible ? "text" : "password"} className="login-input" placeholder="Password" />
-          <img src={isPasswordVisible ? iconHide : iconShow } alt="" onClick={handleTogglePassword} />
+          <img className='button-in-input' src={isPasswordVisible ? iconHide : iconShow} alt="" onClick={handleTogglePassword} />
         </label>
         <div className="button-container">
           <button type="submit" className="login-button">Login</button>
@@ -36,28 +43,28 @@ export default function SignIn() {
       <div className="card users-remember-list">
         <div className="user-remember-item">
           <div className="button-cancel-remember">
-            <img src={ iconClose } alt="" />
+            <img src={iconCancel} alt="" />
           </div>
           <div className="user-remember-item-img">
-            <img src={ imgUser_Test } alt=""/>
+            <img src={imgUser_Test} alt="" />
           </div>
           <h5>Roseedee Cehlaeh</h5>
         </div>
         <div className="user-remember-item">
           <div className="button-cancel-remember">
-            <img src={ iconClose } alt="" />
+            <img src={iconCancel} alt="" />
           </div>
           <div className="user-remember-item-img">
-            <img src={ imgUser_Test } alt=""/>
+            <img src={imgUser_Test} alt="" />
           </div>
           <h5>ซอลาฮุดิน เจ๊ะแล๊ะ</h5>
         </div>
         <div className="user-remember-item">
           <div className="button-cancel-remember">
-            <img src={ iconClose } alt="" />
+            <img src={iconCancel} alt="" />
           </div>
           <div className="user-remember-item-img">
-            <img src={ imgUser_Test } alt=""/>
+            <img src={imgUser_Test} alt="" />
           </div>
           <h5>Muhammad Cehlaeh</h5>
         </div>
