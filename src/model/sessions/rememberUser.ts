@@ -1,7 +1,8 @@
 export interface RememberUser {
-  userId: string
-  username: string
+  id: string
   name: string
+  img?: string
+  username: string
   token?: string
   last: Date
   autoLogin: boolean
