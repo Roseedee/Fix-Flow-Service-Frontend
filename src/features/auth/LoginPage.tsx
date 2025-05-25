@@ -13,6 +13,8 @@ import imgUser_Test1 from '@assets/images/test1.jpg';
 import imgUser_Test2 from '@assets/images/test2.jpg';
 
 export default function SignIn() {
+  const [username, setUsername] = useState('')
+
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [rememberUserSelected, setRememberUserSelected] = useState<RememberUser | null>(null)
   const [rememberUsers, setRememberUsers] = useState<RememberUser[]>(
@@ -52,11 +54,12 @@ export default function SignIn() {
 
   const handleSelectUserRemember = (user: RememberUser) => {
     setRememberUserSelected(user)
-    console.log(rememberUserSelected)
+    setUsername(user.name)
   }
 
   const handleClearSelectedRememberUser = () => {
     setRememberUserSelected(null)
+    setUsername('')
   }
 
   return (
@@ -72,7 +75,7 @@ export default function SignIn() {
             ) : null
           }
           <label className="input-container">
-            <input type="text" className="login-input" placeholder="Username" disabled={false} value={rememberUserSelected ? rememberUserSelected.name : null} />
+            <input type="text" className="login-input" placeholder="Username" disabled={!!rememberUserSelected} value={ username } onChange={(e) => setUsername(e.target.value)}/>
             {
               rememberUserSelected ? (
                 <img className='button-in-input' src={iconClose} alt="" onClick={handleClearSelectedRememberUser} />
