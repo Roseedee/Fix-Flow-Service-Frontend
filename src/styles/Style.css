@@ -1,7 +1,7 @@
 /* Globle Style */
 
-@import url('./variables.css');
-@import url('./font.css');
+@import url('./Variables.css');
+@import url('./Font.css');
 
 * {
     margin: 0;

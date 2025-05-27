@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import IndexPage from "../app";
+import IndexPage from "../App";
 import Auth from "@features/auth/Auth";
 import Dashboard from "@features/Dashboard";
 
