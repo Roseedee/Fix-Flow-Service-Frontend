@@ -24,16 +24,15 @@ const styles = {
   container: {
     display: "flex",
     minHeight: "100vh",
-    backgroundColor: "#f4f4f4",
   } as React.CSSProperties,
   content: {
     flex: 1,
     display: "flex",
     flexDirection: "column" as const,
+    padding: "10px 20px",
   },
   main: {
     padding: "16px",
-    backgroundColor: "#fff",
     flex: 1,
   },
 };

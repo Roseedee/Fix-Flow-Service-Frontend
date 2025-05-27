@@ -1,0 +1,11 @@
+@import url('./ComponentVariables.css');
+
+.header-container {
+    height: var(--header-min-height);
+    background-color: var(--header-bg-color);
+    box-shadow: var(--header-box-shadow);
+    border-radius: var(--header-radius);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}

@@ -1,0 +1,7 @@
+@import url('./ComponentVariables.css');
+
+.sidebar-container {
+    width: var(--sidebar-max-width);
+    background-color: var(--sidebar-bg-color);
+    box-shadow: var(--sidebar-box-shadow);
+}

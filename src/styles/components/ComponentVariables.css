@@ -1,0 +1,22 @@
+@import '../Variables.css';
+
+:root {
+    /* --------------- Header -------------- */
+    --header-min-height: 70px;
+
+    --header-radius: var(--radius-md);
+
+    --header-bg-color: var(--white);
+
+    --header-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+
+
+    /* -------------- Sidebar -------------- */
+    --sidebar-max-width: 350px;
+    --sizebar-min-width: 100px;
+
+    --sidebar-bg-color: var(--white);
+
+    --sidebar-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
