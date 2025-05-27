@@ -8,6 +8,8 @@
     "esModuleInterop": true,
     "baseUrl": "src",
     "paths": {
+      "@features/*": ["features/*"],
+      "@components/*": ["components/*"],
       "@model/*": ["model/*"]
     }
   }

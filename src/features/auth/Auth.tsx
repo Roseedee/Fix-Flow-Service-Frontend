@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '@styles/features/auth/Auth.css';
 import { RememberUser } from '@model/sessions/rememberUser';
+import { useNavigate } from 'react-router-dom';
+
 
 import iconShow from '@assets/icons/show.png';
 import iconHide from '@assets/icons/hide.png';
@@ -14,6 +16,7 @@ import imgUser_Test2 from '@assets/images/test2.jpg';
 
 export default function SignIn() {
   const [username, setUsername] = useState('')
+  const navigate = useNavigate();
 
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [rememberUserSelected, setRememberUserSelected] = useState<RememberUser | null>(null)
@@ -48,6 +51,10 @@ export default function SignIn() {
     ]
   )
 
+  const handleSubmitLogin  = () => {
+    navigate('/dashboard');
+  }
+
   const handleTogglePassword = () => {
     setIsPasswordVisible(!isPasswordVisible);
   }
@@ -63,7 +70,7 @@ export default function SignIn() {
   }
 
   return (
-    <form className="login-form">
+    <form className="login-form" action={ handleSubmitLogin }>
       <div className="card">
         <h1>ยินดีต้อนรับ</h1>
         <div className="input-username-container">
