@@ -4,6 +4,8 @@ import '@styles/components/Header.css';
 import headerIcon from '@assets/icons/task.png';
 import searchIcon from '@assets/icons/search.png';
 
+import imgUser_Test from '@assets/images/test.jpg';
+
 export default function Header() {
 
   const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
@@ -29,8 +31,9 @@ export default function Header() {
         </form>
       </div>
       <div className="header-content">
-        <img src={ headerIcon } alt="" />
-        <img src={ headerIcon } alt="" />
+        <div className="header-user-profile-container">
+          <img src={ imgUser_Test } alt="" />
+        </div>
       </div>
     </div>
   );

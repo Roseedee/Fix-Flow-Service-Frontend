@@ -95,5 +95,29 @@
         justify-content: end;
         gap: var(--header-content-gap);
 
+        .header-user-profile-container {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: black;
+
+            & img {
+                width: 42px;
+                height: 42px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 2px solid var(--white);
+                cursor: pointer;
+            }
+
+            & span {
+                font-size: var(--input-font-size);
+                color: var(--text-tag-color);
+            }
+        }
+
     }
 }
