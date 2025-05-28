@@ -1,5 +1,11 @@
 @import url('./ComponentVariables.css');
 
+:root {
+    --header-content-gap: 20px;
+
+    --header-input-pad: 12px var(--input-pad-h);
+}
+
 .header-container {
     height: var(--header-min-height);
     background-color: var(--header-bg-color);
@@ -7,5 +13,77 @@
     border-radius: var(--header-radius);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
+}
+
+.header-content {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &:nth-of-type(1) {
+        gap: 10px;
+
+        & img {
+            width: 24px;
+        }
+    }
+
+    &:nth-of-type(2) {
+        padding: 0 var(--header-content-gap);
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & .header-input-search-container {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: var(--header-input-pad);
+                font-size: var(--input-font-size);
+                border: var(--input-border);
+                border-radius: var(--input-border-radius);
+                transition: var(--input-transition);
+                cursor: text;
+                gap: 10px;
+
+                &:has(.header-input:focus) {
+                    border: var(--input-border-focus);
+                }
+
+                & input {
+                    flex-grow: 1;
+                    border: none;
+                    outline: none;
+                }
+
+                & img {
+                    width: 16px;
+                    height: 16px;
+                    opacity: var(--icon-opacity);
+                    transition: var(--input-transition);
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &:nth-of-type(3) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        gap: var(--header-content-gap);
+
+    }
 }
