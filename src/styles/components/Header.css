@@ -3,7 +3,11 @@
 :root {
     --header-content-gap: 20px;
 
-    --header-input-pad: 12px var(--input-pad-h);
+    --header-input-pad: 12px 20px;
+
+    --header-user-profile-container-size: 46px;
+    --header-user-profile-img-size: calc(var(--header-user-profile-container-size) - 4px);
+    --header-user-profile-img-border: 2px solid var(--white);
 }
 
 .header-container {
@@ -49,7 +53,7 @@
                 padding: var(--header-input-pad);
                 border: var(--input-border);
                 border-radius: var(--input-border-radius);
-                transition: var(--input-transition);
+                transition: var(--def-transition);
                 cursor: text;
                 gap: 10px;
                 
@@ -78,7 +82,7 @@
                     width: 16px;
                     height: 16px;
                     opacity: var(--icon-opacity);
-                    transition: var(--input-transition);
+                    transition: var(--def-transition);
 
                     &:hover {
                         opacity: 1;
@@ -96,27 +100,28 @@
         gap: var(--header-content-gap);
 
         .header-user-profile-container {
-            width: 46px;
-            height: 46px;
+            width: var(--header-user-profile-container-size);
+            height: var(--header-user-profile-container-size);
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            background-color: black;
-
+            background-color: var(--black);
+            
             & img {
-                width: 42px;
-                height: 42px;
+                width: var(--header-user-profile-img-size);
+                height: var(--header-user-profile-img-size);
                 object-fit: cover;
                 border-radius: 50%;
-                border: 2px solid var(--white);
+                border: var(--header-user-profile-img-border);
                 cursor: pointer;
+                transition: var(--def-transition);
+                
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
 
-            & span {
-                font-size: var(--input-font-size);
-                color: var(--text-tag-color);
-            }
         }
 
     }

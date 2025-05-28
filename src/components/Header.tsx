@@ -23,7 +23,7 @@ export default function Header() {
       <div className="header-content">
         <form onSubmit={ handleSearch }>
           <label className="header-input-search-container">
-            <input type="text" name="qsearch" className="header-input" placeholder="Quick Search" />
+            <input type="text" name="qsearch" className="header-input" placeholder="Quick Search" autoComplete="off" />
             <button type="submit">
               <img src={ searchIcon } alt="" />
             </button>

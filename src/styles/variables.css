@@ -17,7 +17,7 @@
     --input-pad-v: 15px;
     --input-pad-h: 20px;
 
-    --input-transition: 0.3s ease;
+    --def-transition: 0.3s ease;
 
     /* Text */
     --text-tag-color: #AEAEAE;

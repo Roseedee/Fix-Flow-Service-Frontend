@@ -26,6 +26,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--component-gap);
+    padding: 25px 0;
 }
 
 .card {
@@ -87,7 +88,7 @@
     padding: var(--input-pad-v) var(--input-pad-h);
     border: var(--input-border);
     border-radius: var(--input-border-radius);
-    transition: var(--input-transition);
+    transition: var(--def-transition);
     cursor: text;
 
     & img.button-in-input {
@@ -95,7 +96,7 @@
         width: var(--icon-size);
         height: var(--icon-size);
         cursor: pointer;
-        transition: var(--input-transition);
+        transition: var(--def-transition);
 
         &:hover {
             opacity: 1;
@@ -131,7 +132,7 @@
         color: var(--white);
         font-size: var(--input-font-size);
         cursor: pointer;
-        transition: var(--input-transition);
+        transition: var(--def-transition);
 
         &:hover {
             opacity: 0.8;
@@ -158,7 +159,7 @@
             flex-grow: 1;
             flex-basis: 0;
             padding: var(--input-pad-v) var(--input-pad-h);
-            transition: var(--input-transition);
+            transition: var(--def-transition);
 
             &:first-child {
                 color: var(--button-google-bg-color);
@@ -197,7 +198,7 @@
         background-color: var(--white);
         border-radius: 10px;
         border: var(--card-user-remember-item-border);
-        transition: var(--input-transition);
+        transition: var(--def-transition);
         padding: 0 10px;
         cursor: pointer;
 
@@ -214,7 +215,7 @@
                 width: var(--icon-size);
                 height: auto;
                 opacity: var(--icon-opacity);
-                transition: var(--input-transition);
+                transition: var(--def-transition);
 
                 &:hover {
                     opacity: 1;
