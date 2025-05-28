@@ -5,6 +5,13 @@ import headerIcon from '@assets/icons/task.png';
 import searchIcon from '@assets/icons/search.png';
 
 export default function Header() {
+
+  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const searchValue = (event.target as HTMLFormElement).qsearch.value;
+    alert("You searched for: " + searchValue);
+  }
+
   return (
     <div className="header-container">
       <div className="header-content">
@@ -12,10 +19,12 @@ export default function Header() {
         <h3>ระบบจัดการงานซ่อม</h3>
       </div>
       <div className="header-content">
-        <form action="">
+        <form onSubmit={ handleSearch }>
           <label className="header-input-search-container">
             <input type="text" name="qsearch" className="header-input" placeholder="Quick Search" />
-            <img src={ searchIcon } alt="" />
+            <button type="submit">
+              <img src={ searchIcon } alt="" />
+            </button>
           </label>
         </form>
       </div>

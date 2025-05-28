@@ -4,4 +4,11 @@
     width: var(--sidebar-max-width);
     background-color: var(--sidebar-bg-color);
     box-shadow: var(--sidebar-box-shadow);
+    transition: var(--input-transition);
+}
+
+@media screen and (max-width: 1100px) {
+    .sidebar-container {
+        width: var(--sizebar-min-width);
+    }
 }

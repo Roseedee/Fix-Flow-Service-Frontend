@@ -15,7 +15,7 @@
 
     /* -------------- Sidebar -------------- */
     --sidebar-max-width: 350px;
-    --sizebar-min-width: 100px;
+    --sizebar-min-width: 80px;
 
     --sidebar-bg-color: var(--white);
 
