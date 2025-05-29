@@ -14,7 +14,7 @@
     --header-box-shadow: 0 0 10px var(--color-black-05);
 
     /* -------------- Sidebar -------------- */
-    --sidebar-max-width: 350px;
+    --sidebar-max-width: 320px;
     --sizebar-min-width: 80px;
 
     --sidebar-bg-color: var(--white);
