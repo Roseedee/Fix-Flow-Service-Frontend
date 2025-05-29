@@ -3,7 +3,11 @@ import '@styles/components/Sidebar.css';
 export default function Sidebar() {
   return (
     <div className="sidebar-container">
-      <h3>Sidebar</h3>
+      <div className="sidebar-content">
+        <h3>Sidebar</h3>
+        <h3>Sidebar</h3>
+        <h3>Sidebar</h3>
+      </div>
     </div>
   );
 }

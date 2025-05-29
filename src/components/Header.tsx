@@ -34,7 +34,7 @@ export default function Header() {
       </div>
       <div className="header-content">
         <button className="header-button-notification">
-          <img src={ notificationNotReadIcon } alt="" />
+          <img src={ notificationIcon } alt="" />
           <span>การแจ้งเตือน</span>
         </button>
         <div className="header-user-profile-container">

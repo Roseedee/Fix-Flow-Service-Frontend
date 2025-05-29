@@ -7,8 +7,19 @@
     transition: var(--def-transition);
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
     .sidebar-container {
         width: var(--sizebar-min-width);
+    }
+}
+
+
+@media screen and (max-width: 590px) {
+    .sidebar-container {
+        width: 0px;
+        
+        .sidebar-content {
+            display: none;
+        }
     }
 }
