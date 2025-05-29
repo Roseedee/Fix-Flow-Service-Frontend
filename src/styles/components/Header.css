@@ -8,6 +8,10 @@
     --header-user-profile-container-size: 46px;
     --header-user-profile-img-size: calc(var(--header-user-profile-container-size) - 4px);
     --header-user-profile-img-border: 2px solid var(--white);
+
+
+    --header-button-notification-bg-color: #79CF90;
+    --header-button-notification-bg-color-hover: #5AB171;
 }
 
 .header-container {
@@ -98,6 +102,32 @@
         align-items: center;
         justify-content: end;
         gap: var(--header-content-gap);
+
+        .header-button-notification {
+            padding: 10px 12px;
+            background-color: var(--header-button-notification-bg-color);
+            color: var(--white);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: var(--radius-sm);
+            border: none;
+            transition: var(--def-transition);
+
+            &:hover {
+                background-color: var(--header-button-notification-bg-color-hover);
+            }
+
+            & img {
+                width: 16px;
+                height: 16px;
+            }
+        }
 
         .header-user-profile-container {
             width: var(--header-user-profile-container-size);

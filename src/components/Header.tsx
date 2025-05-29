@@ -3,6 +3,8 @@ import '@styles/components/Header.css';
 
 import headerIcon from '@assets/icons/task.png';
 import searchIcon from '@assets/icons/search.png';
+import notificationIcon from '@assets/icons/notification.png';
+import notificationNotReadIcon from '@assets/icons/notification-not-read.png';
 
 import imgUser_Test from '@assets/images/test.jpg';
 
@@ -31,6 +33,10 @@ export default function Header() {
         </form>
       </div>
       <div className="header-content">
+        <button className="header-button-notification">
+          <img src={ notificationNotReadIcon } alt="" />
+          <span>การแจ้งเตือน</span>
+        </button>
         <div className="header-user-profile-container">
           <img src={ imgUser_Test } alt="" />
         </div>
