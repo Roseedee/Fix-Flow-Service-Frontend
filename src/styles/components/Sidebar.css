@@ -13,6 +13,26 @@
     transition: var(--def-transition);
 }
 
+.sidebar-container-min {
+    width: var(--sizebar-min-width);
+
+    .sidebar-content {
+
+        .sidebar-content-header {
+
+            & h3 {
+                display: none;
+            }
+
+            .button-toggle-sidebar-w {
+                & img {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
 .sidebar-content {
     width: 100%;
     height: 100%;
@@ -38,6 +58,10 @@
 
     & h3 {
         font-weight: 900;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .button-toggle-sidebar-w {
