@@ -1,5 +1,11 @@
 @import url('./ComponentVariables.css');
 
+:root {
+    --sidebar-content-gap: 20px;
+
+    --sidebar-header-height: calc(var(--header-min-height) + 20px);
+}
+
 .sidebar-container {
     width: var(--sidebar-max-width);
     background-color: var(--sidebar-bg-color);
@@ -7,9 +13,46 @@
     transition: var(--def-transition);
 }
 
+.sidebar-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.sidebar-content-header {
+    width: 100%;
+    height: var(--sidebar-header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    & img {
+        height: 50%;
+    }
+
+    & h2 {
+        font-weight: 900;
+    }
+}
+
 @media screen and (max-width: 1150px) {
     .sidebar-container {
         width: var(--sizebar-min-width);
+    }
+
+    .sidebar-content {
+
+        .sidebar-content-header {
+
+            & h2 {
+                display: none;
+            }
+        }
     }
 }
 
