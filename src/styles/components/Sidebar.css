@@ -103,9 +103,7 @@
             }
 
             .button-toggle-sidebar-w {
-                & img {
-                    transform: rotate(0deg);
-                }
+                display: none;
             }
         }
     }

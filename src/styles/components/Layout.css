@@ -1,0 +1,22 @@
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.layout-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.layout-main {
+    padding: 10px;
+    flex: 1;
+}
+
+@media screen and (max-width: 590px) {
+    .layout-content {
+        padding: 10px;
+    }
+}
