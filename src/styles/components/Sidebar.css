@@ -6,6 +6,8 @@
     --sidebar-header-height: calc(var(--header-min-height) + 20px);
 
     --sidebar-border: 2px solid #eeeeee;
+
+    --sidebar-def-padding: 15px;
 }
 
 .sidebar-container {
@@ -14,26 +16,6 @@
     background-color: var(--sidebar-bg-color);
     box-shadow: var(--sidebar-box-shadow);
     transition: var(--def-transition);
-}
-
-.sidebar-container-min {
-    width: var(--sizebar-min-width);
-
-    .sidebar-content {
-
-        .sidebar-content-header {
-
-            & h3 {
-                display: none;
-            }
-
-            .button-toggle-sidebar-w {
-                & img {
-                    transform: rotate(0deg);
-                }
-            }
-        }
-    }
 }
 
 .sidebar-content {
@@ -51,7 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: var(--sidebar-def-padding);
     position: relative;
     border-bottom: var(--sidebar-border);
 
@@ -85,7 +67,7 @@
         &:hover {
             background-color: #dddddd;
         }
-        
+
         & img {
             transform: rotate(180deg);
         }
@@ -94,36 +76,38 @@
 
 .sidebar-content-menu {
     width: 100%;
-    height: calc(100vh - 1px);
+    height: 100vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 0 15px;
+    padding: 0 var(--sidebar-def-padding);
 
     .sidebar-sub-menu {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 15px 0;
-        
-        &:not(:last-child) {
-            border-bottom: var(--sidebar-border);
+        padding: var(--sidebar-def-padding) 0;
+
+        & h4 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        
+
         & ul {
             display: flex;
             flex-direction: column;
-            padding-left: 10px;
+            padding-left: var(--sidebar-def-padding);
             gap: 10px;
-            padding-top: 15px;
+            padding-top: var(--sidebar-def-padding);
 
             .sidebar-sub-menu-item {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: start;
-                padding: 10px 15px;
+                padding: 10px var(--sidebar-def-padding);
                 gap: 10px;
                 border-radius: var(--radius-sm);
                 transition: var(--def-transition);
@@ -134,38 +118,124 @@
 
                 & span {
                     opacity: 0.8;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
-                
+
                 &:hover {
                     background-color: var(--color-black-05);
                     cursor: pointer;
 
-                    & img, & span {
+                    & img,
+                    & span {
                         opacity: 1;
                     }
                 }
             }
         }
-        
+
     }
 }
 
 .sidebar-content-company {
     width: 100%;
     height: 90px;
-    background-color: blanchedalmond;
     display: flex;
     align-items: center;
+    padding: 20px;
 
     .company-profile {
         height: 100%;
         width: 100%;
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         align-items: center;
+        gap: var(--sidebar-def-padding);
 
         & img {
-            height: 60px;
+            height: 100%;
             width: auto;
+        }
+
+        .company-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            overflow: hidden;
+
+            & h3, & span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & span {
+                color: var(--text-tag-color)
+            }
+        }
+    }
+}
+
+.sidebar-container-min {
+    width: var(--sizebar-min-width);
+
+    .sidebar-content {
+
+        .sidebar-content-header {
+
+            & h3 {
+                display: none;
+            }
+
+            .button-toggle-sidebar-w {
+                & img {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .sidebar-content-menu {
+
+            .sidebar-sub-menu {
+
+                & h4 {
+                    display: none;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: var(--sidebar-border);
+                }
+
+                & ul {
+                    padding: 0;
+
+                    .sidebar-sub-menu-item {
+                        justify-content: center;
+
+                        & span {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .sidebar-content-company {
+            .company-profile {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .company-name {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -187,6 +257,33 @@
                 display: none;
             }
         }
+
+        .sidebar-content-menu {
+
+            .sidebar-sub-menu {
+
+                & h4 {
+                    display: none;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: var(--sidebar-border);
+                }
+
+                & ul {
+                    padding: 0;
+
+                    .sidebar-sub-menu-item {
+                        justify-content: center;
+
+                        & span {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }
 
@@ -194,7 +291,7 @@
 @media screen and (max-width: 590px) {
     .sidebar-container {
         width: 0px;
-        
+
         .sidebar-content {
             display: none;
         }

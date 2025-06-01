@@ -5,6 +5,8 @@ import appIcon from '@assets/icons/app.png';
 import arrowIcon from '@assets/icons/arrow.png';
 import taskIcon from '@assets/icons/checklist.png';
 
+import brandIcon_Test from '@assets/images/brand.png';
+
 export default function Sidebar() {
   const [sidebarMin, setSidebarMin] = useState(false);
 
@@ -57,11 +59,32 @@ export default function Sidebar() {
               </li>
             </ul>
           </div>
+          <div className="sidebar-sub-menu">
+            <h4>ทั่วไป</h4>
+            <ul>
+              <li className="sidebar-sub-menu-item">
+                <img src={ taskIcon } alt="" />
+                <span>แดชบอร์ดงานซ่อม</span>
+              </li>
+              <li className="sidebar-sub-menu-item">
+                <img src={ taskIcon } alt="" />
+                <span>แดชบอร์ดงานซ่อม</span>
+              </li>
+              <li className="sidebar-sub-menu-item">
+                <img src={ taskIcon } alt="" />
+                <span>แดชบอร์ดงานซ่อม</span>
+              </li>
+            </ul>
+          </div>
         
         </div>
         <div className="sidebar-content-company">
           <div className="company-profile">
-            <img src={ appIcon } alt="" />
+            <img src={ brandIcon_Test } alt="" />
+            <div className="company-name">
+              <h3>YALANETCOM</h3>
+              <span>@roseedee2002</span>
+            </div>
           </div>
         </div>
       </div>
