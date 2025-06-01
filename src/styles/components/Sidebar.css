@@ -107,6 +107,10 @@
         flex-direction: column;
         padding: 15px 0;
         
+        &:not(:last-child) {
+            border-bottom: var(--sidebar-border);
+        }
+        
         & ul {
             display: flex;
             flex-direction: column;
@@ -124,12 +128,12 @@
                 border-radius: var(--radius-sm);
                 transition: var(--def-transition);
 
-                /* & img {
-                    opacity: 0.6;
+                & img {
+                    opacity: 0.8;
                 }
 
                 & span {
-                    opacity: 0.6;
+                    opacity: 0.8;
                 }
                 
                 &:hover {
@@ -139,7 +143,7 @@
                     & img, & span {
                         opacity: 1;
                     }
-                } */
+                }
             }
         }
         
