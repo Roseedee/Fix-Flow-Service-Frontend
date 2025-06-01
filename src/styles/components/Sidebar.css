@@ -89,6 +89,10 @@
         flex-direction: column;
         padding: var(--sidebar-def-padding) 0;
 
+        &:not(:first-child) {
+            padding-top: 0;
+        }
+
         & h4 {
             white-space: nowrap;
             overflow: hidden;
@@ -98,8 +102,8 @@
         & ul {
             display: flex;
             flex-direction: column;
-            padding-left: var(--sidebar-def-padding);
-            gap: 10px;
+            padding-left: 5px;
+            gap: 5px;
             padding-top: var(--sidebar-def-padding);
 
             .sidebar-sub-menu-item {
@@ -166,7 +170,8 @@
             gap: 5px;
             overflow: hidden;
 
-            & h3, & span {
+            & h3,
+            & span {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -200,6 +205,7 @@
         .sidebar-content-menu {
 
             .sidebar-sub-menu {
+                padding: var(--sidebar-def-padding) 0;
 
                 & h4 {
                     display: none;
@@ -282,6 +288,20 @@
                     }
                 }
 
+            }
+        }
+
+        .sidebar-content-company {
+            .company-profile {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .company-name {
+                    display: none;
+                }
             }
         }
     }

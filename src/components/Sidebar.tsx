@@ -26,7 +26,7 @@ export default function Sidebar() {
         </div>
         <div className="sidebar-content-menu">
           <div className="sidebar-sub-menu">
-            <h4>ทั่วไป</h4>
+            <h4>เมนูทั่วไป</h4>
             <ul>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
@@ -34,45 +34,41 @@ export default function Sidebar() {
               </li>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
-              </li>
-              <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
+                <span>ค้นหางานซ่อม</span>
               </li>
             </ul>
           </div>
           <div className="sidebar-sub-menu">
-            <h4>ทั่วไป</h4>
+            <h4>เมนูงานซ่อม</h4>
             <ul>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
+                <span>เพิ่มงานซ่อม</span>
               </li>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
+                <span>คลังงานซ่อมทั้งหมด</span>
               </li>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
+                <span>งานซ่อมที่ลบ</span>
               </li>
             </ul>
           </div>
           <div className="sidebar-sub-menu">
-            <h4>ทั่วไป</h4>
+            <h4>เมนูจัดการ</h4>
             <ul>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
+                <span>สถานะงานซ่อม</span>
               </li>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
+                <span>ประเภทงานซ่อม</span>
               </li>
               <li className="sidebar-sub-menu-item">
                 <img src={ taskIcon } alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
+                <span>ยี่ห้อและรุ่นงานซ่อม</span>
               </li>
             </ul>
           </div>
