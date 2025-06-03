@@ -3,7 +3,15 @@ import '@styles/components/Sidebar.css';
 
 import appIcon from '@assets/icons/app.png';
 import arrowIcon from '@assets/icons/arrow.png';
+
+import dashboardIcon from '@assets/icons/dashboard.png';
+import searchIcon from '@assets/icons/search.png';
+import addIcon from '@assets/icons/add.png';
 import taskIcon from '@assets/icons/checklist.png';
+import recycleBinIcon from '@assets/icons/recycle-bin.png';
+import taskStatusIcon from '@assets/icons/task-status.png';
+import taskTypeIcon from '@assets/icons/task-type.png';
+import taskBrandIcon from '@assets/icons/device.png';
 
 import brandIcon_Test from '@assets/images/brand.png';
 
@@ -29,11 +37,11 @@ export default function Sidebar() {
             <h4>เมนูทั่วไป</h4>
             <ul>
               <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
+                <img src={ dashboardIcon } alt="" />
                 <span>แดชบอร์ดงานซ่อม</span>
               </li>
               <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
+                <img src={ searchIcon } alt="" />
                 <span>ค้นหางานซ่อม</span>
               </li>
             </ul>
@@ -42,7 +50,7 @@ export default function Sidebar() {
             <h4>เมนูงานซ่อม</h4>
             <ul>
               <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
+                <img src={ addIcon } alt="" />
                 <span>เพิ่มงานซ่อม</span>
               </li>
               <li className="sidebar-sub-menu-item">
@@ -50,7 +58,7 @@ export default function Sidebar() {
                 <span>คลังงานซ่อมทั้งหมด</span>
               </li>
               <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
+                <img src={ recycleBinIcon } alt="" />
                 <span>งานซ่อมที่ลบ</span>
               </li>
             </ul>
@@ -59,15 +67,15 @@ export default function Sidebar() {
             <h4>เมนูจัดการ</h4>
             <ul>
               <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
+                <img src={ taskStatusIcon } alt="" />
                 <span>สถานะงานซ่อม</span>
               </li>
               <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
+                <img src={ taskTypeIcon } alt="" />
                 <span>ประเภทงานซ่อม</span>
               </li>
               <li className="sidebar-sub-menu-item">
-                <img src={ taskIcon } alt="" />
+                <img src={ taskBrandIcon } alt="" />
                 <span>ยี่ห้อและรุ่นงานซ่อม</span>
               </li>
             </ul>
