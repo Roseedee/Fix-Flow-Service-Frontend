@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@components/Layout';
-import Chart from '@components/Chart';
+import BarChart from '@components/BarChart';
 
 export default function Dashboard() {
     return (
@@ -8,7 +8,7 @@ export default function Dashboard() {
             <div style={{ padding: '16px' }}>
                 <h2>Dashboard</h2>
                 <p>Welcome to the dashboard!</p>
-                <Chart />
+                <BarChart />
             </div>
         </Layout>
     );

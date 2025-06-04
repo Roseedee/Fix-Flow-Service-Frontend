@@ -9,8 +9,8 @@ import {
     ChartOptions
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import '@styles/components/BarChart.css';
 
-// Register Chart.js components
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const data = {
@@ -31,14 +31,8 @@ const options: ChartOptions<'bar'> = {
     }
 };
 
-export default function Chart() {
+export default function BarChart() {
     return (
-            <Bar data={data} options={options} />
+        <Bar data={data} options={options} />
     );
 }
-
-// const MyChart = () => {
-//   return <Bar data={data} options={options} />;
-// };
-
-// export default MyChart;
