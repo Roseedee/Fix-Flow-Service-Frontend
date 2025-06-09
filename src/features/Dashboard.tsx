@@ -56,6 +56,26 @@ export default function Dashboard() {
                     <BarChart data={generateExampleChartData()} />
                 </div>
             </div>
+            <div className="dashboard-content">
+                <div className="dashboard-sub-content card">
+                    <h4>งานซ่อม 7 วันย้อนหลัง</h4>
+                    <BarChart data={generateExampleChartData()} />
+                </div>
+                <div className="dashboard-sub-content card">
+                    <h4>งานซ่อม 6 เดือนย้อนหลัง</h4>
+                    <BarChart data={generateExampleChartData()} />
+                </div>
+            </div>
+            <div className="dashboard-content">
+                <div className="dashboard-sub-content card">
+                    <h4>งานซ่อม 7 วันย้อนหลัง</h4>
+                    <BarChart data={generateExampleChartData()} />
+                </div>
+                <div className="dashboard-sub-content card">
+                    <h4>งานซ่อม 6 เดือนย้อนหลัง</h4>
+                    <BarChart data={generateExampleChartData()} />
+                </div>
+            </div>
         </Layout>
     );
 }

@@ -11,6 +11,7 @@
 }
 
 .sidebar-container {
+    position:fixed;
     width: var(--sidebar-max-width);
     height: 100vh;
     background-color: var(--sidebar-bg-color);
@@ -187,7 +188,7 @@
 }
 
 .sidebar-container-min {
-    width: var(--sizebar-min-width);
+    width: var(--sidebar-min-width);
 
     .sidebar-content {
 
@@ -250,7 +251,7 @@
 
 @media screen and (max-width: 1150px) {
     .sidebar-container {
-        width: var(--sizebar-min-width);
+        width: var(--sidebar-min-width);
     }
 
     .sidebar-content {
