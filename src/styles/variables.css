@@ -26,4 +26,9 @@
     --radius-sm: 5px;
     --radius-md: 10px;
     --radius-lg: 15px;
+
+    /* Card */
+    --card-bg-color: var(--white);
+    --card-radius: var(--radius-md);
+    --card-box-shadow: 0 0 10px var(--color-black-05);
 }

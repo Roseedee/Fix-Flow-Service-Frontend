@@ -6,32 +6,36 @@ import {
     LinearScale,
     Tooltip,
     Legend,
-    ChartOptions
+    ChartOptions,
+    ChartData
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import '@styles/components/BarChart.css';
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
-    datasets: [
-        {
-            label: 'Votes',
-            data: [12, 19, 3, 5, 2],
-            backgroundColor: 'rgba(75,192,192,0.6)',
-        }
-    ]
+type BarChartProps = {
+    data: ChartData<'bar'>;
 };
 
 const options: ChartOptions<'bar'> = {
     responsive: true,
     plugins: {
         legend: { position: 'top' }
-    }
+    },
+    scales: {
+        
+    },
+    datasets: {
+    bar: {
+        barThickness: 6,         // ความหนาของแท่ง
+        categoryPercentage: 0.8, // ระยะห่างระหว่างกลุ่ม
+        barPercentage: 0.5,      // ระยะห่างระหว่างแท่งในกลุ่ม
+    },
+  },
 };
 
-export default function BarChart() {
+export default function BarChart({ data }: BarChartProps) {
     return (
         <Bar data={data} options={options} />
     );
