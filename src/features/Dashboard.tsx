@@ -13,7 +13,7 @@ const data: ChartData<'bar'> = {
 function generateExampleChartData(): typeof data {
     const labels = ['02-05', '03-05', '04-05', '05-05', '06-05', '07-05'];
 
-    function randomData(length: number, min: number = 1, max: number = 20): number[] {
+    function randomData(length: number, min: number = 1, max: number = 10): number[] {
         return Array.from({ length }, () => Math.floor(Math.random() * (max - min + 1)) + min);
     }
 
@@ -34,7 +34,7 @@ function generateExampleChartData(): typeof data {
                 label: 'รับเครื่องแล้ว',
                 data: randomData(labels.length),
                 backgroundColor: 'rgb(137, 131, 217)',
-                
+
             },
         ]
     };
@@ -45,16 +45,15 @@ export default function Dashboard() {
         <Layout>
             <div className="dashboard-header">
                 <h2>Dashboard</h2>
-                <p>Welcome to the dashboard!</p>
             </div>
             <div className="dashboard-content">
                 <div className="dashboard-sub-content">
-                    <BarChart data={ generateExampleChartData() } />
-
+                    <h4>งานซ่อม 7 วันย้อนหลัง</h4>
+                    <BarChart data={generateExampleChartData()} />
                 </div>
                 <div className="dashboard-sub-content">
-                    <BarChart data={ generateExampleChartData() } />
-
+                    <h4>งานซ่อม 6 เดือนย้อนหลัง</h4>
+                    <BarChart data={generateExampleChartData()} />
                 </div>
             </div>
         </Layout>

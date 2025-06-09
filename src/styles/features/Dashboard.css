@@ -13,4 +13,5 @@
     flex-direction: column;
     padding: 15px 20px;
     border-radius: var(--card-radius);
+    gap: 15px;
 }

@@ -22,10 +22,10 @@ const options: ChartOptions<'bar'> = {
     responsive: true,
     plugins: {
         legend: {
-            position: 'top',
+            position: 'bottom',
             labels: {
                 usePointStyle: true,
-                pointStyle: 'circle', // ตั้งให้เป็นวงกลม
+                pointStyle: 'circle',
                 boxHeight: 10,
                 boxWidth: 10,
             }
@@ -36,6 +36,10 @@ const options: ChartOptions<'bar'> = {
             grid: { display: false },
         },
         y: {
+            ticks: {
+                autoSkip: true,
+                maxTicksLimit: 10,
+            },
             grid: { display: false },
         }
     },
