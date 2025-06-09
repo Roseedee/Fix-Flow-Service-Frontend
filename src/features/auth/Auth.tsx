@@ -71,7 +71,7 @@ export default function SignIn() {
 
   return (
     <form className="login-form" action={ handleSubmitLogin }>
-      <div className="card">
+      <div className="auth-card">
         <h1>ยินดีต้อนรับ</h1>
         <div className="input-username-container">
           {
@@ -103,7 +103,7 @@ export default function SignIn() {
           </div>
         </div>
       </div>
-      <div className="card users-remember-list">
+      <div className="auth-card users-remember-list">
         {
           rememberUsers.map((item) => (
             <div className="user-remember-item" key={item.id} onClick={() => handleSelectUserRemember(item)}>
