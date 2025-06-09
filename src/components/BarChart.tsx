@@ -21,18 +21,31 @@ type BarChartProps = {
 const options: ChartOptions<'bar'> = {
     responsive: true,
     plugins: {
-        legend: { position: 'top' }
+        legend: {
+            position: 'top',
+            labels: {
+                usePointStyle: true,
+                pointStyle: 'circle', // ตั้งให้เป็นวงกลม
+                boxHeight: 10,
+                boxWidth: 10,
+            }
+        }
     },
     scales: {
-        
+        x: {
+            grid: { display: false },
+        },
+        y: {
+            grid: { display: false },
+        }
     },
     datasets: {
-    bar: {
-        barThickness: 6,         // ความหนาของแท่ง
-        categoryPercentage: 0.8, // ระยะห่างระหว่างกลุ่ม
-        barPercentage: 0.5,      // ระยะห่างระหว่างแท่งในกลุ่ม
+        bar: {
+            barPercentage: 0.8,
+            categoryPercentage: 0.4,
+            borderRadius: 5,
+        },
     },
-  },
 };
 
 export default function BarChart({ data }: BarChartProps) {

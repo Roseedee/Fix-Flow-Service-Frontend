@@ -34,6 +34,7 @@ function generateExampleChartData(): typeof data {
                 label: 'รับเครื่องแล้ว',
                 data: randomData(labels.length),
                 backgroundColor: 'rgb(137, 131, 217)',
+                
             },
         ]
     };
