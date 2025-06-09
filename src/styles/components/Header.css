@@ -15,6 +15,11 @@
 }
 
 .header-container {
+    /* for show on scroll */
+    position: sticky;
+    left: 0;
+    top: 5px;
+
     height: var(--header-min-height);
     background-color: var(--header-bg-color);
     box-shadow: var(--header-box-shadow);
