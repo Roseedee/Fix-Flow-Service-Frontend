@@ -1,0 +1,20 @@
+.footer-container {
+    width: 100%;
+    /* height: var(--footer-height); */
+    /* background-color: black; */
+    padding: 1.2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    & img {
+        width: 28px;
+        height: 28px;
+    }
+}
+

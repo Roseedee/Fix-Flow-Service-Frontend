@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import Footer from "./Footer";
 
 import '@styles/components/Layout.css';
 
@@ -17,6 +18,7 @@ export default function Layout({ children }: Props) {
         <div className="layout-main">
           {children}
         </div>
+        <Footer />
       </div>
     </div>
   );
