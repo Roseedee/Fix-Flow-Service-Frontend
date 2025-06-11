@@ -3,7 +3,12 @@ import Layout from '@components/Layout';
 import BarChart from '@components/BarChart';
 import '@styles/features/Dashboard.css';
 import { ChartData } from 'chart.js';
-import { Chart } from 'react-chartjs-2';
+
+
+import imgUser_Test from '@assets/images/test.jpg';
+import imgUser_Test1 from '@assets/images/test1.jpg';
+import imgUser_Test2 from '@assets/images/test2.jpg';
+
 
 const data: ChartData<'bar'> = {
     labels: [],
@@ -45,6 +50,31 @@ export default function Dashboard() {
         <Layout>
             <div className="dashboard-header">
                 <h2>Dashboard</h2>
+            </div>
+            <div className="dashboard-content">
+                <div className="dashboard-sub-content user-loged-in-list">
+                    <div className="user-card card">
+                        <div className="user-card-img">
+                            <img src={ imgUser_Test } alt="" />
+                        </div>
+                        <h5>รอซ๊ดี เจ๊ะแล๊ะ</h5>
+                        <span>พนักงานซ่อม</span>
+                    </div>
+                    <div className="user-card card">
+                        <div className="user-card-img">
+                            <img src={ imgUser_Test1 } alt="" />
+                        </div>
+                        <h5>ซอลาฮุดิน เจ๊ะแล๊ะ</h5>
+                        <span>พนักงานหน้าร้าน</span>
+                    </div>
+                    <div className="user-card card">
+                        <div className="user-card-img">
+                            <img src={ imgUser_Test2 } alt="" />
+                        </div>
+                        <h5>มูฮัมหมัด เจ๊ะแล๊ะ</h5>
+                        <span>พนักงานกล้องวงจรปิด</span>
+                    </div>
+                </div>
             </div>
             <div className="dashboard-content">
                 <div className="dashboard-sub-content card">
