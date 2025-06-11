@@ -3,6 +3,9 @@
     /* height: var(--footer-height); */
     /* background-color: black; */
     padding: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .footer-content {
@@ -16,5 +19,20 @@
         width: 28px;
         height: 28px;
     }
+
+    & a {
+        color: var(--black);
+        opacity: 0.5;
+        transition: var(--def-transition);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.footer-content:last-of-type {
+    gap: 25px;
 }
 
