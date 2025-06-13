@@ -40,14 +40,18 @@ export default function Sidebar() {
           <div className="sidebar-sub-menu">
             <h4>เมนูทั่วไป</h4>
             <ul>
-              <li className="sidebar-sub-menu-item">
-                <img src={dashboardIcon} alt="" />
-                <span>แดชบอร์ดงานซ่อม</span>
-              </li>
-              <li className="sidebar-sub-menu-item">
-                <img src={searchIcon} alt="" />
-                <span>ค้นหางานซ่อม</span>
-              </li>
+              <a href="/dashboard">
+                <li className="sidebar-sub-menu-item">
+                  <img src={dashboardIcon} alt="" />
+                  <span>แดชบอร์ดงานซ่อม</span>
+                </li>
+              </a>
+              <a href="/search">
+                <li className="sidebar-sub-menu-item">
+                  <img src={searchIcon} alt="" />
+                  <span>ค้นหางานซ่อม</span>
+                </li>
+              </a>
             </ul>
           </div>
           <div className="sidebar-sub-menu">
