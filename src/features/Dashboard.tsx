@@ -3,7 +3,10 @@ import Layout from '@components/Layout';
 import BarChart from '@components/BarChart';
 import '@styles/features/Dashboard.css';
 import { ChartData } from 'chart.js';
+import DashboardTaskItem from '@components/DashboardTaskItem'
 
+
+import taskIcon from '@assets/icons/task.png'
 
 import imgUser_Test from '@assets/images/test.jpg';
 import imgUser_Test1 from '@assets/images/test1.jpg';
@@ -76,7 +79,7 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
-            <div className="dashboard-content">
+            <div className="dashboard-content-row">
                 <div className="dashboard-sub-content card">
                     <h4>งานซ่อม 7 วันย้อนหลัง</h4>
                     <BarChart data={generateExampleChartData()} />
@@ -106,6 +109,16 @@ export default function Dashboard() {
                     <BarChart data={generateExampleChartData()} />
                 </div>
             </div> */}
+            <div className="dashboard-content">
+                <h3>สถานะงานซ่อม</h3>
+                <div className="dashboard-sub-content-row">
+                    <DashboardTaskItem title="งานซ่อมในระบบทั้งหมด" number="100" color='#D9D9D9' />
+                    <DashboardTaskItem title="กำลังซ่อมอยู่" number="100" color='#a9c352' />
+                    <DashboardTaskItem title="ซ่อมเสร็จแล้ว" number="100" color='#B9B39B' />
+                    <DashboardTaskItem title="รับเครื่องแล้ว" number="100" color='#6C96FF' />
+                    <DashboardTaskItem title="ยกเลิกงานซ่อม" number="100" color='#FF7878' />
+                </div>
+            </div>
         </Layout>
     );
 }
