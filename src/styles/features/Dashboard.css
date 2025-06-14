@@ -78,14 +78,9 @@
 }
 
 .status-task-list {
-  background-color: antiquewhite;
-
-  & div {
-    & img {
-      width: 24px;
-      height: 24px;
-    }
-  }
+  display: flex;
+  flex-direction: row;
+  gap: var(--dashboard-gap);
 }
 
 @media (max-width: 830px) {

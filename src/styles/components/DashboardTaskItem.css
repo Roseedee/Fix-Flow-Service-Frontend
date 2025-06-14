@@ -4,7 +4,7 @@
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-between;
-    padding: 15px;
+    padding: 20px;
     gap: 20px;
 
     & .content:first-of-type {
@@ -29,9 +29,9 @@
 
             & span {
                 display: inline-block;
-                padding:  3px 7px;
+                padding:  2px 8px;
+                /* margin-inline: 5px; */
                 border-radius: 1000px;
-                background-color: rgb(156, 151, 151);
             }
         }
     }

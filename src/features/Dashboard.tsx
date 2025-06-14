@@ -110,8 +110,8 @@ export default function Dashboard() {
                 </div>
             </div> */}
             <div className="dashboard-content">
-                <h3>สถานะงานซ่อม</h3>
-                <div className="dashboard-sub-content-row">
+                <h4>สถานะงานซ่อม</h4>
+                <div className="status-task-list">
                     <DashboardTaskItem title="งานซ่อมในระบบทั้งหมด" number="100" color='#D9D9D9' />
                     <DashboardTaskItem title="กำลังซ่อมอยู่" number="100" color='#a9c352' />
                     <DashboardTaskItem title="ซ่อมเสร็จแล้ว" number="100" color='#B9B39B' />
