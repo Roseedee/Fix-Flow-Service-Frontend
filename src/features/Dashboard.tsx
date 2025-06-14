@@ -110,13 +110,21 @@ export default function Dashboard() {
                 </div>
             </div> */}
             <div className="dashboard-content">
-                <h4>สถานะงานซ่อม</h4>
+                <h4>สถานะงานซ่อมหลัก</h4>
                 <div className="status-task-list">
                     <DashboardTaskItem title="งานซ่อมในระบบทั้งหมด" number="100" color='#D9D9D9' />
                     <DashboardTaskItem title="กำลังซ่อมอยู่" number="100" color='#a9c352' />
                     <DashboardTaskItem title="ซ่อมเสร็จแล้ว" number="100" color='#B9B39B' />
                     <DashboardTaskItem title="รับเครื่องแล้ว" number="100" color='#6C96FF' />
                     <DashboardTaskItem title="ยกเลิกงานซ่อม" number="100" color='#FF7878' />
+                </div>
+            </div>
+            <div className="dashboard-content">
+                <h4>สถานะงานซ่อมอื่นๆ</h4>
+                <div className="status-task-list">
+                    <DashboardTaskItem title="ส่งเคลมศูนย์" number="100" color='#D9D9D9' maxWidth={240} />
+                    <DashboardTaskItem title="กำลังซ่อมอยู่" number="100" color='#a9c352' maxWidth={240} />
+                    <DashboardTaskItem title="ซ่อมเสร็จแล้ว" number="100" color='#B9B39B' maxWidth={240} />
                 </div>
             </div>
         </Layout>

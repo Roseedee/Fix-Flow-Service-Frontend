@@ -7,11 +7,12 @@ type DashboardTaskItemProps = {
     title: string;
     number: string;
     color: string;
+    maxWidth?: number;
 }
 
-export default function DashboardTaskItem({title, number, color} : DashboardTaskItemProps) {
+export default function DashboardTaskItem({title, number, color, maxWidth=1000} : DashboardTaskItemProps) {
     return (
-        <div className="task-content card">
+        <div className="task-content card" style={{maxWidth: maxWidth}}>
             <div className="content">
                 <div>
                     <img src={ taskIcon } alt="" />
