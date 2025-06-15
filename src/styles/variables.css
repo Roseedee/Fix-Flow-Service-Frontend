@@ -1,4 +1,20 @@
 :root {
+    /* Layout */
+        /* Header */
+        --header-min-height: 70px;
+        --header-radius: var(--radius-md);
+        --header-bg-color: var(--white);
+        --header-box-shadow: 0 0 10px var(--color-black-05);
+
+        /* Sidebar */
+        --sidebar-max-width: 320px;
+        --sidebar-min-width: 90px;
+        --sidebar-bg-color: var(--white);
+        --sidebar-box-shadow: 0 0 10px var(--color-black-05);
+
+        /* Footer */
+        --footer-height: 100px;
+
     /* Color */
     --main-bg-color: #FEFEFE;
     --white: #FFFFFF;
