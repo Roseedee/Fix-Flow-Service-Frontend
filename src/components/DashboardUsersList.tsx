@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '@styles/components/DashboardUsersList.css'
 
 interface UserData {
     id: string;
