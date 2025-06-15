@@ -89,30 +89,10 @@ export default function Dashboard() {
                     <BarChart data={generateExampleChartData()} />
                 </div>
             </div>
-            {/* <div className="dashboard-content">
-                <div className="dashboard-sub-content card">
-                    <h4>งานซ่อม 7 วันย้อนหลัง</h4>
-                    <BarChart data={generateExampleChartData()} />
-                </div>
-                <div className="dashboard-sub-content card">
-                    <h4>งานซ่อม 6 เดือนย้อนหลัง</h4>
-                    <BarChart data={generateExampleChartData()} />
-                </div>
-            </div>
-            <div className="dashboard-content">
-                <div className="dashboard-sub-content card">
-                    <h4>งานซ่อม 7 วันย้อนหลัง</h4>
-                    <BarChart data={generateExampleChartData()} />
-                </div>
-                <div className="dashboard-sub-content card">
-                    <h4>งานซ่อม 6 เดือนย้อนหลัง</h4>
-                    <BarChart data={generateExampleChartData()} />
-                </div>
-            </div> */}
             <div className="dashboard-content">
                 <h4>สถานะงานซ่อมหลัก</h4>
                 <div className="status-task-list">
-                    <DashboardTaskItem title="งานซ่อมในระบบทั้งหมด" number="100"/>
+                    <DashboardTaskItem icon={taskIcon} title="งานซ่อมในระบบทั้งหมด" number="100"/>
                     <DashboardTaskItem title="กำลังซ่อมอยู่" number="100" color='#a9c352' />
                     <DashboardTaskItem title="ซ่อมเสร็จแล้ว" number="100" color='#B9B39B' />
                     <DashboardTaskItem title="รับเครื่องแล้ว" number="100" color='#6C96FF' />
