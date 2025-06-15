@@ -1,8 +1,10 @@
 import React from 'react';
-import Layout from '@components/Layout';
-import BarChart from '@components/BarChart';
+import Layout from '@components/layout/Layout';
 import '@styles/features/Dashboard.css';
 import { ChartData } from 'chart.js';
+
+import DashboardUsersList from '@components/DashboardUsersList';
+import BarChart from '@components/BarChart';
 import DashboardTaskItem from '@components/DashboardTaskItem'
 
 
@@ -48,6 +50,27 @@ function generateExampleChartData(): typeof data {
     };
 }
 
+const users = [
+  {
+    id: '1',
+    img: imgUser_Test,
+    name: 'รอซ๊ดี เจ๊ะแล๊ะ',
+    position: 'พนักงานซ่อม',
+  },
+  {
+    id: '2',
+    img: imgUser_Test1,
+    name: 'ซอลาฮุดิน เจ๊ะแล๊ะ',
+    position: 'พนักงานหน้าร้าน',
+  },
+  {
+    id: '3',
+    img: imgUser_Test2,
+    name: 'มูฮัมหมัด เจ๊ะแล๊ะ',
+    position: 'พนักงานกล้องวงจรปิด',
+  },
+];
+
 export default function Dashboard() {
     return (
         <Layout>
@@ -55,29 +78,7 @@ export default function Dashboard() {
                 <h2>Dashboard</h2>
             </div>
             <div className="dashboard-content">
-                <div className="dashboard-sub-content user-loged-in-list">
-                    <div className="user-card card">
-                        <div className="user-card-img">
-                            <img src={ imgUser_Test } alt="" />
-                        </div>
-                        <h5>รอซ๊ดี เจ๊ะแล๊ะ</h5>
-                        <span>พนักงานซ่อม</span>
-                    </div>
-                    <div className="user-card card">
-                        <div className="user-card-img">
-                            <img src={ imgUser_Test1 } alt="" />
-                        </div>
-                        <h5>ซอลาฮุดิน เจ๊ะแล๊ะ</h5>
-                        <span>พนักงานหน้าร้าน</span>
-                    </div>
-                    <div className="user-card card">
-                        <div className="user-card-img">
-                            <img src={ imgUser_Test2 } alt="" />
-                        </div>
-                        <h5>มูฮัมหมัด เจ๊ะแล๊ะ</h5>
-                        <span>พนักงานกล้องวงจรปิด</span>
-                    </div>
-                </div>
+                <DashboardUsersList users={users}/>
             </div>
             <div className="dashboard-content-row">
                 <div className="dashboard-sub-content card">

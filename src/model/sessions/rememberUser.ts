@@ -1,4 +1,4 @@
-export interface RememberUser {
+export default interface RememberUser {
   id: string
   name: string
   img?: string

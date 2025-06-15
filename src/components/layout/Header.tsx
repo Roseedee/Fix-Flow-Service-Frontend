@@ -1,5 +1,5 @@
 import React from "react";
-import '@styles/components/Header.css';
+import '@styles/components/layout/Header.css';
 
 import headerIcon from '@assets/icons/task.png';
 import searchIcon from '@assets/icons/search.png';

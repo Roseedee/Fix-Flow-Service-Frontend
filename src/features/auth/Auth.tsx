@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '@styles/features/auth/Auth.css';
-import { RememberUser } from '@model/sessions/rememberUser';
+import RememberUser from '@model/sessions/RememberUser';
 import { useNavigate } from 'react-router-dom';
 
 
