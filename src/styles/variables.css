@@ -1,7 +1,9 @@
 :root {
+    /* Color */
     --main-bg-color: #FEFEFE;
     --white: #FFFFFF;
     --black: #000000;
+    --color-black-05: rgba(0, 0, 0, 0.05);
 
     /* Input */
     --input-font-size: 15px;

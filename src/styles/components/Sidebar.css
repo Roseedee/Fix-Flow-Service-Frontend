@@ -270,6 +270,7 @@
         .sidebar-content-menu {
 
             .sidebar-sub-menu {
+                padding: var(--sidebar-def-padding) 0;
 
                 & h4 {
                     display: none;
