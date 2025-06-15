@@ -6,13 +6,12 @@ import taskIcon from "@assets/icons/task.png"
 type DashboardTaskItemProps = {
     title: string;
     number: string;
-    color: string;
-    maxWidth?: number;
+    color?: string;
 }
 
-export default function DashboardTaskItem({title, number, color, maxWidth=10000} : DashboardTaskItemProps) {
+export default function DashboardTaskItem({title, number, color="#D9D9D9"} : DashboardTaskItemProps) {
     return (
-        <div className="task-content card" style={{maxWidth: maxWidth}}>
+        <div className="task-content card">
             <div className="content">
                 <div>
                     <img src={ taskIcon } alt="" />
