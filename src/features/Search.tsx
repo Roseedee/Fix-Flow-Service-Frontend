@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "@components/layout/Layout";
+import '@styles/features/Search.css'
 
 export default function Search() {
 
@@ -8,6 +9,7 @@ export default function Search() {
             <div className="search-header">
                 <h2>Search</h2>
             </div>
+
         </Layout>
     )
 }
