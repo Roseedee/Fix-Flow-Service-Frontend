@@ -1,5 +1,7 @@
 :root {
   --dashboard-gap: 15px;
+
+  --dashboard-sub-content-pad: 15px 20px;
 }
 
 .dashboard-content {
@@ -20,8 +22,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 15px 20px;
-    gap: 15px;
+    padding: var(--dashboard-sub-content-pad);
+    gap: var(--dashboard-gap);
     
 }
 
@@ -29,8 +31,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 15px 20px;
-  gap: 15px;
+  padding: var(--dashboard-sub-content-pad);
+  gap: var(--dashboard-gap);
 }
 
 .status-task-list {

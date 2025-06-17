@@ -1,0 +1,36 @@
+:root {
+    --search-gap: 15px;
+
+    --search-sub-content-pad: 15px 20px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--search-sub-content-pad);
+    gap: var(--search-gap);
+}
+
+.search-form-input-container {
+    width: 800px;
+    gap: calc(var(--search-gap) + 5px);
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+.search-form-input-container:first-of-type {
+    padding: 10px 100px;
+}
+
+@media (max-width: 1220px) {
+    .search-form-input-container:first-of-type {
+        padding: 10px 0px;
+    }
+
+    .search-form-input-container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

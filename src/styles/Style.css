@@ -2,6 +2,7 @@
 
 @import url('./Variables.css');
 @import url('./Font.css');
+@import url('@styles/components/Input.css');
 
 * {
     margin: 0;
@@ -42,4 +43,9 @@ a {
 
 .space-between {
     justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
 }
