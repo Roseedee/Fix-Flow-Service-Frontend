@@ -49,4 +49,5 @@
     --card-bg-color: var(--white);
     --card-radius: var(--radius-md);
     --card-box-shadow: 0 0 10px var(--color-black-05);
+    --card-def-pad: 15px 20px;
 }

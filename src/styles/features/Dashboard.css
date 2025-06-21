@@ -1,7 +1,7 @@
 :root {
   --dashboard-gap: 15px;
 
-  --dashboard-sub-content-pad: 15px 20px;
+  --dashboard-sub-content-pad: var(--card-def-pad);
 }
 
 .dashboard-content {

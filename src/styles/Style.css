@@ -25,6 +25,22 @@ a {
     border-radius: var(--card-radius);
 }
 
+.round-vsm {
+    border-radius: 3px;
+}
+
+.round-sm {
+    border-radius: var(--radius-sm);
+}
+
+.round-md {
+    border-radius: var(--radius-md);
+}
+
+.round-lg {
+    border-radius: var(--radius-lg);
+}
+
 .row {
     flex-grow: 1;
     display: flex;
