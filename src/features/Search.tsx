@@ -23,7 +23,7 @@ export default function Search() {
                         <option value="1">เบอร์โทร</option>
                         <option value="1">รหัสสินค้า</option>
                         <option value="1">รหัสเครื่อง</option>
-                    </select>    
+                    </select>
                 </div>
                 <div className="search-form-input-container">
                     <div className="input-title">
@@ -92,7 +92,7 @@ export default function Search() {
                     </div>
                 </div>
                 <div className="search-task-result-list">
-                    <div className="task-item">
+                    {/* <div className="task-item">
                         <div className="task-item-start-content">
                             <p className="task-color round-vsm"></p>
                             <div className="task-data-form-1">
@@ -132,89 +132,164 @@ export default function Search() {
                             <button><img src={fullSizeIcon} alt="" /></button>
                             <button><img src={editIcon} alt="" /></button>
                         </div>
-                    </div>
-                    <div className="task-item">
-                        <div className="task-item-start-content">
-                            <p className="task-color round-vsm"></p>
-                            <div className="task-data-form-1">
-                                <span>รหัส</span>
-                                <p>1254687791</p>
-                            </div>
-                            <div className="task-data-form-1">
-                                <span>ผู้รับงานซ่อม</span>
-                                <p>รอซีดี เจ๊ะแล๊ะ</p>
-                            </div>
-                            <div className="task-data-form-2">
-                                <p>เอบีซี ดีเอฟจี</p>
-                                <p>0630742165</p>
-                            </div>        
-                            <div className="task-data-form-3">
-                                <a>#Printer</a>
-                                <p>Epson L3110</p>
-                            </div>        
-                            <div className="task-data-form-2">
-                                <p>MP2FNXRY</p>
-                                <p>LNVNB161216</p>
-                            </div>       
-                            <div className="task-data-form-1">
-                                <span>อาการลูกค้าแจ้ง</span>
-                                <p>Microsoft Word ใช้งานไม่ได้</p>
-                            </div>
-                            <div className="task-data-form-1">
-                                <span>ราคาประเมิน</span>
-                                <p>1000-1200</p>
-                            </div>
-                            <div className="task-data-form-1">
-                                <span>ผู้รับผิดชอบงานซ่อม</span>
-                                <p>ไม่มี</p>
-                            </div> 
+                    </div> */}
+                    <div className="task-row">
+                        <div className="color-indicator"></div>
+                        <div className="cell">
+                            <span className="label">รหัส</span>
+                            <p>1254687791</p>
                         </div>
-                        <div className="task-item-end-content">
-                            <button><img src={fullSizeIcon} alt="" /></button>
-                            <button><img src={editIcon} alt="" /></button>
+                        <div className="cell">
+                            <span className="label">ผู้รับงานซ่อม</span>
+                            <p>รอซีดี เจ๊ะแล๊ะ</p>
+                        </div>
+                        <div className="cell">
+                            <strong>บูอัมหมัด เจ๊ะแล๊ะ</strong>
+                            <p>0630742165</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label text-hashtag">#Notebook</span>
+                            <p>Lenovo Ideapad 3</p>
+                        </div>
+                        <div className="cell">
+                            <strong>MP2FNXRY</strong>
+                            <p>LNVNB161216</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">อาการลูกค้าแจ้ง</span>
+                            <p>Microsoft Word ใช้งานไม่ได้</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">ราคาประเมิน</span>
+                            <p>500-1200</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">ผู้รับผิดชอบงานซ่อม</span>
+                            <p>ไม่มี</p>
+                        </div>
+                        <div className="action-buttons">
+                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
+                            <button><img src={editIcon} alt="แก้ไข" /></button>
                         </div>
                     </div>
-                    <div className="task-item">
-                        <div className="task-item-start-content">
-                            <p className="task-color round-vsm"></p>
-                            <div className="task-data-form-1">
-                                <span>รหัส</span>
-                                <p>546849764</p>
-                            </div>
-                            <div className="task-data-form-1">
-                                <span>ผู้รับงานซ่อม</span>
-                                <p>มูฮัมหมัด เจ๊ะแล๊ะ</p>
-                            </div>
-                            <div className="task-data-form-2">
-                                <p>ชื่อตัวอย่าง เทส</p>
-                                <p>0652568546</p>
-                            </div>        
-                            <div className="task-data-form-3">
-                                <a>#Notebook</a>
-                                <p>Lenovo Ideapad 3</p>
-                            </div>        
-                            <div className="task-data-form-2">
-                                <p>MP2FNXRY</p>
-                                <p>LNVNB161216</p>
-                            </div>       
-                            <div className="task-data-form-1">
-                                <span>อาการลูกค้าแจ้ง</span>
-                                <p>เครื่องช้าๆ ต้องการโปรแกรม - autocad - photoshop</p>
-                            </div>
-                            <div className="task-data-form-1">
-                                <span>ราคาประเมิน</span>
-                                <p>500-1200</p>
-                            </div>
-                            <div className="task-data-form-1">
-                                <span>ผู้รับผิดชอบงานซ่อม</span>
-                                <p>ไม่มี</p>
-                            </div> 
+                    <div className="task-row">
+                        <div className="color-indicator"></div>
+                        <div className="cell">
+                            <span className="label">รหัส</span>
+                            <p>1254687791</p>
                         </div>
-                        <div className="task-item-end-content">
-                            <button><img src={fullSizeIcon} alt="" /></button>
-                            <button><img src={editIcon} alt="" /></button>
+                        <div className="cell">
+                            <span className="label">ผู้รับงานซ่อม</span>
+                            <p>รอซีดี เจ๊ะแล๊ะ</p>
+                        </div>
+                        <div className="cell">
+                            <strong>บูอัมหมัด เจ๊ะแล๊ะ</strong>
+                            <p>0630742165</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label text-hashtag">#Notebook</span>
+                            <p>Lenovo Ideapad 3</p>
+                        </div>
+                        <div className="cell">
+                            <strong>MP2FNXRY</strong>
+                            <p>LNVNB161216</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">อาการลูกค้าแจ้ง</span>
+                            <p>Microsoft Word ใช้งานไม่ได้</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">ราคาประเมิน</span>
+                            <p>500-1200</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">ผู้รับผิดชอบงานซ่อม</span>
+                            <p>ไม่มี</p>
+                        </div>
+                        <div className="action-buttons">
+                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
+                            <button><img src={editIcon} alt="แก้ไข" /></button>
                         </div>
                     </div>
+                    <div className="task-row">
+                        <div className="color-indicator"></div>
+                        <div className="cell task-data-form-1">
+                            <span>รหัส</span>
+                            <p>1254687791</p>
+                        </div>
+                        <div className="cell task-data-form-1">
+                            <span>ผู้รับงานซ่อม</span>
+                            <p>รอซีดี เจ๊ะแล๊ะ</p>
+                        </div>
+                        <div className="cell">
+                            <strong>บูอัมหมัด เจ๊ะแล๊ะ</strong>
+                            <p>0630742165</p>
+                        </div>
+                        <div className="cell">
+                            <p>#Notebook</p>
+                            <p>Lenovo Ideapad 3</p>
+                        </div>
+                        <div className="cell">
+                            <strong>MP2FNXRY</strong>
+                            <p>LNVNB161216</p>
+                        </div>
+                        <div className="cell">
+                            <span>อาการลูกค้าแจ้ง</span>
+                            <p>Microsoft Word ใช้งานไม่ได้</p>
+                        </div>
+                        <div className="cell">
+                            <span>ราคาประเมิน</span>
+                            <p>500-1200</p>
+                        </div>
+                        <div className="cell">
+                            <span>ผู้รับผิดชอบงานซ่อม</span>
+                            <p>ไม่มี</p>
+                        </div>
+                        <div className="action-buttons">
+                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
+                            <button><img src={editIcon} alt="แก้ไข" /></button>
+                        </div>
+                    </div>
+                    <div className="task-row">
+                        <div className="color-indicator"></div>
+                        <div className="cell">
+                            <span className="label">รหัส</span>
+                            <p>1254687791</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">ผู้รับงานซ่อม</span>
+                            <p>รอซีดี เจ๊ะแล๊ะ</p>
+                        </div>
+                        <div className="cell">
+                            <strong>บูอัมหมัด เจ๊ะแล๊ะ</strong>
+                            <p>0630742165</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label text-hashtag">#Notebook</span>
+                            <p>Lenovo Ideapad 3</p>
+                        </div>
+                        <div className="cell">
+                            <strong>MP2FNXRY</strong>
+                            <p>LNVNB161216</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">อาการลูกค้าแจ้ง</span>
+                            <p>Microsoft Word ใช้งานไม่ได้</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">ราคาประเมิน</span>
+                            <p>500-1200</p>
+                        </div>
+                        <div className="cell">
+                            <span className="label">ผู้รับผิดชอบงานซ่อม</span>
+                            <p>ไม่มี</p>
+                        </div>
+                        <div className="action-buttons">
+                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
+                            <button><img src={editIcon} alt="แก้ไข" /></button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
