@@ -2,9 +2,66 @@ import React from "react";
 import Layout from "@components/layout/Layout";
 import '@styles/features/Search.css'
 
+//components
+import SearchTaskItem from "@components/SearchTaskItem";
+
 //icon
-import fullSizeIcon from "@assets/icons/full-size-white.png"
-import editIcon from "@assets/icons/edit-white.png"
+
+type SearchTaskItemProps = {
+    id: string;
+    getter: string;
+    cName: string;
+    cPhone: string;
+    taskType: string;
+    brand: string;
+    sn: string;
+    pn: string;
+    price: string;
+    repairer: string;
+    report: string;
+}
+
+const exampleTasks: SearchTaskItemProps[] = [
+    {
+        id: "1254687791",
+        getter: "รอซีดี เจ๊ะแล๊ะ",
+        cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
+        cPhone: "0630742165",
+        taskType: "#Printer",
+        brand: "Epson L3110",
+        sn: "MP2FNXRY",
+        pn: "LNVNB161216",
+        price: "1000-1200",
+        repairer: "ไม่มี",
+        report: "Microsoft Word ใช้งานไม่ได้",
+    },
+    {
+        id: "1254687792",
+        getter: "สมศักดิ์ คงดี",
+        cName: "ศิริพร ใจดี",
+        cPhone: "0812345678",
+        taskType: "#Notebook",
+        brand: "Lenovo Ideapad 3",
+        sn: "MP2AABBCC",
+        pn: "LNVNB151234",
+        price: "800-1000",
+        repairer: "ช่างชัย",
+        report: "เครื่องเปิดไม่ติด ต้องกดหลายครั้ง",
+    },
+    {
+        id: "1254687793",
+        getter: "สุภาพร แสงทอง",
+        cName: "ประหยัด สุวรรณ",
+        cPhone: "0898765432",
+        taskType: "#PC",
+        brand: "Acer Aspire",
+        sn: "SN12345678",
+        pn: "PN98765432",
+        price: "1500-2000",
+        repairer: "ช่างหนึ่ง",
+        report: "มีเสียงดังผิดปกติจากพัดลม",
+    }
+];
 
 export default function Search() {
 
@@ -133,166 +190,14 @@ export default function Search() {
                             <button><img src={editIcon} alt="" /></button>
                         </div>
                     </div> */}
-                    <div className="task-row">
-                        <div className="color-indicator"></div>
-                        <div className="cell task-data-form-1">
-                            <span>รหัส</span>
-                            <p>1254687791</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับงานซ่อม</span>
-                            <p>มูฮัมหมัด เจ๊ะแล๊ะ</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>รอซีดี เจ๊ะแล๊ะ</strong>
-                            <p>0630742165</p>
-                        </div>
-                        <div className="cell task-data-form-3">
-                            <a>#Notebook</a>
-                            <p>Lenovo Ideapad 3</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>MP2FNXRY</strong>
-                            <p>LNVNB161216</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ราคาประเมิน</span>
-                            <p>500-1200</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับผิดชอบงานซ่อม</span>
-                            <p>ไม่มี</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>อาการลูกค้าแจ้ง</span>
-                            <p>Microsoft Word ใช้งานไม่ได้</p>
-                        </div>
-                        <div className="action-buttons">
-                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
-                            <button><img src={editIcon} alt="แก้ไข" /></button>
-                        </div>
-                    </div>
-                    <div className="task-row">
-                        <div className="color-indicator"></div>
-                        <div className="cell task-data-form-1">
-                            <span>รหัส</span>
-                            <p>1254687791</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับงานซ่อม</span>
-                            <p>รอซีดี เจ๊ะแล๊ะ</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>บูอัมหมัด เจ๊ะแล๊ะ</strong>
-                            <p>0630742165</p>
-                        </div>
-                        <div className="cell task-data-form-3">
-                            <a>#Notebook</a>
-                            <p>Lenovo Ideapad 3</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>FASDF5WE5R12</strong>
-                            <p>ASDF5454W6EF16W</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ราคาประเมิน</span>
-                            <p>500-1200</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับผิดชอบงานซ่อม</span>
-                            <p>ไม่มี</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>อาการลูกค้าแจ้ง</span>
-                            <p>Microsoft Word ใช้งานไม่ได้</p>
-                        </div>
-                        <div className="action-buttons">
-                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
-                            <button><img src={editIcon} alt="แก้ไข" /></button>
-                        </div>
-                    </div>
-                    <div className="task-row">
-                        <div className="color-indicator"></div>
-                        <div className="cell task-data-form-1">
-                            <span>รหัส</span>
-                            <p>1254687791</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับงานซ่อม</span>
-                            <p>รอซีดี เจ๊ะแล๊ะ</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>บูอัมหมัด เจ๊ะแล๊ะ</strong>
-                            <p>0630742165</p>
-                        </div>
-                        <div className="cell task-data-form-3">
-                            <a>#Notebook</a>
-                            <p>Lenovo Ideapad 3</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>MP2FNXRY</strong>
-                            <p>LNVNB161216</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ราคาประเมิน</span>
-                            <p>500-1200</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับผิดชอบงานซ่อม</span>
-                            <p>ไม่มี</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>อาการลูกค้าแจ้ง</span>
-                            <p>Microsoft Word ใช้งานไม่ได้</p>
-                        </div>
-                        <div className="action-buttons">
-                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
-                            <button><img src={editIcon} alt="แก้ไข" /></button>
-                        </div>
-                    </div>
-                    <div className="task-row">
-                        <div className="color-indicator"></div>
-                        <div className="cell task-data-form-1">
-                            <span>รหัส</span>
-                            <p>1254687791</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับงานซ่อม</span>
-                            <p>รอซีดี เจ๊ะแล๊ะ</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>บูอัมหมัด เจ๊ะแล๊ะ</strong>
-                            <p>0630742165</p>
-                        </div>
-                        <div className="cell task-data-form-3">
-                            <a>#Notebook</a>
-                            <p>Lenovo Ideapad 3</p>
-                        </div>
-                        <div className="cell task-data-form-2">
-                            <strong>MP2FNXRY</strong>
-                            <p>LNVNB161216</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ราคาประเมิน</span>
-                            <p>500-1200</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>ผู้รับผิดชอบงานซ่อม</span>
-                            <p>ไม่มี</p>
-                        </div>
-                        <div className="cell task-data-form-1">
-                            <span>อาการลูกค้าแจ้ง</span>
-                            <p>Microsoft Word ใช้งานไม่ได้</p>
-                        </div>
-                        <div className="action-buttons">
-                            <button><img src={fullSizeIcon} alt="ขยาย" /></button>
-                            <button><img src={editIcon} alt="แก้ไข" /></button>
-                        </div>
-                    </div>
 
+                    {
+                        exampleTasks.map((item, index) => (
+                            <SearchTaskItem task={item} />
+                        ))
+                    }
                 </div>
             </div>
-
         </Layout>
     )
 }
