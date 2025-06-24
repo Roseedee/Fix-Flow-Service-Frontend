@@ -57,10 +57,12 @@ export default function Sidebar() {
           <div className="sidebar-sub-menu">
             <h4>เมนูงานซ่อม</h4>
             <ul>
-              <li className="sidebar-sub-menu-item">
-                <img src={addIcon} alt="" />
-                <span>เพิ่มงานซ่อม</span>
-              </li>
+              <a href="/addtask">
+                <li className="sidebar-sub-menu-item">
+                  <img src={addIcon} alt="" />
+                  <span>เพิ่มงานซ่อม</span>
+                </li>
+              </a>
               <li className="sidebar-sub-menu-item">
                 <img src={taskIcon} alt="" />
                 <span>คลังงานซ่อมทั้งหมด</span>
