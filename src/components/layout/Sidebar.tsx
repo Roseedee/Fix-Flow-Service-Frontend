@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '@styles/components/layout/Sidebar.css';
+import { useLocation } from "react-router-dom";
 
 import appIcon from '@assets/icons/app.png';
 import arrowIcon from '@assets/icons/arrow.png';
@@ -17,6 +18,10 @@ import brandIcon_Test from '@assets/images/brand.png';
 
 export default function Sidebar() {
   const [sidebarMin, setSidebarMin] = useState(false);
+
+  const location = useLocation().pathname.split('/')[1];
+
+
 
   const toggleSidebar = () => {
     const sidebarMaxW = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-max-width').trim();
@@ -41,13 +46,13 @@ export default function Sidebar() {
             <h4>เมนูทั่วไป</h4>
             <ul>
               <a href="/dashboard">
-                <li className="sidebar-sub-menu-item">
+                <li className={`sidebar-sub-menu-item ${location === 'dashboard' ? 'active' : ''}`}>
                   <img src={dashboardIcon} alt="" />
                   <span>แดชบอร์ดงานซ่อม</span>
                 </li>
               </a>
               <a href="/search">
-                <li className="sidebar-sub-menu-item">
+                <li className={`sidebar-sub-menu-item ${location === 'search' ? 'active' : ''}`}>
                   <img src={searchIcon} alt="" />
                   <span>ค้นหางานซ่อม</span>
                 </li>
@@ -58,7 +63,7 @@ export default function Sidebar() {
             <h4>เมนูงานซ่อม</h4>
             <ul>
               <a href="/addtask">
-                <li className="sidebar-sub-menu-item">
+                <li className={`sidebar-sub-menu-item ${location === 'addtask' ? 'active' : ''}`}>
                   <img src={addIcon} alt="" />
                   <span>เพิ่มงานซ่อม</span>
                 </li>

@@ -9,7 +9,7 @@
 }
 
 .sidebar-container {
-    position:fixed;
+    position: fixed;
     width: var(--sidebar-max-width);
     height: 100vh;
     background-color: var(--sidebar-bg-color);
@@ -136,6 +136,16 @@
                     & span {
                         opacity: 1;
                     }
+                }
+            }
+
+            .active {
+                background-color: var(--color-black-05);
+                cursor: pointer;
+
+                & img,
+                & span {
+                    opacity: 1;
                 }
             }
         }
