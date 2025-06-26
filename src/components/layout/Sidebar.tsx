@@ -21,8 +21,6 @@ export default function Sidebar() {
 
   const location = useLocation().pathname.split('/')[1];
 
-
-
   const toggleSidebar = () => {
     const sidebarMaxW = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-max-width').trim();
     const sidebarMinW = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-min-width').trim();

@@ -129,7 +129,7 @@
                 }
 
                 &:hover {
-                    background-color: var(--color-black-05);
+                    background-color: var(--color-black-03);
                     cursor: pointer;
 
                     & img,
