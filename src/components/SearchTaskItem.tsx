@@ -5,7 +5,7 @@ import "@styles/components/SearchTaskItem.css"
 import fullSizeIcon from "@assets/icons/full-size-white.png"
 import editIcon from "@assets/icons/edit-white.png"
 
-interface SearchTaskItemProps {
+interface Task {
     id: string;
     getter: string;
     cName: string;
@@ -17,6 +17,10 @@ interface SearchTaskItemProps {
     price: string;
     repairer: string;
     report: string;
+}
+
+interface SearchTaskItemProps {
+    task: Task;
 }
 
 export default function SearchTaskItem({ task }: SearchTaskItemProps) {
