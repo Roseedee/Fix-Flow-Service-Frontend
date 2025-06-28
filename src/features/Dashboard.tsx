@@ -114,7 +114,7 @@ export default function Dashboard() {
     return (
         <Layout>
             <div className="dashboard-header">
-                <h2>Dashboard</h2>
+                <h2>แดชบอร์ด</h2>
             </div>
             <div className="dashboard-content">
                 <DashboardUsersList users={users} />

@@ -2,7 +2,8 @@
 
 @import url('./Variables.css');
 @import url('./Font.css');
-@import url('@styles/components/input.css');
+@import url('@styles/components/controller/input.css');
+@import url('@styles/components/controller/button.css');
 @import url('@styles/components/hr.css');
 
 * {
@@ -47,7 +48,19 @@ a {
     display: flex;
     flex-direction: row;
     width: 100%;
-    align-items: center;
+    align-items: start;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* background-color: thistle; */
+}
+
+.row-end {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: end;
+    justify-content: end;
     gap: 20px;
     flex-wrap: wrap;
     /* background-color: thistle; */

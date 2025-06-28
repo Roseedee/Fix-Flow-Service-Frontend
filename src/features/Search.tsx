@@ -68,7 +68,7 @@ export default function Search() {
     return (
         <Layout>
             <div className="search-header">
-                <h2>Search</h2>
+                <h2>ค้นหา</h2>
             </div>
             <div className="search-form card">
                 <div className="search-form-input-container">
