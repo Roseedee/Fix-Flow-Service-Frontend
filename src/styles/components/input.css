@@ -1,13 +1,32 @@
+& div.input-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    /* background-color: wheat; */
+
+    & span {
+        font-size: 0.9rem;
+    }
+
+    & input {
+        flex-grow: 1;
+    }
+}
+
 & input.def-input,
-& select.def-input {
+& select.def-input,
+& textarea.def-input {
+    resize: none;
     height: 45px;
     border: none;
     outline: none;
     background-color: #f9f9f9;
     border-radius: var(--radius-sm);
     border: 1px solid #EEEEEE;
-    padding-inline: 12px;
-    font-size: medium;
+    padding: 12px 15px;
+    font-size: .9rem;
     transition: var(--def-transition);
     flex-grow: 1;
 /* 
@@ -17,17 +36,5 @@
     &:hover,
     &:focus {
         border: 1px solid #afafaf;
-    }
-}
-
-& div.input-title {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 10px;
-
-    & input {
-        flex-grow: 1;
     }
 }

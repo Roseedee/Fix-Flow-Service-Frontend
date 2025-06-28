@@ -43,20 +43,25 @@ a {
 }
 
 .row {
-    flex-grow: 1;
+    flex: 1;
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    /* background-color: thistle; */
 }
 
 .column {
-    flex-grow: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: tomato;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    /* background-color: turquoise; */
 }
 
 .space-between {

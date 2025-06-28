@@ -17,6 +17,10 @@
     gap: 20px;
 }
 
+textarea.note {
+    min-height: 100px;
+}
+
 @media (max-width: 1245px) {
     .addtask-content {
         padding: 20px;
