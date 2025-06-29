@@ -1,4 +1,5 @@
 :root {
+    --addtask-gap: 20px;
     --addtask-sub-content-pad: var(--card-def-pad);
 }
 
@@ -6,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 10%;
+    padding: var(--addtask-gap) 10%;
 }
 
 .addtask-sub-content {
@@ -21,46 +22,80 @@ textarea.note {
     min-height: 100px;
 }
 
-.image-upload {
+.image-upload-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    gap: 10px;
+    align-items: stretch;
+    gap: calc(var(--addtask-gap) - 10px);
 }
 
-.button-action {
+.image-button-group {
+    flex: 1;
     display: flex;
-    gap: 10px;
-}
-
-.image-upload-qr {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #FAFAFA;
-    border: 1px solid #EDEDED;
-    border-radius: var(--radius-sm);
-
-    & img {
-        width: 75%;
-    }
+    flex-direction: row;
+    gap: calc(var(--addtask-gap) - 10px);
 }
 
 .image-list {
-    flex: 1;
-    height: 250px;
+    flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    align-items: stretch;
     gap: 10px;
+    flex-wrap: wrap;
 
-    & span {
-        color: var(--text-tag-color);
+
+    .image-item {
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+        background-color: #FAFAFA;
+        border-radius: var(--radius-sm);
+        transition: var(--def-transition);
+        
+        .img {
+            min-width: 140px;
+            max-width: 240px;
+            height: 100%;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        &:hover {
+            background-color: #f0f0f0;
+
+            & button {
+                opacity: 8;
+                height: 30px;
+            }
+        }
+    
+        & button {
+            overflow: hidden;
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            border: none;
+            outline: none;
+            height: 0px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            flex: 1;
+            width: calc(100% - 20px);
+            transition: var(--def-transition);
+            background-color: rgba(255, 24, 24, 0.925);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
 

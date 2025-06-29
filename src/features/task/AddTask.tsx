@@ -10,11 +10,14 @@ import closeIcon from '@assets/icons/close-white.png';
 
 //unit test
 import qrImage from '@assets/images/qr.png';
+import imgTest1 from '@assets/images/test.jpg';
+import imgTest2 from '@assets/images/test1.jpg';
+import imgTest3 from '@assets/images/test2.jpg';
+import imgTest4 from '@assets/images/test3.jpeg';
 
 export default function AddTask() {
 
     useEffect(() => {
-        
     }, []);
 
     return (
@@ -138,19 +141,39 @@ export default function AddTask() {
                         </div>
                     </div>
                     <hr />
-                    <div className="row">
-                        <div className="image-upload">
-                            <div className="button-action">
-                                <button className="def-button"><img src={uploadImageIcon} alt="" />อับโหลดรูปภาพ</button>
+                    <div className="column">
+                        <h4>รูปภาพ</h4>
+                        <div className="image-upload-container">
+                            <div className="image-button-group">
+                                <button className="def-button"><img src={uploadImageIcon} alt="" />อัพโหลดรูปภาพ</button>
                                 <button className="def-button"><img src={photoIcon} alt="" />ถ่ายรูป</button>
                             </div>
-                            <div className="image-upload-qr">
-                                <img src={qrImage} alt="" />
+                            <div className="image-list">
+                                <div className="image-item">
+                                    <div className="img">
+                                        <img src={imgTest1} alt="" />
+                                    </div>
+                                    <button><img src={closeIcon} alt="" /></button>
+                                </div>
+                                <div className="image-item">
+                                    <div className="img">
+                                        <img src={imgTest3} alt="" />
+                                    </div>
+                                    <button><img src={closeIcon} alt="" /></button>
+                                </div>
+                                <div className="image-item">
+                                    <div className="img">
+                                        <img src={imgTest2} alt="" />
+                                    </div>
+                                    <button><img src={closeIcon} alt="" /></button>
+                                </div>
+                                <div className="image-item">
+                                    <div className="img">
+                                        <img src={imgTest4} alt="" />
+                                    </div>
+                                    <button><img src={closeIcon} alt="" /></button>
+                                </div>
                             </div>
-                        </div>
-                        <div className="image-list">
-                            <span>ไม่มีรูปภาพ</span>
-                            
                         </div>
                     </div>
                     <hr />
