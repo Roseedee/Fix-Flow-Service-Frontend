@@ -55,11 +55,11 @@
             gap: 5px;
         }
 
-        .column:first-of-type {
+        & div:first-of-type {
             justify-content: center;
         }
 
-        .column:last-of-type {
+        & div:last-of-type {
             align-items: start;
         }
     }
@@ -76,4 +76,12 @@
             align-items: end;
         }
     }
+}
+
+.task-item-content-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    gap: 20px;
 }

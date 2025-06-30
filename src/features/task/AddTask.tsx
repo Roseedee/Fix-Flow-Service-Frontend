@@ -50,7 +50,7 @@ export default function AddTask() {
                             </div>
                         </div>
                     </div>
-                    <hr />
+                    <hr className="hr" />
                     <div className="column">
                         <h4>อุปกรณ์</h4>
                         <div className="row">
@@ -88,7 +88,7 @@ export default function AddTask() {
                             </div>
                         </div>
                     </div>
-                    <hr />
+                    <hr className="hr" />
                     <div className="column">
                         <h4>รายละเอียดอื่นๆ</h4>
                         <div className="row">
@@ -112,7 +112,7 @@ export default function AddTask() {
                             </div>
                         </div>
                     </div>
-                    <hr />
+                    <hr className="hr" />
                     <div className="column">
                         <h4>รายละเอียดการซ่อม</h4>
                         <div className="row">
@@ -140,7 +140,7 @@ export default function AddTask() {
                             </div>
                         </div>
                     </div>
-                    <hr />
+                    <hr className="hr" />
                     <div className="column">
                         <h4>รูปภาพ</h4>
                         <div className="image-upload-container">
@@ -176,7 +176,7 @@ export default function AddTask() {
                             </div>
                         </div>
                     </div>
-                    <hr />
+                    <hr className="hr" />
                     <div className="row-end">
                         <button className="denger-button"><img src={closeIcon} alt="" />ล้างข้อมูล</button>
                         <button className="def-button"><img src={saveIcon} alt="" />เพิ่มงานซ่อมเข้าระบบ</button>

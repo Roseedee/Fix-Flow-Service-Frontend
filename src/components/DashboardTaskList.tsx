@@ -24,18 +24,18 @@ export default function DashboardTaskList({ tasks }: TaskDataListProps) {
                         <div className="number"><h5>{index + 1}</h5></div>
                         <div className="task-item-content">
                             <div className="task-item-start-content">
-                                <div className="column">
+                                <div className="task-item-content-column">
                                     <h5>{task.id}</h5>
                                     <span>{task.time}</span>
                                 </div>
                                 <hr />
-                                <div className="column">
+                                <div className="task-item-content-column">
                                     <h5>{task.name}</h5>
                                     <span><a href="">#{task.taskType}</a> {task.taskBrand}</span>
                                 </div>
                             </div>
                             <div className="task-item-end-content">
-                                <div className="column">
+                                <div className="task-item-content-column">
                                     <span>รายละเอียด</span>
                                     <p>{task.detail}</p>
                                 </div>
