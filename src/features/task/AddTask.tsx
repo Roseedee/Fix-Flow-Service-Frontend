@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Layout from "@components/layout/Layout";
 import '@styles/features/task/AddTask.css'
 
@@ -13,12 +13,23 @@ import qrImage from '@assets/images/qr.png';
 import imgTest1 from '@assets/images/test.jpg';
 import imgTest2 from '@assets/images/test1.jpg';
 import imgTest3 from '@assets/images/test2.jpg';
-import imgTest4 from '@assets/images/test3.jpeg';
+// import imgTest4 from '@assets/images/test3.jpeg';
 
 export default function AddTask() {
 
-    useEffect(() => {
-    }, []);
+    //image upload state
+    const [imagesUpload, setImagesUpload] = React.useState<File[]>([]);
+
+
+    const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const files = Array.from(e.target.files || []);
+        setImagesUpload(files);
+        console.log("Uploaded files:", files);
+    }
+
+    React.useEffect(() => {
+        console.log("imageFiles (updated):", imagesUpload);
+    }, [imagesUpload]);
 
     return (
         <Layout>
@@ -122,15 +133,15 @@ export default function AddTask() {
                             </div>
                             <div className="input-title">
                                 <span>มัดจำเงินก่อนซ่อม</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="0"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="0" />
                             </div>
                             <div className="input-title">
                                 <span>ระยะเวลาในการซ่อม<span className="tag-warning">#วัน</span></span>
-                                <input type="text" name="" id="" className="def-input" placeholder="1"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="1" />
                             </div>
                             <div className="input-title">
                                 <span>ราคาประเมิน</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="500-1000 บาท"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="500-1000 บาท" />
                             </div>
                         </div>
                         <div className="row">
@@ -145,34 +156,24 @@ export default function AddTask() {
                         <h4>รูปภาพ</h4>
                         <div className="image-upload-container">
                             <div className="image-button-group">
-                                <button className="def-button"><img src={uploadImageIcon} alt="" />อัพโหลดรูปภาพ</button>
+                                <input type="file" id="image-upload" accept="image/*" multiple className="def-button d-none" onChange={(e) => handleImageUpload(e)} />
+                                <button className="def-button" onClick={() => document.getElementById('image-upload')?.click()} ><img src={uploadImageIcon} alt="" />อัพโหลดรูปภาพ</button>
                                 <button className="def-button"><img src={photoIcon} alt="" />ถ่ายรูป</button>
                             </div>
                             <div className="image-list">
-                                <div className="image-item">
-                                    <div className="img">
-                                        <img src={imgTest1} alt="" />
-                                    </div>
-                                    <button><img src={closeIcon} alt="" /></button>
-                                </div>
-                                <div className="image-item">
-                                    <div className="img">
-                                        <img src={imgTest3} alt="" />
-                                    </div>
-                                    <button><img src={closeIcon} alt="" /></button>
-                                </div>
-                                <div className="image-item">
-                                    <div className="img">
-                                        <img src={imgTest2} alt="" />
-                                    </div>
-                                    <button><img src={closeIcon} alt="" /></button>
-                                </div>
-                                <div className="image-item">
-                                    <div className="img">
-                                        <img src={imgTest4} alt="" />
-                                    </div>
-                                    <button><img src={closeIcon} alt="" /></button>
-                                </div>
+                                {
+                                    imagesUpload.map((file, index) => (
+                                        <div className="image-item" key={index}>
+                                            <div className="img">
+                                                <img src={URL.createObjectURL(file)} alt={`Uploaded ${index + 1}`} />
+                                            </div>
+                                            <button onClick={() => {
+                                                const newFiles = imagesUpload.filter((_, i) => i !== index);
+                                                setImagesUpload(newFiles);
+                                            }}><img src={closeIcon} alt="" /></button>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
