@@ -47,13 +47,13 @@ export default function AddTask() {
                             </div>
                             <div className="input-title">
                                 <span>เบอร์โทร*</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="" id="" className="def-input" placeholder="0800000000"/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-title">
                                 <span>อีเมล</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="" id="" className="def-input" placeholder="example@gmail.com"/>
                             </div>
                             <div className="input-title">
                                 <span>รหัสบัตรประชาชน</span>
@@ -84,7 +84,7 @@ export default function AddTask() {
                             <div className="column">
                                 <div className="input-title">
                                     <span>อาการที่ลูกค้าแจ้ง*</span>
-                                    <textarea name="" id="" className="def-input note"></textarea>
+                                    <textarea name="" id="" className="def-input note" placeholder="เปิดติดไม่ขึ้นภาพ"></textarea>
                                 </div>
                             </div>
                             <div className="column">
@@ -105,21 +105,21 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>ตำหนิ</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="" id="" className="def-input" placeholder="มีรอยแตกที่บอดี้หลังเครื่อง"/>
                             </div>
                             <div className="input-title">
                                 <span>อุปกรณ์ที่ติดมาด้วย</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="" id="" className="def-input" placeholder="สายชาร์จ กระเป๋า"/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-title">
                                 <span>สีของอุปกรณ์</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="" id="" className="def-input" placeholder="ดำ ขาว"/>
                             </div>
                             <div className="input-title">
                                 <span>รหัสผ่านอุปกรณ์</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="" id="" className="def-input" placeholder="1234"/>
                             </div>
                         </div>
                     </div>
