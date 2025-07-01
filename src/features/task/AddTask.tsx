@@ -18,17 +18,28 @@ import imgTest3 from '@assets/images/test2.jpg';
 export default function AddTask() {
 
     //image upload state
+    const maxImageUpload: number = 5;
     const [imagesUpload, setImagesUpload] = React.useState<File[]>([]);
 
 
     const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = Array.from(e.target.files || []);
-        setImagesUpload(files);
-        console.log("Uploaded files:", files);
+        if (imagesUpload.length < maxImageUpload && (imagesUpload.length + files.length) <= maxImageUpload) {
+            if (imagesUpload.length > 0) {
+                console.log("push files to imagesUpload");
+                setImagesUpload([...imagesUpload, ...files]);
+            } else {
+                console.log("set imagesUpload");
+                setImagesUpload(files);
+            }
+        } else {
+            console.log(`cannot upload more than ${maxImageUpload} images`);
+            alert(`ไม่สามารถอัพโหลดรูปภาพได้เกิน ${maxImageUpload} รูป`);
+        }
     }
 
     React.useEffect(() => {
-        console.log("imageFiles (updated):", imagesUpload);
+        console.log(imagesUpload.length + " files images uploaded");
     }, [imagesUpload]);
 
     return (
@@ -47,13 +58,13 @@ export default function AddTask() {
                             </div>
                             <div className="input-title">
                                 <span>เบอร์โทร*</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="0800000000"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="0800000000" />
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-title">
                                 <span>อีเมล</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="example@gmail.com"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="example@gmail.com" />
                             </div>
                             <div className="input-title">
                                 <span>รหัสบัตรประชาชน</span>
@@ -105,21 +116,21 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>ตำหนิ</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="มีรอยแตกที่บอดี้หลังเครื่อง"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="มีรอยแตกที่บอดี้หลังเครื่อง" />
                             </div>
                             <div className="input-title">
                                 <span>อุปกรณ์ที่ติดมาด้วย</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="สายชาร์จ กระเป๋า"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="สายชาร์จ กระเป๋า" />
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-title">
                                 <span>สีของอุปกรณ์</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="ดำ ขาว"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="ดำ ขาว" />
                             </div>
                             <div className="input-title">
                                 <span>รหัสผ่านอุปกรณ์</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="1234"/>
+                                <input type="text" name="" id="" className="def-input" placeholder="1234" />
                             </div>
                         </div>
                     </div>
