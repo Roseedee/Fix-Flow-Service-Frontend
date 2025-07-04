@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import Layout from "@components/layout/Layout";
+import Today, {getCurrentTime} from "@util/DateTime";
+
 import '@styles/features/task/AddTask.css'
+
+
 
 //icon
 import photoIcon from '@assets/icons/camera.png';
@@ -32,17 +36,16 @@ export default function AddTask() {
         accessories: 'asdf',
         color: 'asdf',
         password: 'asdf',
-        taskDate: '',
-        deposit: 'asdf',
-        repairTime: 'asdf',
-        estimatedPrice: 'asdf',
+        taskDate: Today(),
+        deposit: '0',
+        repairTime: '2',
+        estimatedPrice: '1000',
         notes: 'asdf'
     });
 
     //image upload state
     const maxImageUpload: number = 5;
     const [imagesUpload, setImagesUpload] = React.useState<File[]>([]);
-
 
     const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = Array.from(e.target.files || []);
@@ -89,9 +92,9 @@ export default function AddTask() {
                 accessories: '',
                 color: '',
                 password: '',
-                taskDate: '',
-                deposit: '',
-                repairTime: '',
+                taskDate: Today(),
+                deposit: '0',
+                repairTime: '1',
                 estimatedPrice: '',
                 notes: ''
             });
@@ -197,25 +200,25 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>วันที่เพิ่มงานซ่อม</span>
-                                <input type="date" name="" id="" className="def-input" />
+                                <input type="date" name="taskDate" className="def-input" onChange={handleInputChange} value={input.taskDate}/>
                             </div>
                             <div className="input-title">
                                 <span>มัดจำเงินก่อนซ่อม</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="0" />
+                                <input type="text" name="deposit" className="def-input" placeholder="0" onChange={handleInputChange} value={input.deposit}/>
                             </div>
                             <div className="input-title">
                                 <span>ระยะเวลาในการซ่อม<span className="tag-warning">#วัน</span></span>
-                                <input type="text" name="" id="" className="def-input" placeholder="1" />
+                                <input type="text" name="repairTime" className="def-input" placeholder="1" onChange={handleInputChange} value={input.repairTime}/>
                             </div>
                             <div className="input-title">
                                 <span>ราคาประเมิน</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="500-1000 บาท" />
+                                <input type="text" name="estimatedPrice" className="def-input" placeholder="500-1000 บาท" onChange={handleInputChange} value={input.estimatedPrice}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-title">
                                 <span>หมายเหตุ</span>
-                                <textarea name="" id="" className="def-input note" placeholder="หมายเหตุ"></textarea>
+                                <textarea name="notes" className="def-input note" placeholder="หมายเหตุ" onChange={handleInputChange} value={input.notes}></textarea>
                             </div>
                         </div>
                     </div>

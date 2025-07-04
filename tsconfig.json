@@ -10,7 +10,8 @@
     "paths": {
       "@features/*": ["features/*"],
       "@components/*": ["components/*"],
-      "@model/*": ["model/*"]
+      "@model/*": ["model/*"],
+      "@util/*": ["util/*"]
     }
   }
 }
