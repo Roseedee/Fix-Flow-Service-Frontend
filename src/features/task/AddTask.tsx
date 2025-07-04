@@ -68,9 +68,35 @@ export default function AddTask() {
         console.log("input changed", input);
     }, [input])
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: any) => {
         const { name, value } = e.target;
         setInput((prev) => ({ ...prev, [name]: value }));
+    }
+
+    const handleResetForm = () => {
+        if(confirm("คุณต้องการล้างข้อมูลทั้งหมดหรือไม่?")) {
+            setInput({
+                name: '',
+                phone: '',
+                email: '',
+                idCard: '',
+                deviceType: 'Notebook',
+                brandModel: '',
+                symptoms: '',
+                productNumber: '',
+                serialNumber: '',
+                defects: '',
+                accessories: '',
+                color: '',
+                password: '',
+                taskDate: '',
+                deposit: '',
+                repairTime: '',
+                estimatedPrice: '',
+                notes: ''
+            });
+            setImagesUpload([]);
+        }
     }
 
     return (
@@ -221,7 +247,7 @@ export default function AddTask() {
                     </div>
                     <hr className="hr" />
                     <div className="row-end">
-                        <button className="denger-button"><img src={closeIcon} alt="" />ล้างข้อมูล</button>
+                        <button className="denger-button" onClick={handleResetForm}><img src={closeIcon} alt="" />ล้างข้อมูล</button>
                         <button className="def-button"><img src={saveIcon} alt="" />เพิ่มงานซ่อมเข้าระบบ</button>
                     </div>
                 </div>
