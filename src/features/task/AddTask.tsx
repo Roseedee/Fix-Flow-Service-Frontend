@@ -17,6 +17,28 @@ import imgTest3 from '@assets/images/test2.jpg';
 
 export default function AddTask() {
 
+    //input
+    const [input, setInput] = React.useState({
+        name: 'asdf',
+        phone: 'asdf',
+        email: 'asdf',
+        idCard: 'asdf',
+        deviceType: 'Printer',
+        brandModel: 'asdf',
+        symptoms: 'asdf',
+        productNumber: 'asdf',
+        serialNumber: 'asdf',
+        defects: 'asdf',
+        accessories: 'asdf',
+        color: 'asdf',
+        password: 'asdf',
+        taskDate: '',
+        deposit: 'asdf',
+        repairTime: 'asdf',
+        estimatedPrice: 'asdf',
+        notes: 'asdf'
+    });
+
     //image upload state
     const maxImageUpload: number = 5;
     const [imagesUpload, setImagesUpload] = React.useState<File[]>([]);
@@ -42,6 +64,15 @@ export default function AddTask() {
         console.log(imagesUpload.length + " files images uploaded");
     }, [imagesUpload]);
 
+    React.useEffect(() => {
+        console.log("input changed", input);
+    }, [input])
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setInput((prev) => ({ ...prev, [name]: value }));
+    }
+
     return (
         <Layout>
             <div className="add-task-header">
@@ -54,21 +85,21 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>ชื่อ-นามสกุล*</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="name" className="def-input" onChange={handleInputChange} value={input.name}/>
                             </div>
                             <div className="input-title">
                                 <span>เบอร์โทร*</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="0800000000" />
+                                <input type="text" name="phone" className="def-input" placeholder="0800000000" onChange={handleInputChange} value={input.phone}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-title">
                                 <span>อีเมล</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="example@gmail.com" />
+                                <input type="text" name="email" className="def-input" placeholder="example@gmail.com" onChange={handleInputChange} value={input.email}/>
                             </div>
                             <div className="input-title">
                                 <span>รหัสบัตรประชาชน</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="idCard" id="" className="def-input" onChange={handleInputChange} value={input.idCard}/>
                             </div>
                         </div>
                     </div>
@@ -78,34 +109,34 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>ประเภทงานซ่อม*</span>
-                                <select name="" id="" className="def-input">
-                                    <option value="1">Notebook</option>
-                                    <option value="1">Computer PC</option>
-                                    <option value="1">Printer</option>
-                                    <option value="1">Macbook</option>
-                                    <option value="1">UPS</option>
+                                <select name="deviceType" className="def-input" onChange={handleInputChange} value={input.deviceType}>
+                                    <option value="Notebook">Notebook</option>
+                                    <option value="Computer PC">Computer PC</option>
+                                    <option value="Printer">Printer</option>
+                                    <option value="Macbook">Macbook</option>
+                                    <option value="UPS">UPS</option>
                                 </select>
                             </div>
                             <div className="input-title">
                                 <span>ยี่ห้อและรุ่น*</span>
-                                <input type="text" name="" id="" className="def-input" />
+                                <input type="text" name="brandModel" className="def-input" onChange={handleInputChange} value={input.brandModel}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="column">
                                 <div className="input-title">
                                     <span>อาการที่ลูกค้าแจ้ง*</span>
-                                    <textarea name="" id="" className="def-input note" placeholder="เปิดติดไม่ขึ้นภาพ"></textarea>
+                                    <textarea name="symptoms" className="def-input note" placeholder="เปิดติดไม่ขึ้นภาพ" onChange={handleInputChange} value={input.symptoms}></textarea>
                                 </div>
                             </div>
                             <div className="column">
                                 <div className="input-title">
                                     <span>Product Nubmer {'(PN)'}</span>
-                                    <input type="text" name="" id="" className="def-input" />
+                                    <input type="text" name="productNumber" className="def-input" onChange={handleInputChange} value={input.productNumber}/>
                                 </div>
                                 <div className="input-title">
                                     <span>Serial Number {'(SN)'}*</span>
-                                    <input type="text" name="" id="" className="def-input" />
+                                    <input type="text" name="serialNumber" id="" className="def-input" onChange={handleInputChange} value={input.serialNumber}/>
                                 </div>
                             </div>
                         </div>
@@ -116,21 +147,21 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>ตำหนิ</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="มีรอยแตกที่บอดี้หลังเครื่อง" />
+                                <input type="text" name="defects" className="def-input" placeholder="มีรอยแตกที่บอดี้หลังเครื่อง" onChange={handleInputChange} value={input.defects}/>
                             </div>
                             <div className="input-title">
                                 <span>อุปกรณ์ที่ติดมาด้วย</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="สายชาร์จ กระเป๋า" />
+                                <input type="text" name="accessories" className="def-input" placeholder="สายชาร์จ กระเป๋า" onChange={handleInputChange} value={input.accessories} />
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-title">
                                 <span>สีของอุปกรณ์</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="ดำ ขาว" />
+                                <input type="text" name="color" className="def-input" placeholder="ดำ ขาว" onChange={handleInputChange} value={input.color} />
                             </div>
                             <div className="input-title">
                                 <span>รหัสผ่านอุปกรณ์</span>
-                                <input type="text" name="" id="" className="def-input" placeholder="1234" />
+                                <input type="text" name="password" className="def-input" placeholder="1234" onChange={handleInputChange} value={input.password} />
                             </div>
                         </div>
                     </div>
