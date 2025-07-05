@@ -67,14 +67,14 @@ export default function Sidebar() {
                 </li>
               </a>
               <a href="/alltask">
-                <li className="sidebar-sub-menu-item-expand">
+                <li className={`${location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `}>
                   <div className="menu-item-header">
                     <img src={taskIcon} alt="" />
                     <span>คลังงานซ่อมทั้งหมด</span>
                   </div>
                   <ul className="menu-expand-list">
-                    <a href="/">
-                      <li className="menu-expand-item">
+                    <a href="alltask">
+                      <li className={`menu-expand-item ${location === 'alltask' ? 'active' : ''}`}>
                         <div className="indicator"></div>
                         <span>ทั้งหมด</span>
                       </li>
