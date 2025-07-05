@@ -1,0 +1,46 @@
+:root {
+    --alltask-gap: 20px;
+    --alltask-sub-content-pad: var(--card-def-pad);
+}
+
+.alltask-content-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.alltask-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--addtask-gap);
+    gap: var(--alltask-gap);
+}
+
+.alltask-sub-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--alltask-gap);
+}
+
+.alltask-sub-content-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.filter-item {
+    display: flex;
+    gap: 10px;
+}
+
+.task-list-container {
+    height: 100%;
+    justify-content: space-between;
+}
+
+.task-list {
+    gap: 5px;
+}
