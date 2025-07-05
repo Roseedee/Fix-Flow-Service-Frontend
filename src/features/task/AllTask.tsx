@@ -6,6 +6,7 @@ import '@styles/features/task/AllTask.css';
 import SearchTaskItem from "@components/SearchTaskItem";
 
 //icon
+import arrowIcon from '@assets/icons/arrow.png';
 
 type SearchTaskItemProps = {
     id: string;
@@ -100,7 +101,16 @@ export default function AllTask() {
                         }
                     </div>
                 </div>
-                <div className="alltask-sub-content"><input type="text" className="def-input" /></div>
+                <div className="alltask-sub-content pagination-container">
+                    <div className="pagination-item prev disabled"><img src={arrowIcon} alt="" /></div>
+                    <div className="all-pagination">
+                        <div className="pagination-item active">1</div>
+                        <div className="pagination-item">2</div>
+                        <div className="pagination-item">3</div>
+                        <div className="pagination-item">4</div>
+                    </div>
+                    <div className="pagination-item next"><img src={arrowIcon} alt="" /></div>
+                </div>
             </div>
         </Layout>
     );

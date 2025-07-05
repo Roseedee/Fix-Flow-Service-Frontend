@@ -44,3 +44,60 @@
 .task-list {
     gap: 5px;
 }
+
+.pagination-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.all-pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.pagination-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background-color: #EDEDED;
+    cursor: pointer;
+    transition: var(--def-transition);
+
+    & img {
+        height: 12px;        
+    }
+
+    &:first-of-type {
+        & img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &:hover {
+        background-color: #dfdfdf;
+    }
+}
+
+.pagination-item.disabled {
+    cursor: not-allowed;
+
+    & img {
+        opacity: 0.5;
+    }
+    
+    &:hover {
+        background-color: #EDEDED;
+    }
+}
+
+.pagination-item.active {
+    border: 1px solid #767171;
+
+}
