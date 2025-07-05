@@ -139,6 +139,78 @@
                 }
             }
 
+            .sidebar-sub-menu-item-expand {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                padding: 10px var(--sidebar-def-padding);
+                gap: 10px;
+                border-radius: var(--radius-sm);
+                transition: var(--def-transition);
+
+                .menu-item-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    & img {
+                        opacity: 0.8;
+                        height: 20px;
+                        width: 20px;
+                    }
+
+                    & span {
+                        opacity: 0.8;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .menu-expand-list {
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    display: flex;
+                    gap: 15px;
+
+                    .menu-expand-item {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        gap: 10px;
+
+                        .indicator {
+                            height: 20px;
+                            width: 20px;
+                            border-radius: 100%;
+                            background-color: var(--color-black-05);
+                        }
+
+                        & span {
+                            opacity: 0.8;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+
+
+                &:hover {
+                    background-color: var(--color-black-03);
+                    cursor: pointer;
+
+                    & img,
+                    & span {
+                        opacity: 1;
+                    }
+                }
+            }
+
             .active {
                 background-color: var(--color-black-05);
                 cursor: pointer;

@@ -66,10 +66,28 @@ export default function Sidebar() {
                   <span>เพิ่มงานซ่อม</span>
                 </li>
               </a>
-              <li className="sidebar-sub-menu-item">
-                <img src={taskIcon} alt="" />
-                <span>คลังงานซ่อมทั้งหมด</span>
-              </li>
+              <a href="/alltask">
+                <li className="sidebar-sub-menu-item-expand">
+                  <div className="menu-item-header">
+                    <img src={taskIcon} alt="" />
+                    <span>คลังงานซ่อมทั้งหมด</span>
+                  </div>
+                  <ul className="menu-expand-list">
+                    <a href="/">
+                      <li className="menu-expand-item">
+                        <div className="indicator"></div>
+                        <span>ทั้งหมด</span>
+                      </li>
+                    </a>
+                    <a href="/">
+                      <li className="menu-expand-item">
+                        <div className="indicator"></div>
+                        <span>กำลังซ่อม</span>
+                      </li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
               <li className="sidebar-sub-menu-item">
                 <img src={recycleBinIcon} alt="" />
                 <span>งานซ่อมที่ลบ</span>
