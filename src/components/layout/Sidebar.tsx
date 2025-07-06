@@ -17,13 +17,14 @@ import taskBrandIcon from '@assets/icons/device.png';
 import brandIcon_Test from '@assets/images/brand.png';
 
 export default function Sidebar() {
+
   const [sidebarMin, setSidebarMin] = useState<boolean>(() => {
     const stored = localStorage.getItem('sidebarMin');
     return stored === 'true' ? true : false;
   });
 
 
-  const location = useLocation().pathname.split('/')[1];
+  const location = useLocation().pathname.split('/');
   const navigate = useNavigate();
 
   React.useEffect(() => {
@@ -41,16 +42,15 @@ export default function Sidebar() {
     setSidebarMin(!sidebarMin);
   };
   
+  //onchange sidebar minimized 
   React.useEffect(() => {
-    console.log('set new sidebar state')
     resizeLayout()
     localStorage.setItem('sidebarMin', String(sidebarMin))
   }, [sidebarMin]);
 
   // React.useEffect(() => {
-  //   console.log("Current location:", location);
-  // }, [location]);
-
+  //   console.log(location)
+  // }, [location])
 
   return (
     <div className={`sidebar-container ${sidebarMin ? 'sidebar-container-min' : ''}`}>
@@ -67,13 +67,13 @@ export default function Sidebar() {
             <h4>เมนูทั่วไป</h4>
             <ul>
               <a href="/dashboard">
-                <li className={`sidebar-sub-menu-item ${location === 'dashboard' ? 'active' : ''}`}>
+                <li className={`sidebar-sub-menu-item ${location[1] === 'dashboard' ? 'active' : ''}`}>
                   <img src={dashboardIcon} alt="" />
                   <span>แดชบอร์ดงานซ่อม</span>
                 </li>
               </a>
               <a href="/search">
-                <li className={`sidebar-sub-menu-item ${location === 'search' ? 'active' : ''}`}>
+                <li className={`sidebar-sub-menu-item ${location[1] === 'search' ? 'active' : ''}`}>
                   <img src={searchIcon} alt="" />
                   <span>ค้นหางานซ่อม</span>
                 </li>
@@ -84,19 +84,19 @@ export default function Sidebar() {
             <h4>เมนูงานซ่อม</h4>
             <ul>
               <a href="/addtask">
-                <li className={`sidebar-sub-menu-item ${location === 'addtask' ? 'active' : ''}`}>
+                <li className={`sidebar-sub-menu-item ${location[1] === 'addtask' ? 'active' : ''}`}>
                   <img src={addIcon} alt="" />
                   <span>เพิ่มงานซ่อม</span>
                 </li>
               </a>
-              <li className={`${location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `} onClick={() => navigate('/alltask')}>
+              <li className={`${location[1] === 'task' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `} onClick={() => navigate('/task/alltask')}>
                 <div className="menu-item-header">
                   <img src={taskIcon} alt="" />
                   <span>คลังงานซ่อมทั้งหมด</span>
                 </div>
                 <ul className="menu-expand-list">
                   <a href="/alltask">
-                    <li className={`menu-expand-item ${location === 'alltask' ? 'active' : ''}`}>
+                    <li className={`menu-expand-item ${location[2] === 'alltask' ? 'active' : ''}`}>
                       <div className="indicator"></div>
                       <span>ทั้งหมด</span>
                     </li>

@@ -20,7 +20,7 @@ export default function AppRouter() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/search" element={<Search />} />
         <Route path="/addtask" element={<AddTask />}/>
-        <Route path="/alltask" element={<AllTask />} />
+        <Route path="/task/alltask" element={<AllTask />} />
       </Routes>
     </BrowserRouter>
   );
