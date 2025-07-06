@@ -17,22 +17,39 @@ import taskBrandIcon from '@assets/icons/device.png';
 import brandIcon_Test from '@assets/images/brand.png';
 
 export default function Sidebar() {
-  const [sidebarMin, setSidebarMin] = useState(false);
+  const [sidebarMin, setSidebarMin] = useState<boolean>(() => {
+    const stored = localStorage.getItem('sidebarMin');
+    return stored === 'true' ? true : false;
+  });
+
 
   const location = useLocation().pathname.split('/')[1];
   const navigate = useNavigate();
 
-  const toggleSidebar = () => {
+  React.useEffect(() => {
+    resizeLayout()
+  }, [])
+
+  const resizeLayout = () => {
     const sidebarMaxW = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-max-width').trim();
     const sidebarMinW = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-min-width').trim();
 
-    document.documentElement.style.setProperty('--layout-container-pad-left', sidebarMin ? sidebarMaxW : sidebarMinW);
+    document.documentElement.style.setProperty('--layout-container-pad-left', !sidebarMin ? sidebarMaxW : sidebarMinW);
+  }
+
+  const toggleSidebar = () => {
     setSidebarMin(!sidebarMin);
   };
-
+  
   React.useEffect(() => {
-    console.log("Current location:", location);
-  }, [location]);
+    console.log('set new sidebar state')
+    resizeLayout()
+    localStorage.setItem('sidebarMin', String(sidebarMin))
+  }, [sidebarMin]);
+
+  // React.useEffect(() => {
+  //   console.log("Current location:", location);
+  // }, [location]);
 
 
   return (
@@ -72,7 +89,7 @@ export default function Sidebar() {
                   <span>เพิ่มงานซ่อม</span>
                 </li>
               </a>
-              <li className={`${ location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `} onClick={() => navigate('/alltask')}>
+              <li className={`${location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `} onClick={() => navigate('/alltask')}>
                 <div className="menu-item-header">
                   <img src={taskIcon} alt="" />
                   <span>คลังงานซ่อมทั้งหมด</span>
