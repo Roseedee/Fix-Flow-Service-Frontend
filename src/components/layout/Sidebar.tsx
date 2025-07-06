@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '@styles/components/layout/Sidebar.css';
-import { useLocation } from "react-router-dom";
+import { Navigate, NavigationType, useLocation, useNavigate } from "react-router-dom";
 
 import appIcon from '@assets/icons/app.png';
 import arrowIcon from '@assets/icons/arrow.png';
@@ -20,6 +20,7 @@ export default function Sidebar() {
   const [sidebarMin, setSidebarMin] = useState(false);
 
   const location = useLocation().pathname.split('/')[1];
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     const sidebarMaxW = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-max-width').trim();
@@ -71,13 +72,13 @@ export default function Sidebar() {
                   <span>เพิ่มงานซ่อม</span>
                 </li>
               </a>
-              <li className={`${ location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `}>
+              <li className={`${ location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `} onClick={() => navigate('/alltask')}>
                 <div className="menu-item-header">
                   <img src={taskIcon} alt="" />
                   <span>คลังงานซ่อมทั้งหมด</span>
                 </div>
                 <ul className="menu-expand-list">
-                  <a href="alltask">
+                  <a href="/alltask">
                     <li className={`menu-expand-item ${location === 'alltask' ? 'active' : ''}`}>
                       <div className="indicator"></div>
                       <span>ทั้งหมด</span>
