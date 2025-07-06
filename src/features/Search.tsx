@@ -151,7 +151,7 @@ export default function Search() {
                 <div className="search-task-result-list">
                     {
                         exampleTasks.map((item, index) => (
-                            <SearchTaskItem task={item} />
+                            <SearchTaskItem task={item} key={index} />
                         ))
                     }
                 </div>

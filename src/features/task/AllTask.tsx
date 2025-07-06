@@ -96,7 +96,7 @@ export default function AllTask() {
                     <div className="alltask-sub-content task-list">
                         {
                             exampleTasks.map((item, index) => (
-                                <SearchTaskItem task={item} />
+                                <SearchTaskItem task={item} key={index} />
                             ))
                         }
                     </div>

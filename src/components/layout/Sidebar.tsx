@@ -29,6 +29,11 @@ export default function Sidebar() {
     setSidebarMin(!sidebarMin);
   };
 
+  React.useEffect(() => {
+    console.log("Current location:", location);
+  }, [location]);
+
+
   return (
     <div className={`sidebar-container ${sidebarMin ? 'sidebar-container-min' : ''}`}>
       <div className="sidebar-content">
@@ -66,28 +71,26 @@ export default function Sidebar() {
                   <span>เพิ่มงานซ่อม</span>
                 </li>
               </a>
-              <a href="/alltask">
-                <li className={`${location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `}>
-                  <div className="menu-item-header">
-                    <img src={taskIcon} alt="" />
-                    <span>คลังงานซ่อมทั้งหมด</span>
-                  </div>
-                  <ul className="menu-expand-list">
-                    <a href="alltask">
-                      <li className={`menu-expand-item ${location === 'alltask' ? 'active' : ''}`}>
-                        <div className="indicator"></div>
-                        <span>ทั้งหมด</span>
-                      </li>
-                    </a>
-                    <a href="/">
-                      <li className="menu-expand-item">
-                        <div className="indicator"></div>
-                        <span>กำลังซ่อม</span>
-                      </li>
-                    </a>
-                  </ul>
-                </li>
-              </a>
+              <li className={`${ location === 'alltask' ? 'sidebar-sub-menu-item-expand' : 'sidebar-sub-menu-item-collapse'} `}>
+                <div className="menu-item-header">
+                  <img src={taskIcon} alt="" />
+                  <span>คลังงานซ่อมทั้งหมด</span>
+                </div>
+                <ul className="menu-expand-list">
+                  <a href="alltask">
+                    <li className={`menu-expand-item ${location === 'alltask' ? 'active' : ''}`}>
+                      <div className="indicator"></div>
+                      <span>ทั้งหมด</span>
+                    </li>
+                  </a>
+                  <a href="/">
+                    <li className="menu-expand-item">
+                      <div className="indicator"></div>
+                      <span>กำลังซ่อม</span>
+                    </li>
+                  </a>
+                </ul>
+              </li>
               <li className="sidebar-sub-menu-item">
                 <img src={recycleBinIcon} alt="" />
                 <span>งานซ่อมที่ลบ</span>
