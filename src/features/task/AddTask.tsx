@@ -104,8 +104,9 @@ export default function AddTask() {
 
     return (
         <Layout>
-            <div className="add-task-header">
+            <div className="addtask-header">
                 <h2>เพิ่มงานซ่อม</h2>
+                <span><input type="checkbox" name="" id="" />เพิ่มงานซ่อมแบบด่วน</span>
             </div>
             <div className="addtask-content card">
                 <div className="addtask-sub-content">

@@ -3,6 +3,17 @@
     --addtask-sub-content-pad: var(--card-def-pad);
 }
 
+.addtask-header {
+
+    & span {
+        padding-top: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
 .addtask-content {
     display: flex;
     flex-direction: column;
