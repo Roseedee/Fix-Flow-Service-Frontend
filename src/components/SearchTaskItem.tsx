@@ -7,6 +7,7 @@ import editIcon from "@assets/icons/edit-white.png"
 
 interface Task {
     id: string;
+    color: string;
     getter: string;
     cName: string;
     cPhone: string;
@@ -27,7 +28,7 @@ export default function SearchTaskItem({ task }: SearchTaskItemProps) {
 
     return (
         <div className="task-row">
-            <div className="color-indicator"></div>
+            <div className="color-indicator" style={{backgroundColor: task.color}}></div>
             <div className="cell task-data-form-1">
                 <span>รหัส</span>
                 <p>{task.id}</p>

@@ -10,6 +10,7 @@ import arrowIcon from '@assets/icons/arrow.png';
 
 type SearchTaskItemProps = {
     id: string;
+    color: string;
     getter: string;
     cName: string;
     cPhone: string;
@@ -25,6 +26,7 @@ type SearchTaskItemProps = {
 const exampleTasks: SearchTaskItemProps[] = [
     {
         id: "1254687791",
+        color: '#a9c352',
         getter: "รอซีดี เจ๊ะแล๊ะ",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0630742165",
@@ -38,6 +40,7 @@ const exampleTasks: SearchTaskItemProps[] = [
     },
     {
         id: "1254687792",
+        color: '#a9c352',
         getter: "สมศักดิ์ คงดี",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -51,6 +54,21 @@ const exampleTasks: SearchTaskItemProps[] = [
     },
     {
         id: "1254687793",
+        color: '#b9b39b',
+        getter: "สุภาพร แสงทอง",
+        cName: "ประหยัด สุวรรณ",
+        cPhone: "0898765432",
+        taskType: "#PC",
+        brand: "Acer Aspire",
+        sn: "SN12345678",
+        pn: "PN98765432",
+        price: "1500-2000",
+        repairer: "ช่างหนึ่ง",
+        report: "มีเสียงดังผิดปกติจากพัดลม",
+    },
+    {
+        id: "1254687793",
+        color: 'red',
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0898765432",
