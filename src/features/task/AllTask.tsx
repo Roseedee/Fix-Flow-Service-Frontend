@@ -91,7 +91,6 @@ export default function AllTask() {
                             </select>
                             <input type="text" className="def-input" placeholder="ค้นหา" />
                         </div>
-                        <div className="filter-item"></div>
                     </div>
                     <div className="alltask-sub-content task-list">
                         {
