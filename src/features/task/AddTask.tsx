@@ -23,24 +23,24 @@ export default function AddTask() {
 
     //input
     const [input, setInput] = React.useState({
-        name: 'asdf',
-        phone: 'asdf',
-        email: 'asdf',
-        idCard: 'asdf',
-        deviceType: 'Printer',
-        brandModel: 'asdf',
-        symptoms: 'asdf',
-        productNumber: 'asdf',
-        serialNumber: 'asdf',
-        defects: 'asdf',
-        accessories: 'asdf',
-        color: 'asdf',
-        password: 'asdf',
+        name: '',
+        phone: '',
+        email: '',
+        idCard: '',
+        deviceType: 'ไม่มี',
+        brandModel: '',
+        symptoms: '',
+        productNumber: '',
+        serialNumber: '',
+        defects: '',
+        accessories: '',
+        color: '',
+        password: '',
         taskDate: Today(),
         deposit: '0',
         repairTime: '2',
         estimatedPrice: '1000',
-        notes: 'asdf'
+        notes: ''
     });
 
     //image upload state
@@ -140,6 +140,7 @@ export default function AddTask() {
                             <div className="input-title">
                                 <span>ประเภทงานซ่อม*</span>
                                 <select name="deviceType" className="def-input" onChange={handleInputChange} value={input.deviceType}>
+                                    <option value="ไม่มี">ไม่มี</option>
                                     <option value="Notebook">Notebook</option>
                                     <option value="Computer PC">Computer PC</option>
                                     <option value="Printer">Printer</option>
