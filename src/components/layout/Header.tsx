@@ -2,6 +2,7 @@ import React from "react";
 import '@styles/components/layout/Header.css';
 
 import headerIcon from '@assets/icons/task.png';
+import burgerBarIcon from '@assets/icons/burger-bar.png'
 import searchIcon from '@assets/icons/search.png';
 import notificationIcon from '@assets/icons/notification.png';
 import notificationNotReadIcon from '@assets/icons/notification-not-read.png';
@@ -16,13 +17,20 @@ export default function Header() {
     alert("You searched for: " + searchValue);
   }
 
+  const handleToggleBurgerMenu = () => {
+    alert("toggle burger menu")
+  }
+
   return (
     <div className="header-container">
-      <div className="header-content">
+      <div className="header-content home">
         <img src={ headerIcon } alt="" />
         <h3>ระบบจัดการงานซ่อม</h3>
       </div>
-      <div className="header-content">
+      <div className="header-content burger-bar" onClick={handleToggleBurgerMenu}>
+        <img src={ burgerBarIcon } alt="" />
+      </div>
+      <div className="header-content search">
         <form onSubmit={ handleSearch }>
           <label className="header-input-search-container">
             <input type="text" name="qsearch" className="header-input" placeholder="Quick Search" autoComplete="off" />
@@ -32,7 +40,7 @@ export default function Header() {
           </label>
         </form>
       </div>
-      <div className="header-content">
+      <div className="header-content profile">
         <button className="header-button-notification">
           <img src={ notificationIcon } alt="" />
           <span>การแจ้งเตือน</span>
