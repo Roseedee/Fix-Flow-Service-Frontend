@@ -115,11 +115,15 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>ชื่อ-นามสกุล*</span>
-                                <input type="text" name="name" className="def-input" onChange={handleInputChange} value={input.name}/>
+                                <input type="text" name="name" className="def-input" onChange={handleInputChange} value={input.name} autoComplete="no"/>
+                                <div className="popup-recommand-data-container name-recommand-popup">
+                                </div>
                             </div>
                             <div className="input-title">
                                 <span>เบอร์โทร*</span>
-                                <input type="text" name="phone" className="def-input" placeholder="0800000000" onChange={handleInputChange} value={input.phone}/>
+                                <input type="text" name="phone" className="def-input" placeholder="0800000000" onChange={handleInputChange} value={input.phone} autoComplete="no"/>
+                                <div className="popup-recommand-data-container phone-recommand-popup">
+                                </div>
                             </div>
                         </div>
                         <div className="row">
