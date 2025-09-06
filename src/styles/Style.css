@@ -2,8 +2,11 @@
 
 @import url('./Variables.css');
 @import url('./Font.css');
+
 @import url('@styles/components/controller/input.css');
 @import url('@styles/components/controller/button.css');
+@import url('@styles/components/controller/loader.css');
+
 @import url('@styles/components/hr.css');
 
 * {
