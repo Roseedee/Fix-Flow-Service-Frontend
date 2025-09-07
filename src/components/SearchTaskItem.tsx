@@ -5,20 +5,9 @@ import "@styles/components/SearchTaskItem.css"
 import fullSizeIcon from "@assets/icons/full-size-white.png"
 import editIcon from "@assets/icons/edit-white.png"
 
-interface Task {
-    id: string;
-    color: string;
-    getter: string;
-    cName: string;
-    cPhone: string;
-    taskType: string;
-    brand: string;
-    sn: string;
-    pn: string;
-    price: string;
-    repairer: string;
-    report: string;
-}
+//model
+import Task from "@model/task/Task"
+import { TaskColor } from "@model/task/TaskStatus"
 
 interface SearchTaskItemProps {
     task: Task;
@@ -28,7 +17,7 @@ export default function SearchTaskItem({ task }: SearchTaskItemProps) {
 
     return (
         <div className="task-row">
-            <div className="color-indicator" style={{backgroundColor: task.color}}></div>
+            <div className="color-indicator" style={{backgroundColor: TaskColor(task.status)}}></div>
             <div className="cell task-data-form-1">
                 <span>รหัส</span>
                 <p>{task.id}</p>
