@@ -136,7 +136,7 @@ export default function Sidebar() {
               <li className="sidebar-sub-menu-item">
                 <img src={systemReportIcon} alt="" />
                 <span>รายงานของระบบ</span>
-                <span className="noti-number">2</span>
+                <span className="noti-number" style={{backgroundColor: 'red'}}>2</span>
               </li>
             </ul>
           </div>
