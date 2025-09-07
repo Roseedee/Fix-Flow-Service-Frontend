@@ -39,7 +39,7 @@ export default function AddTask() {
         taskDate: Today(),
         deposit: '0',
         repairTime: '2',
-        estimatedPrice: '1000',
+        estimatedPrice: '100',
         notes: ''
     });
 
@@ -79,6 +79,8 @@ export default function AddTask() {
     const handleInputChange = (e: any) => {
         const { name, value } = e.target;
         setInput((prev) => ({ ...prev, [name]: value }));
+        name === "name" && handleInputNameChange(e);
+        name === "phone" && handleInputPhoneChange(e);
     }
 
     const handleInputPhoneChange = (e: any) => {
@@ -106,8 +108,7 @@ export default function AddTask() {
             typingTimer = setTimeout(() => {
                 setIsTyping(false);
                 console.log("done typing name:", input.name);
-            }
-                , doneTypingDelay);
+            }, doneTypingDelay);
         }
         return () => clearTimeout(typingTimer);
     }, [input.name]);
@@ -151,14 +152,35 @@ export default function AddTask() {
                         <div className="row">
                             <div className="input-title">
                                 <span>ชื่อ-นามสกุล*</span>
-                                <input type="text" name="name" className="def-input" onChange={handleInputChange} onInput={handleInputNameChange} value={input.name} autoComplete="no" />
-                                <div className="popup-recommand-data-container name-recommand-popup">
-                                </div>
+                                <input type="text" name="name" className="def-input" onChange={handleInputChange} value={input.name} autoComplete="no" />
+                                {/* <ul className="popup-recommand-data-container name-recommand-popup">
+                                    <li className="popup-recommand-item loader-item">
+                                        <div className="loader sm"></div>
+                                    </li>
+                                    <li className="popup-recommand-item">
+                                        สมชาย ใจดี
+                                    </li>
+                                    <li className="popup-recommand-item">
+                                        นางสาวสมหญิง แสนดี
+                                    </li>
+                                    <li className="popup-recommand-item">
+                                        นายสมปอง รวยริน
+                                    </li>
+                                    <li className="popup-recommand-item">
+                                        นางสาวสมศรี มีสุข
+                                    </li>
+                                    <li className="popup-recommand-item">
+                                        นายสมบัติ ทองดี
+                                    </li>
+                                    <li className="popup-recommand-item">
+                                        นางสาวสมใจ ศรีสุข
+                                    </li>
+                                </ul> */}
                             </div>
                             <div className="input-title">
                                 <span>เบอร์โทร*</span>
-                                <input type="text" name="phone" className="def-input" placeholder="0800000000" onChange={handleInputChange} onInput={handleInputPhoneChange} value={input.phone} autoComplete="no" />
-                                <ul className="popup-recommand-data-container phone-recommand-popup">
+                                <input type="text" name="phone" className="def-input" placeholder="0800000000" onChange={handleInputChange} value={input.phone} autoComplete="no" />
+                                {/* <ul className="popup-recommand-data-container phone-recommand-popup">
                                     <li className="popup-recommand-item loader-item">
                                         <div className="loader sm"></div>
                                     </li>
@@ -180,7 +202,7 @@ export default function AddTask() {
                                     <li className="popup-recommand-item">
                                         0665432198(นางสาวสมใจ ศรีสุข)
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                         <div className="row">
