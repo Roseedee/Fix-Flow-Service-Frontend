@@ -150,7 +150,7 @@ export default function Dashboard() {
             <div className="dashboard-content-row">
                 <div className="dashboard-content">
                     <div className="row space-between">
-                        <h4>งานซ๋อมที่เข้าระบบ</h4>
+                        <h4>งานซ่อมที่เข้าระบบ</h4>
                         <select name="" id="" className='input-selector'>
                             <option value="1">วันนี้</option>
                             <option value="2">สัปดาห์นี้</option>
@@ -161,7 +161,7 @@ export default function Dashboard() {
                 </div>
                 <div className="dashboard-content">
                     <div className="row space-between">
-                        <h4>งานซ๋อมที่เข้าระบบ</h4>
+                        <h4>งานซ่อมที่เข้าระบบ</h4>
                         <select name="" id="" className='input-selector'>
                             <option value="1">วันนี้</option>
                             <option value="2">สัปดาห์นี้</option>
