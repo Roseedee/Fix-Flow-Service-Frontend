@@ -1,4 +1,4 @@
-export default function Today() {
+export function getCurrentDate() {
     const today = new Date();
 
     const formattedForInput = today.toISOString().split('T')[0]; // yyyy-MM-dd

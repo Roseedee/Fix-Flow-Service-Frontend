@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import Layout from "@components/layout/Layout";
-import Today, { getCurrentTime } from "@util/DateTime";
+import { getCurrentDate, getCurrentTime } from "@util/DateTime";
 
 import '@styles/features/task/AddTask.css'
-
-
 
 //icon
 import photoIcon from '@assets/icons/camera.png';
@@ -19,31 +17,15 @@ import imgTest2 from '@assets/images/test1.jpg';
 import imgTest3 from '@assets/images/test2.jpg';
 // import imgTest4 from '@assets/images/test3.jpeg';
 
+//data model
+import { AddTaskData } from '@model/task/AddTask';
+
 export default function AddTask() {
 
     //input
-    const [input, setInput] = React.useState({
-        name: '',
-        phone: '',
-        email: '',
-        idCard: '',
-        deviceType: 'ไม่มี',
-        brandModel: '',
-        symptoms: '',
-        productNumber: '',
-        serialNumber: '',
-        defects: '',
-        accessories: '',
-        color: '',
-        password: '',
-        taskDate: Today(),
-        deposit: '0',
-        repairTime: '2',
-        estimatedPrice: '100',
-        notes: ''
-    });
+    const [input, setInput] = React.useState(AddTaskData);
 
-    //image upload state
+    //image state
     const maxImageUpload: number = 5;
     const [imagesUpload, setImagesUpload] = React.useState<File[]>([]);
 
@@ -115,26 +97,7 @@ export default function AddTask() {
 
     const handleResetForm = () => {
         if (confirm("คุณต้องการล้างข้อมูลทั้งหมดหรือไม่?")) {
-            setInput({
-                name: '',
-                phone: '',
-                email: '',
-                idCard: '',
-                deviceType: 'Notebook',
-                brandModel: '',
-                symptoms: '',
-                productNumber: '',
-                serialNumber: '',
-                defects: '',
-                accessories: '',
-                color: '',
-                password: '',
-                taskDate: Today(),
-                deposit: '0',
-                repairTime: '1',
-                estimatedPrice: '',
-                notes: ''
-            });
+            setInput(AddTaskData);
             setImagesUpload([]);
         }
     }
@@ -212,7 +175,7 @@ export default function AddTask() {
                             </div>
                             <div className="input-title">
                                 <span>รหัสบัตรประชาชน</span>
-                                <input type="text" name="idCard" id="" className="def-input" onChange={handleInputChange} value={input.idCard} />
+                                <input type="text" name="idCard" id="" className="def-input" onChange={handleInputChange} value={input.idCard} placeholder="19XXXXXXXXXXX" />
                             </div>
                         </div>
                     </div>

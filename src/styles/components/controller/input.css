@@ -37,4 +37,8 @@
     &:focus {
         border: 1px solid #afafaf;
     }
+
+    &::placeholder {
+        color: var(--color-text-placeholder);
+    }
 }
