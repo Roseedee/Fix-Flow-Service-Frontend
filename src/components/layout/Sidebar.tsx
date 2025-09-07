@@ -13,6 +13,7 @@ import recycleBinIcon from '@assets/icons/recycle-bin.png';
 import taskStatusIcon from '@assets/icons/task-status.png';
 import taskTypeIcon from '@assets/icons/task-type.png';
 import taskBrandIcon from '@assets/icons/device.png';
+import systemReportIcon from '@assets/icons/bar-chart.png';
 
 import brandIcon_Test from '@assets/images/brand.png';
 
@@ -99,12 +100,14 @@ export default function Sidebar() {
                     <li className={`menu-expand-item ${location[2] === 'alltask' ? 'active' : ''}`}>
                       <div className="indicator"></div>
                       <span>ทั้งหมด</span>
+                      <span className="noti-number">256</span>
                     </li>
                   </a>
                   <a href="/">
                     <li className="menu-expand-item">
                       <div className="indicator"></div>
                       <span>กำลังซ่อม</span>
+                      <span className="noti-number">12</span>
                     </li>
                   </a>
                 </ul>
@@ -129,6 +132,11 @@ export default function Sidebar() {
               <li className="sidebar-sub-menu-item">
                 <img src={taskBrandIcon} alt="" />
                 <span>ยี่ห้อและรุ่นงานซ่อม</span>
+              </li>
+              <li className="sidebar-sub-menu-item">
+                <img src={systemReportIcon} alt="" />
+                <span>รายงานของระบบ</span>
+                <span className="noti-number">2</span>
               </li>
             </ul>
           </div>
