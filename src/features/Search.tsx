@@ -6,7 +6,7 @@ import '@styles/features/Search.css'
 import TaskModel, { TaskDataEx } from "@model/task/Task";
 
 //components
-import SearchTaskItem from "@components/SearchTaskItem";
+import TaskItem from "@components/TaskItem";
 
 const exampleTasks: TaskModel[] = TaskDataEx;
 
@@ -98,7 +98,7 @@ export default function Search() {
                 <div className="search-task-result-list">
                     {
                         exampleTasks.map((item, index) => (
-                            <SearchTaskItem task={item} key={index} />
+                            <TaskItem task={item} key={index} />
                         ))
                     }
                 </div>

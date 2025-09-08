@@ -13,7 +13,7 @@ interface SearchTaskItemProps {
     task: Task;
 }
 
-export default function SearchTaskItem({ task }: SearchTaskItemProps) {
+export default function TaskItem({ task }: SearchTaskItemProps) {
 
     return (
         <div className="task-row">

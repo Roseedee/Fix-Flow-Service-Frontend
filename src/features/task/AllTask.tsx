@@ -1,21 +1,30 @@
-import React from "react";
+import React, { use } from "react";
 import Layout from "@components/layout/Layout";
 import '@styles/features/task/AllTask.css';
+import { useLocation } from "react-router-dom";
 
 //model
 import TaskModel, {TaskDataEx} from '@model/task/Task'
 
 //components
-import SearchTaskItem from "@components/SearchTaskItem";
+import SearchTaskItem from "@components/TaskItem";
 
 //icon
 import arrowIcon from '@assets/icons/arrow.png';
+import TaskItem from "@components/TaskItem";
 
 
 const exampleTasks: TaskModel[] = TaskDataEx;
 
 
 export default function AllTask() {
+
+    const localtion = useLocation().pathname.split('/');
+
+    // React.useEffect(() => {
+    //     console.log(localtion[localtion.length - 1]) //end path
+    // }, [])
+
     return (
         <Layout>
             <div className="alltask-content-header">
@@ -45,7 +54,7 @@ export default function AllTask() {
                     <div className="alltask-sub-content task-list">
                         {
                             exampleTasks.map((item, index) => (
-                                <SearchTaskItem task={item} key={index} />
+                                <TaskItem task={item} key={index} />
                             ))
                         }
                     </div>
