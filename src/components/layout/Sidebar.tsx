@@ -17,6 +17,8 @@ import systemReportIcon from '@assets/icons/bar-chart.png';
 
 import brandIcon_Test from '@assets/images/brand.png';
 
+import TaskStatus, { TaskColor } from "@model/task/TaskStatus";
+
 export default function Sidebar() {
 
   const [sidebarMin, setSidebarMin] = useState<boolean>(() => {
@@ -96,17 +98,45 @@ export default function Sidebar() {
                   <span>คลังงานซ่อมทั้งหมด</span>
                 </div>
                 <ul className="menu-expand-list">
-                  <a href="/alltask">
+                  <a href="/task/alltask">
                     <li className={`menu-expand-item ${location[2] === 'alltask' ? 'active' : ''}`}>
                       <div className="indicator"></div>
                       <span>ทั้งหมด</span>
                       <span className="noti-number">256</span>
                     </li>
                   </a>
-                  <a href="/">
-                    <li className="menu-expand-item">
-                      <div className="indicator"></div>
+                  <a href="/task/inprogress">
+                    <li className={`menu-expand-item ${location[2] === 'inprogress' ? 'active' : ''}`}>
+                      <div className="indicator" style={{backgroundColor: TaskColor(TaskStatus.IN_PROGRESS)}}></div>
                       <span>กำลังซ่อม</span>
+                      <span className="noti-number">12</span>
+                    </li>
+                  </a>
+                  <a href="/task/awaitingparts">
+                    <li className={`menu-expand-item ${location[2] === 'awaitingparts' ? 'active' : ''}`}>
+                      <div className="indicator" style={{backgroundColor: TaskColor(TaskStatus.COMPLETED)}}></div>
+                      <span>รออะไหล่</span>
+                      <span className="noti-number">12</span>
+                    </li>
+                  </a>
+                  <a href="/task/completed">
+                    <li className={`menu-expand-item ${location[2] === 'completed' ? 'active' : ''}`}>
+                      <div className="indicator" style={{backgroundColor: TaskColor(TaskStatus.COMPLETED)}}></div>
+                      <span>ซ่อมเสร็จแล้ว</span>
+                      <span className="noti-number">12</span>
+                    </li>
+                  </a>
+                  <a href="/task/delivered">
+                    <li className={`menu-expand-item ${location[2] === 'delivered' ? 'active' : ''}`}>
+                      <div className="indicator" style={{backgroundColor: TaskColor(TaskStatus.DELIVERED)}}></div>
+                      <span>รับเครื่องแล้ว</span>
+                      <span className="noti-number">12</span>
+                    </li>
+                  </a>
+                  <a href="/task/cancelled">
+                    <li className={`menu-expand-item ${location[2] === 'cancelled' ? 'active' : ''}`}>
+                      <div className="indicator" style={{backgroundColor: TaskColor(TaskStatus.CANCELLED)}}></div>
+                      <span>รับเครื่องแล้ว</span>
                       <span className="noti-number">12</span>
                     </li>
                   </a>

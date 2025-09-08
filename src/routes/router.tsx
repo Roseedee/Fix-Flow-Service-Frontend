@@ -21,6 +21,11 @@ export default function AppRouter() {
         <Route path="/search" element={<Search />} />
         <Route path="/addtask" element={<AddTask />}/>
         <Route path="/task/alltask" element={<AllTask />} />
+        <Route path="/task/inprogress" element={<AllTask />} />
+        <Route path="/task/completed" element={<AllTask />} />
+        <Route path="/task/delivered" element={<AllTask />} />
+        <Route path="/task/cancelled" element={<AllTask />} />
+        <Route path="/task/awaitingparts" element={<AllTask />} />
       </Routes>
     </BrowserRouter>
   );
