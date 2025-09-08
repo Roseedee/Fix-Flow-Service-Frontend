@@ -8,35 +8,32 @@ import TaskModel, {TaskDataEx} from '@model/task/Task'
 import TaskStatus from "@model/task/TaskStatus";
 
 //components
-import SearchTaskItem from "@components/TaskItem";
+import TaskItem from "@components/TaskItem";
 
 //icon
 import arrowIcon from '@assets/icons/arrow.png';
-import TaskItem from "@components/TaskItem";
 
 export default function AllTask() {
 
-    const [Tasks, setTasks] = React.useState<TaskModel[]>(TaskDataEx);
-
     const localtion = useLocation().pathname.split('/');
 
-    React.useEffect(() => {
-
+    const [Tasks, setTasks] = React.useState<TaskModel[]>(TaskDataEx.filter(item => {
         const path = localtion[localtion.length - 1];
-        console.log(path)
+        // console.log(path)
         if (path === 'inprogress') {
-            setTasks(Tasks.filter(item => item.status === TaskStatus.IN_PROGRESS));
+            return item.status === TaskStatus.IN_PROGRESS;
         }else if (path === 'completed') {
-            setTasks(Tasks.filter(item => item.status === TaskStatus.COMPLETED));
+            return item.status === TaskStatus.COMPLETED;
         }else if (path === 'delivered') {
-            setTasks(Tasks.filter(item => item.status === TaskStatus.DELIVERED));
+            return item.status === TaskStatus.DELIVERED;
         }else if (path === 'cancelled') {
-            setTasks(Tasks.filter(item => item.status === TaskStatus.CANCELLED));
+            return item.status === TaskStatus.CANCELLED;
         }else if (path === 'awaitingparts') {
-            setTasks(Tasks.filter(item => item.status === TaskStatus.AWAITING_PARTS));
+            return item.status === TaskStatus.AWAITING_PARTS;
+        }else {
+            return item;
         }
-
-    }, [])
+    }));
 
     return (
         <Layout>
