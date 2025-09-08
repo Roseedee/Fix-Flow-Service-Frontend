@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 
 //model
 import TaskModel, {TaskDataEx} from '@model/task/Task'
+import TaskStatus from "@model/task/TaskStatus";
 
 //components
 import SearchTaskItem from "@components/TaskItem";
@@ -13,17 +14,29 @@ import SearchTaskItem from "@components/TaskItem";
 import arrowIcon from '@assets/icons/arrow.png';
 import TaskItem from "@components/TaskItem";
 
-
-const exampleTasks: TaskModel[] = TaskDataEx;
-
-
 export default function AllTask() {
+
+    const [Tasks, setTasks] = React.useState<TaskModel[]>(TaskDataEx);
 
     const localtion = useLocation().pathname.split('/');
 
-    // React.useEffect(() => {
-    //     console.log(localtion[localtion.length - 1]) //end path
-    // }, [])
+    React.useEffect(() => {
+
+        const path = localtion[localtion.length - 1];
+        console.log(path)
+        if (path === 'inprogress') {
+            setTasks(Tasks.filter(item => item.status === TaskStatus.IN_PROGRESS));
+        }else if (path === 'completed') {
+            setTasks(Tasks.filter(item => item.status === TaskStatus.COMPLETED));
+        }else if (path === 'delivered') {
+            setTasks(Tasks.filter(item => item.status === TaskStatus.DELIVERED));
+        }else if (path === 'cancelled') {
+            setTasks(Tasks.filter(item => item.status === TaskStatus.CANCELLED));
+        }else if (path === 'awaitingparts') {
+            setTasks(Tasks.filter(item => item.status === TaskStatus.AWAITING_PARTS));
+        }
+
+    }, [])
 
     return (
         <Layout>
@@ -53,7 +66,7 @@ export default function AllTask() {
                     </div>
                     <div className="alltask-sub-content task-list">
                         {
-                            exampleTasks.map((item, index) => (
+                            Tasks.map((item, index) => (
                                 <TaskItem task={item} key={index} />
                             ))
                         }

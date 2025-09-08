@@ -18,7 +18,7 @@ export default interface Task {
 export const TaskDataEx: Task[] = [
     {
         id: "1254687701",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.IN_PROGRESS,
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0630742165",
@@ -32,7 +32,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687702",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สมศักดิ์ คงดี",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -46,7 +46,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687703",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สมศักดิ์ คงดี",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -60,7 +60,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687704",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0630742165",
@@ -88,7 +88,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687706",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สายสมร พรมทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0812345678",
@@ -116,7 +116,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687708",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0898765432",
@@ -158,7 +158,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687711",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สายสมร พรมทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0923344556",
@@ -186,7 +186,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687713",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0812345678",
@@ -200,7 +200,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687714",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สายสมร พรมทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0845566778",
@@ -214,7 +214,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687715",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -256,7 +256,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687718",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0898765432",
@@ -312,7 +312,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687722",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สายสมร พรมทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -368,7 +368,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687726",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -382,7 +382,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687727",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สายสมร พรมทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0630742165",
@@ -410,7 +410,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687729",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สายสมร พรมทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0898765432",
@@ -424,7 +424,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687730",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -438,7 +438,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687731",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สมศักดิ์ คงดี",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -466,7 +466,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687733",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0812345678",
@@ -480,7 +480,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687734",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สมศักดิ์ คงดี",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0898765432",
@@ -522,7 +522,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687737",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -578,7 +578,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687741",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สุภาพร แสงทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0630742165",
@@ -606,7 +606,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687743",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -620,7 +620,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687744",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สุภาพร แสงทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0812345678",
@@ -648,7 +648,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687746",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สมศักดิ์ คงดี",
         cName: "กมล ศรีสุข",
         cPhone: "0898765432",
@@ -676,7 +676,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687748",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0998877665",
@@ -704,7 +704,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687750",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สมศักดิ์ คงดี",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -746,7 +746,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687753",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สมศักดิ์ คงดี",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0898765432",
@@ -788,7 +788,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687756",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0923344556",
@@ -816,7 +816,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687758",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สายสมร พรมทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -886,7 +886,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687763",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "เจนจิรา มณีทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -900,7 +900,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687764",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สายสมร พรมทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -914,7 +914,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687765",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0845566778",
@@ -942,7 +942,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687767",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สุภาพร แสงทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -970,7 +970,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687769",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -998,7 +998,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687771",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สายสมร พรมทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -1026,7 +1026,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687773",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -1040,7 +1040,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687774",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สมศักดิ์ คงดี",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -1068,7 +1068,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687776",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "เจนจิรา มณีทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0630742165",
@@ -1110,7 +1110,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687779",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0812345678",
@@ -1124,7 +1124,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687780",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สายสมร พรมทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0630742165",
@@ -1167,7 +1167,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687783",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0845566778",
@@ -1181,7 +1181,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687784",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0630742165",
@@ -1195,7 +1195,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687785",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0812345678",
@@ -1237,7 +1237,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687788",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สุภาพร แสงทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -1251,7 +1251,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687789",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -1279,7 +1279,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687791",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0923344556",
@@ -1293,7 +1293,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687792",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สายสมร พรมทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -1307,7 +1307,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687793",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -1321,7 +1321,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687794",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "วิไลวรรณ สมหวัง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0998877665",
@@ -1335,7 +1335,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687795",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0998877665",
@@ -1349,7 +1349,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687796",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0998877665",
@@ -1363,7 +1363,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687797",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.DELIVERED,
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0923344556",
@@ -1405,7 +1405,7 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687800",
-        status: TaskStatus.READY_FOR_PICKUP,
+        status: TaskStatus.COMPLETED,
         getter: "เจนจิรา มณีทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0845566778",

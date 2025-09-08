@@ -9,11 +9,11 @@ import editIcon from "@assets/icons/edit-white.png"
 import Task from "@model/task/Task"
 import { TaskColor } from "@model/task/TaskStatus"
 
-interface SearchTaskItemProps {
+interface TaskItemProps {
     task: Task;
 }
 
-export default function TaskItem({ task }: SearchTaskItemProps) {
+export default function TaskItem({ task }: TaskItemProps) {
 
     return (
         <div className="task-row">
