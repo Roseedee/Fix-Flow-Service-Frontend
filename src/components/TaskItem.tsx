@@ -1,5 +1,5 @@
 import React from "react";
-import "@styles/components/SearchTaskItem.css"
+import "@styles/components/TaskItem.css"
 
 //icon
 import fullSizeIcon from "@assets/icons/full-size-white.png"

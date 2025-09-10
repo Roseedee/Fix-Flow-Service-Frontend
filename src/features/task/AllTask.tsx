@@ -53,11 +53,11 @@ export default function AllTask() {
                             </select>
                         </div>
                         <div className="filter-item">
-                            <select name="" id="" className="def-input">
+                            {/* <select name="" id="" className="def-input">
                                 <option value="">อินวอยส์</option>
                                 <option value="">ชื่อ-นามสกุล</option>
                                 <option value="">เบอร์โทร</option>
-                            </select>
+                            </select> */}
                             <input type="text" className="def-input" placeholder="ค้นหา" />
                         </div>
                     </div>

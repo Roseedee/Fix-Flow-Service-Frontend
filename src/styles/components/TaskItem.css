@@ -109,6 +109,53 @@
     border-radius: var(--radius-sm);
 }
 
+@media (max-width: 1600px) {
+    .task-row { 
+        grid-template-columns: 20px repeat(1, 1fr) 0px repeat(5, 1fr) repeat(1, 2.5fr) auto;
+    }
+}
+
+@media (max-width: 1550px) {
+    .task-row { 
+        grid-template-columns: 20px repeat(1, 1fr) 0px repeat(3, 1fr) 0px repeat(1, 1fr) repeat(1, 2fr) auto;
+    }
+}
+
+@media (max-width: 1500px) {
+    .task-row { 
+        grid-template-columns: 20px repeat(1, 1fr) 0px repeat(3, 1fr) 0px 0px repeat(1, 2fr) auto;
+    }
+}
+
+@media (max-width: 1450px) {
+    .task-row { 
+        grid-template-columns: 20px minmax(100, 150px) 0px repeat(2, 1fr) 0px 0px 0px repeat(1, 2fr) auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .task-row { 
+        grid-template-columns: 20px 0px 0px repeat(3, 1fr) 0px 0px repeat(1, 2fr) auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .task-row { 
+        grid-template-columns: 20px 0px 0px repeat(2, 1fr) 0px 0px 0px repeat(1, 2fr) auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .task-row { 
+        gap: 8px;
+        grid-template-columns: 0px 0px 0px repeat(1, 0.8fr) 0px 0px 0px 0px repeat(1, 1fr) auto;
+    }
+
+    .cell {
+        font-size: 0.8rem;
+    }
+}
+
 .color-indicator {
     height: 100%;
     background-color: #a5c45a;
