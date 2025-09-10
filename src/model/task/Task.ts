@@ -3,6 +3,7 @@ import TaskStatus from "@model/task/TaskStatus"
 export default interface Task {
     id: string
     status: TaskStatus
+    date: string
     getter: string
     cName: string
     cPhone: string
@@ -19,6 +20,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687701",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-01",
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0630742165",
@@ -33,6 +35,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687702",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-02",
         getter: "สมศักดิ์ คงดี",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -47,6 +50,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687703",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-03",
         getter: "สมศักดิ์ คงดี",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -61,6 +65,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687704",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-04",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0630742165",
@@ -75,6 +80,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687705",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-05",
         getter: "สายสมร พรมทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0923344556",
@@ -88,7 +94,8 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687706",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.COMPLETED,  
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0812345678",
@@ -102,7 +109,8 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687707",
-        status: TaskStatus.CANCELLED,
+        status: TaskStatus.CANCELLED,  
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0923344556",
@@ -116,7 +124,8 @@ export const TaskDataEx: Task[] = [
     },
     {
         id: "1254687708",
-        status: TaskStatus.COMPLETED,
+        status: TaskStatus.COMPLETED,  
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0898765432",
@@ -131,6 +140,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687709",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -145,6 +155,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687710",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0845566778",
@@ -159,6 +170,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687711",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0923344556",
@@ -173,6 +185,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687712",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "กมล ศรีสุข",
         cPhone: "0898765432",
@@ -187,6 +200,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687713",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0812345678",
@@ -201,6 +215,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687714",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0845566778",
@@ -215,6 +230,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687715",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -229,6 +245,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687716",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "อนันต์ ดีมาก",
         cPhone: "0630742165",
@@ -243,6 +260,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687717",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0898765432",
@@ -257,6 +275,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687718",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0898765432",
@@ -271,6 +290,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687719",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0845566778",
@@ -285,6 +305,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687720",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0845566778",
@@ -299,6 +320,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687721",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -313,6 +335,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687722",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -327,6 +350,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687723",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -341,6 +365,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687724",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0845566778",
@@ -355,6 +380,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687725",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -369,6 +395,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687726",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -383,6 +410,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687727",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0630742165",
@@ -397,6 +425,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687728",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0845566778",
@@ -411,6 +440,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687729",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0898765432",
@@ -425,6 +455,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687730",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -439,6 +470,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687731",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -453,6 +485,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687732",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "อนันต์ ดีมาก",
         cPhone: "0845566778",
@@ -467,6 +500,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687733",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0812345678",
@@ -481,6 +515,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687734",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0898765432",
@@ -495,6 +530,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687735",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -509,6 +545,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687736",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0630742165",
@@ -523,6 +560,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687737",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -537,6 +575,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687738",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0923344556",
@@ -551,6 +590,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687739",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0898765432",
@@ -565,6 +605,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687740",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0630742165",
@@ -579,6 +620,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687741",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0630742165",
@@ -593,6 +635,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687742",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -607,6 +650,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687743",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -621,6 +665,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687744",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0812345678",
@@ -635,6 +680,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687745",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0898765432",
@@ -649,6 +695,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687746",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "กมล ศรีสุข",
         cPhone: "0898765432",
@@ -663,6 +710,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687747",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -677,6 +725,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687748",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0998877665",
@@ -691,6 +740,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687749",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -705,6 +755,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687750",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -719,6 +770,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687751",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0845566778",
@@ -733,6 +785,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687752",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "กมล ศรีสุข",
         cPhone: "0812345678",
@@ -747,6 +800,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687753",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0898765432",
@@ -761,6 +815,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687754",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0630742165",
@@ -775,6 +830,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687755",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0998877665",
@@ -789,6 +845,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687756",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0923344556",
@@ -803,6 +860,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687757",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -817,6 +875,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687758",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -831,6 +890,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687759",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0845566778",
@@ -845,6 +905,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687760",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0998877665",
@@ -859,6 +920,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687761",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0630742165",
@@ -873,6 +935,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687762",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -887,6 +950,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687763",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -901,6 +965,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687764",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -915,6 +980,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687765",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0845566778",
@@ -929,6 +995,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687766",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -943,6 +1010,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687767",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -957,6 +1025,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687768",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0923344556",
@@ -971,6 +1040,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687769",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -985,6 +1055,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687770",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0923344556",
@@ -999,6 +1070,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687771",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0923344556",
@@ -1013,6 +1085,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687772",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -1027,6 +1100,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687773",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -1041,6 +1115,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687774",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สมศักดิ์ คงดี",
         cName: "ศิริพร ใจดี",
         cPhone: "0812345678",
@@ -1055,6 +1130,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687775",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0630742165",
@@ -1069,6 +1145,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687776",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0630742165",
@@ -1083,6 +1160,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687777",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -1097,6 +1175,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687778",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0630742165",
@@ -1111,6 +1190,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687779",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0812345678",
@@ -1125,6 +1205,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687780",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0630742165",
@@ -1139,6 +1220,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687781",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
 
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
@@ -1154,6 +1236,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687782",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -1168,6 +1251,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687783",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0845566778",
@@ -1182,6 +1266,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687784",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0630742165",
@@ -1196,6 +1281,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687785",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0812345678",
@@ -1210,6 +1296,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687786",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "กมล ศรีสุข",
         cPhone: "0630742165",
@@ -1224,6 +1311,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687787",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0923344556",
@@ -1238,6 +1326,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687788",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -1252,6 +1341,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687789",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0898765432",
@@ -1266,6 +1356,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687790",
         status: TaskStatus.CANCELLED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "กมล ศรีสุข",
         cPhone: "0998877665",
@@ -1280,6 +1371,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687791",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0923344556",
@@ -1294,6 +1386,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687792",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สายสมร พรมทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -1308,6 +1401,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687793",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "มูฮัมหมัด เจ๊ะแล๊ะ",
         cPhone: "0998877665",
@@ -1322,6 +1416,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687794",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0998877665",
@@ -1336,6 +1431,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687795",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0998877665",
@@ -1350,6 +1446,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687796",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "อนันต์ ดีมาก",
         cPhone: "0998877665",
@@ -1364,6 +1461,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687797",
         status: TaskStatus.DELIVERED,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "ศิริพร ใจดี",
         cPhone: "0923344556",
@@ -1378,6 +1476,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687798",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "สุภาพร แสงทอง",
         cName: "กมล ศรีสุข",
         cPhone: "0923344556",
@@ -1392,6 +1491,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687799",
         status: TaskStatus.IN_PROGRESS,
+        date: "2024-06-06",
         getter: "วิไลวรรณ สมหวัง",
         cName: "ภาณุวัฒน์ สายทอง",
         cPhone: "0998877665",
@@ -1406,6 +1506,7 @@ export const TaskDataEx: Task[] = [
     {
         id: "1254687800",
         status: TaskStatus.COMPLETED,
+        date: "2024-06-06",
         getter: "เจนจิรา มณีทอง",
         cName: "ประหยัด สุวรรณ",
         cPhone: "0845566778",

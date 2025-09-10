@@ -19,7 +19,7 @@ export default function TaskItem({ task }: TaskItemProps) {
         <div className="task-row">
             <div className="color-indicator" style={{backgroundColor: TaskColor(task.status)}}></div>
             <div className="cell task-data-form-1">
-                <span>รหัส</span>
+                <span>{task.date}</span>
                 <p>{task.id}</p>
             </div>
             <div className="cell task-data-form-1">

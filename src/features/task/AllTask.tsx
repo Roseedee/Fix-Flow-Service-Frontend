@@ -33,7 +33,7 @@ export default function AllTask() {
         }else {
             return item;
         }
-    }));
+    }));    
 
     return (
         <Layout>
