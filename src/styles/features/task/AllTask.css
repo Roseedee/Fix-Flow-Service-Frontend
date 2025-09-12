@@ -69,6 +69,8 @@
     background-color: #EDEDED;
     cursor: pointer;
     transition: var(--def-transition);
+    outline: none;
+    border: none;
 
     & img {
         height: 12px;        
@@ -85,7 +87,7 @@
     }
 }
 
-.pagination-item.disabled {
+.pagination-item:disabled {
     cursor: not-allowed;
 
     & img {
