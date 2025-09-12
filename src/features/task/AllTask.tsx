@@ -16,11 +16,13 @@ import arrowIcon from '@assets/icons/arrow.png';
 export default function AllTask() {
 
     //input state
-    const [limit, setLimit] = React.useState<number>(30);
+    const [dataLimit, setDataLimit] = React.useState<number>(5);
 
     const localtion = useLocation().pathname.split('/');
 
-    const [Tasks, setTasks] = React.useState<TaskModel[]>(TaskDataEx.filter(item => {
+    const [Tasks, setTasks] = React.useState<TaskModel[]>();
+
+    const filterTasks = (item: TaskModel) => {
         const path = localtion[localtion.length - 1];
         // console.log(path)
         if (path === 'inprogress') {
@@ -36,7 +38,16 @@ export default function AllTask() {
         }else {
             return item;
         }
-    }).slice(0, limit));
+    }
+
+    React.useEffect(() => {
+        setTasks(TaskDataEx.filter(item => filterTasks(item)).slice(0, dataLimit));
+    }, []);
+
+    const dataLimitOnChange = (newLimit: number) => {
+        setDataLimit(newLimit);
+        setTasks(TaskDataEx.filter(item => filterTasks(item)).slice(0, newLimit));
+    }
 
     return (
         <Layout>
@@ -48,10 +59,10 @@ export default function AllTask() {
                 <div className="alltask-sub-content">
                     <div className="alltask-sub-content-row">
                         <div className="filter-item">
-                            <select name="" id="" className="def-input" onChange={(e) => setLimit(parseInt(e.target.value)) }>
+                            <select name="" id="" className="def-input" onChange={(e) => dataLimitOnChange(parseInt(e.target.value)) }>
+                                <option value="5">แสดง 5 รายการ</option>
                                 <option value="10">แสดง 10 รายการ</option>
                                 <option value="20">แสดง 20 รายการ</option>
-                                <option value="50">แสดง 50 รายการ</option>
                                 <option value="100">แสดง 100 รายการ</option>
                             </select>
                         </div>
@@ -66,7 +77,7 @@ export default function AllTask() {
                     </div>
                     <div className="alltask-sub-content task-list">
                         {
-                            Tasks.map((item, index) => (
+                            Tasks && Tasks.map((item, index) => (
                                 <TaskItem task={item} key={index} />
                             ))
                         }
