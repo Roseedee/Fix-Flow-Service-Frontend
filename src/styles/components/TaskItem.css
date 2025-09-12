@@ -101,7 +101,7 @@
     font-size: 0.9rem;
     padding: 15px;
     display: grid;
-    grid-template-columns: 20px repeat(7, 1fr) repeat(1, 2.5fr) auto;
+    grid-template-columns: 20px repeat(3, 1fr) minmax(150px, 1.5fr) repeat(3, 1fr) repeat(1, 2.5fr) auto;
     grid-template-rows: 45px;
     align-items: center;
     gap: 12px;
@@ -111,49 +111,55 @@
 
 @media (max-width: 1600px) {
     .task-row { 
-        grid-template-columns: 20px repeat(1, 1fr) 0px repeat(5, 1fr) repeat(1, 2.5fr) auto;
+        grid-template-columns: 20px 1fr 0px 1f minmax(150px, 1.5fr) repeat(4, 1fr) repeat(1, 2.5fr) auto;
     }
 }
 
 @media (max-width: 1550px) {
     .task-row { 
-        grid-template-columns: 20px repeat(1, 1fr) 0px repeat(3, 1fr) 0px repeat(1, 1fr) repeat(1, 2fr) auto;
+        grid-template-columns: 20px 1fr 0px 1fr minmax(150px, 1.5fr) 1fr 0px repeat(1, 1fr) repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 1500px) {
     .task-row { 
-        grid-template-columns: 20px repeat(1, 1fr) 0px repeat(3, 1fr) 0px 0px repeat(1, 2fr) auto;
+        grid-template-columns: 20px 1fr 0px 1fr minmax(150px, 1.5fr) 1fr 0px 0px repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 1450px) {
     .task-row { 
-        grid-template-columns: 20px minmax(100, 150px) 0px repeat(2, 1fr) 0px 0px 0px repeat(1, 2fr) auto;
+        grid-template-columns: 20px minmax(100, 150px) 0px 1fr minmax(150px, 1.5fr) 0px 0px 0px repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 1000px) {
     .task-row { 
-        grid-template-columns: 20px 0px 0px repeat(3, 1fr) 0px 0px repeat(1, 2fr) auto;
+        grid-template-columns: 20px 0px 0px minmax(110px, 1fr) minmax(150px, 1.5fr) 1fr 0px 0px repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 850px) {
     .task-row { 
-        grid-template-columns: 20px 0px 0px repeat(2, 1fr) 0px 0px 0px repeat(1, 2fr) auto;
+        grid-template-columns: 20px 0px 0px minmax(110px, 1fr) minmax(150px, 1.5fr) 0px 0px 0px repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 700px) {
-    .task-row { 
-        gap: 8px;
+
+    .task-row {
+        gap: 0px;
         grid-template-columns: 0px 0px 0px repeat(1, 0.8fr) 0px 0px 0px 0px repeat(1, 1fr) auto;
+    }
+
+    .action-buttons {
+        padding-left: 10px;
     }
 
     .cell {
         font-size: 0.8rem;
     }
+
 }
 
 .color-indicator {
