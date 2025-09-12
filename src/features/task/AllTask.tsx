@@ -15,6 +15,9 @@ import arrowIcon from '@assets/icons/arrow.png';
 
 export default function AllTask() {
 
+    //input state
+    const [limit, setLimit] = React.useState<number>(30);
+
     const localtion = useLocation().pathname.split('/');
 
     const [Tasks, setTasks] = React.useState<TaskModel[]>(TaskDataEx.filter(item => {
@@ -33,7 +36,7 @@ export default function AllTask() {
         }else {
             return item;
         }
-    }));    
+    }).slice(0, limit));
 
     return (
         <Layout>
@@ -45,7 +48,7 @@ export default function AllTask() {
                 <div className="alltask-sub-content">
                     <div className="alltask-sub-content-row">
                         <div className="filter-item">
-                            <select name="" id="" className="def-input">
+                            <select name="" id="" className="def-input" onChange={(e) => setLimit(parseInt(e.target.value)) }>
                                 <option value="10">แสดง 10 รายการ</option>
                                 <option value="20">แสดง 20 รายการ</option>
                                 <option value="50">แสดง 50 รายการ</option>
