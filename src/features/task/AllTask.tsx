@@ -16,7 +16,10 @@ import arrowIcon from '@assets/icons/arrow.png';
 export default function AllTask() {
 
     //input state
-    const [dataLimit, setDataLimit] = React.useState<number>(5);
+    const [dataLimit, setDataLimit] = React.useState<number>(() => {
+        const stored = localStorage.getItem('task-dataLimit');
+        return stored ? parseInt(stored) : 5;
+    });
 
     const localtion = useLocation().pathname.split('/');
 
@@ -47,6 +50,7 @@ export default function AllTask() {
     const dataLimitOnChange = (newLimit: number) => {
         setDataLimit(newLimit);
         setTasks(TaskDataEx.filter(item => filterTasks(item)).slice(0, newLimit));
+        localStorage.setItem('task-dataLimit', String(newLimit));
     }
 
     return (
@@ -59,7 +63,7 @@ export default function AllTask() {
                 <div className="alltask-sub-content">
                     <div className="alltask-sub-content-row">
                         <div className="filter-item">
-                            <select name="" id="" className="def-input" onChange={(e) => dataLimitOnChange(parseInt(e.target.value)) }>
+                            <select name="" id="" className="def-input" onChange={(e) => dataLimitOnChange(parseInt(e.target.value)) } value={dataLimit}>
                                 <option value="5">แสดง 5 รายการ</option>
                                 <option value="10">แสดง 10 รายการ</option>
                                 <option value="20">แสดง 20 รายการ</option>

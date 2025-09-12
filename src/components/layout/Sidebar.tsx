@@ -25,7 +25,7 @@ import { TaskDataEx } from "@model/task/Task";
 export default function Sidebar() {
 
   const [sidebarMin, setSidebarMin] = useState<boolean>(() => {
-    const stored = localStorage.getItem('sidebarMin');
+    const stored = localStorage.getItem('sidebar-min');
     return stored === 'true' ? true : false;
   });
 
@@ -51,7 +51,7 @@ export default function Sidebar() {
   //onchange sidebar minimized 
   React.useEffect(() => {
     resizeLayout()
-    localStorage.setItem('sidebarMin', String(sidebarMin))
+    localStorage.setItem('sidebar-min', String(sidebarMin))
   }, [sidebarMin]);
 
   // React.useEffect(() => {
