@@ -54,7 +54,7 @@ export default function TaskItem({ task }: TaskItemProps) {
                     <p>{task.report}</p>
                 </div>
                 <div className="action-buttons">
-                    <button onClick={() => setIsFullView(true)}><img src={fullSizeIcon} alt="ขยาย"/></button>
+                    <button onClick={() => setIsFullView(true)}><img src={fullSizeIcon} alt="ขยาย" /></button>
                     <button><img src={editIcon} alt="แก้ไข" /></button>
                 </div>
             </div>
@@ -64,12 +64,37 @@ export default function TaskItem({ task }: TaskItemProps) {
                 isFullView && (
                     <div className="overlay" onClick={() => setIsFullView(false)}>
                         <div className="popup" onClick={(e) => e.stopPropagation()}>
-                            <h3>รายละเอียดงาน</h3>
-                            <p><strong>ลูกค้า:</strong> {task.cName} ({task.cPhone})</p>
-                            <p><strong>ประเภทงาน:</strong> {task.taskType} - {task.brand}</p>
-                            <p><strong>SN/PN:</strong> {task.sn} / {task.pn}</p>
-                            <p><strong>อาการ:</strong> {task.report}</p>
-                            <p><strong>ราคาประเมิน:</strong> {task.price}</p>
+                            <h3 className="pb tag">#INV {task.id}</h3>
+                            <div className="row pb">
+                                <div className="input-title">
+                                    <span>ชื่อ-นามสกุล</span>
+                                    <input type="text" name="email" className="def-input" disabled value={task.cName}/>
+                                </div>
+                                <div className="input-title">
+                                    <span>เบอร์โทร</span>
+                                    <input type="text" name="idCard" id="" className="def-input" disabled value={task.cPhone}/>
+                                </div>
+                            </div>
+                            <div className="row pb">
+                                <div className="input-title">
+                                    <span>อีเมล</span>
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com"  />
+                                </div>
+                                <div className="input-title">
+                                    <span>รหัสบัตรประชาชน</span>
+                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX" />
+                                </div>
+                            </div>
+                            <div className="row pb">
+                                <div className="input-title">
+                                    <span>อีเมล</span>
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com"  />
+                                </div>
+                                <div className="input-title">
+                                    <span>รหัสบัตรประชาชน</span>
+                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX" />
+                                </div>
+                            </div>
                             <button onClick={() => setIsFullView(false)}>ปิด</button>
                         </div>
                     </div>

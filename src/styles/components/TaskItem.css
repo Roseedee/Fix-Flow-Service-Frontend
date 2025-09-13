@@ -110,37 +110,37 @@
 }
 
 @media (max-width: 1600px) {
-    .task-row { 
+    .task-row {
         grid-template-columns: 20px 1fr 0px 1f minmax(150px, 1.5fr) repeat(4, 1fr) repeat(1, 2.5fr) auto;
     }
 }
 
 @media (max-width: 1550px) {
-    .task-row { 
+    .task-row {
         grid-template-columns: 20px 1fr 0px 1fr minmax(150px, 1.5fr) 1fr 0px repeat(1, 1fr) repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 1500px) {
-    .task-row { 
+    .task-row {
         grid-template-columns: 20px 1fr 0px 1fr minmax(150px, 1.5fr) 1fr 0px 0px repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 1450px) {
-    .task-row { 
+    .task-row {
         grid-template-columns: 20px minmax(100, 150px) 0px 1fr minmax(150px, 1.5fr) 0px 0px 0px repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 1000px) {
-    .task-row { 
+    .task-row {
         grid-template-columns: 20px 0px 0px minmax(110px, 1fr) minmax(150px, 1.5fr) 1fr 0px 0px repeat(1, 2fr) auto;
     }
 }
 
 @media (max-width: 850px) {
-    .task-row { 
+    .task-row {
         grid-template-columns: 20px 0px 0px minmax(110px, 1fr) minmax(150px, 1.5fr) 0px 0px 0px repeat(1, 2fr) auto;
     }
 }
@@ -231,19 +231,20 @@
 }
 
 .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
 .popup {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  min-width: 300px;
-  max-width: 500px;
+    width: 60%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 450px;
+    max-width: 1000px;
 }

@@ -6,6 +6,7 @@
 @import url('@styles/components/controller/input.css');
 @import url('@styles/components/controller/button.css');
 @import url('@styles/components/controller/loader.css');
+@import url('@styles/components/controller/text.css');
 
 @import url('@styles/components/hr.css');
 
@@ -91,6 +92,26 @@ a {
 
 .d-none {
     display: none;
+}
+
+.p {
+    padding: 15px;
+}
+
+.pv {
+    padding: 15px 0 15px 0;
+}
+
+.ph {
+    padding: 0 15px 0 15px;
+}
+
+.pt {
+    padding-top: 15px;
+}
+
+.pb {
+    padding-bottom: 15px;
 }
 
 /* Test Unit */
