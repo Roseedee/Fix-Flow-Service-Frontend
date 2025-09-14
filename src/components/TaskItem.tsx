@@ -64,7 +64,7 @@ export default function TaskItem({ task }: TaskItemProps) {
                 isFullView && (
                     <div className="overlay" onClick={() => setIsFullView(false)}>
                         <div className="popup" onClick={(e) => e.stopPropagation()}>
-                            <h3 className="pb tag">#INV {task.id}</h3>
+                            <h3 className="pb">{task.id} <span style={{color: TaskColor(task.status)}}>#{task.status}</span></h3>
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>ชื่อ-นามสกุล</span>
