@@ -17,6 +17,7 @@ export default function AllTask() {
 
     const localtion = useLocation().pathname.split('/');
     const [searchParams, setSearchParams] = useSearchParams();
+    let prevPage: number = parseInt(searchParams.get('prevPage') || '1');
     let page: number = parseInt(searchParams.get('page') || '1');
 
     //input state
@@ -51,7 +52,9 @@ export default function AllTask() {
     React.useEffect(() => {
         pageNumber = Math.ceil(tasksLenght / dataLimit)
         setTasks(TaskDataEx.filter(item => filterTasks(item)).slice((page - 1) * dataLimit, page * dataLimit));
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        if(page > prevPage) {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
     }, [dataLimit, page]);
 
 
@@ -102,7 +105,7 @@ export default function AllTask() {
                                 <div
                                     key={i}
                                     className={`pagination-item ${i + 1 === page ? "active" : ""}`}
-                                    onClick={() => setSearchParams({ page: (i + 1).toString() })}>
+                                    onClick={() => setSearchParams({ page: (i + 1).toString(), prevPage: (page).toString()})}>
                                     {i + 1}
                                 </div>
                             ))
