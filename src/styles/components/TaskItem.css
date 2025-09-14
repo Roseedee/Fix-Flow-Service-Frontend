@@ -248,3 +248,38 @@
     min-width: 450px;
     max-width: 1000px;
 }
+
+div.task-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & span {
+        font-size: 0.9rem;
+    }
+}
+
+div.task-type div {
+    cursor: default;
+    resize: none;
+    height: 45px;
+    background-color: #f9f9f9;
+    border-radius: var(--radius-sm);
+    border: 1px solid #EEEEEE;
+    padding: 12px 15px;
+    font-size: .9rem;
+    transition: var(--def-transition);
+    flex-grow: 1;
+/* 
+    &:not(select) {
+    } */
+
+    &:hover,
+    &:focus {
+        border: 1px solid #afafaf;
+    }
+
+    &::placeholder {
+        color: var(--color-text-placeholder);
+    }
+}

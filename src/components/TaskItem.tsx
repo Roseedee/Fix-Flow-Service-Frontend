@@ -78,21 +78,25 @@ export default function TaskItem({ task }: TaskItemProps) {
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>อีเมล</span>
-                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com"  />
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com"/>
                                 </div>
                                 <div className="input-title">
                                     <span>รหัสบัตรประชาชน</span>
-                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX" />
+                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX"/>
                                 </div>
                             </div>
                             <div className="row pb">
+                                <div className="task-type">
+                                    <span>ประเภทงานซ่อม</span>
+                                    <div>คอมพิวเตอร์ตั้งโต๊ะ</div>
+                                </div>
                                 <div className="input-title">
-                                    <span>อีเมล</span>
+                                    <span>ยี่ห้อ-รุ่น</span>
                                     <input type="text" name="email" className="def-input" placeholder="example@gmail.com"  />
                                 </div>
                                 <div className="input-title">
-                                    <span>รหัสบัตรประชาชน</span>
-                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX" />
+                                    <span>Serial number</span>
+                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="SNXXXXXXXXXXX" />
                                 </div>
                             </div>
                             <button onClick={() => setIsFullView(false)}>ปิด</button>
