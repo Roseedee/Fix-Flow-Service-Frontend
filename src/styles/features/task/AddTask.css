@@ -29,10 +29,6 @@
     gap: 5px;
 }
 
-textarea.note {
-    min-height: 100px;
-}
-
 .image-upload-container {
     display: flex;
     flex-direction: column;

@@ -78,25 +78,31 @@ export default function TaskItem({ task }: TaskItemProps) {
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>อีเมล</span>
-                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com"/>
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.cEmail}/>
                                 </div>
                                 <div className="input-title">
                                     <span>รหัสบัตรประชาชน</span>
-                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX"/>
+                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX" disabled value={task.idCard} />
                                 </div>
                             </div>
                             <div className="row pb">
                                 <div className="task-type">
                                     <span>ประเภทงานซ่อม</span>
-                                    <div>คอมพิวเตอร์ตั้งโต๊ะ</div>
+                                    <div>{task.taskType}</div>
                                 </div>
                                 <div className="input-title">
                                     <span>ยี่ห้อ-รุ่น</span>
-                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com"  />
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.brand} />
                                 </div>
                                 <div className="input-title">
                                     <span>Serial number</span>
-                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="SNXXXXXXXXXXX" />
+                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="SNXXXXXXXXXXX" disabled value={task.sn} />
+                                </div>
+                            </div>
+                            <div className="row pb">
+                                <div className="input-title">
+                                    <span>Serial number</span>
+                                    <textarea name="idCard" id="" className="def-input note"  placeholder="SNXXXXXXXXXXX" disabled disabled value={task.sn}></textarea>
                                 </div>
                             </div>
                             <button onClick={() => setIsFullView(false)}>ปิด</button>

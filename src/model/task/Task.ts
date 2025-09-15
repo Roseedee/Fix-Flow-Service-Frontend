@@ -1,11 +1,13 @@
 import TaskStatus from "@model/task/TaskStatus"
-
+    
 export default interface Task {
     id: string
     status: TaskStatus
     date: string
     getter: string
     cName: string
+    cEmail?: string
+    idCard?: string
     cPhone: string
     taskType: string
     brand: string
