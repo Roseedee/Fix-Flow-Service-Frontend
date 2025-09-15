@@ -236,11 +236,13 @@
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow: auto;
     z-index: 999;
 }
 
 .popup {
+    margin: 50px 0;
     width: 60%;
     background: #fff;
     padding: 25px;
