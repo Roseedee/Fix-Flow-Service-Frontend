@@ -64,25 +64,25 @@ export default function TaskItem({ task }: TaskItemProps) {
                 isFullView && (
                     <div className="overlay" onClick={() => setIsFullView(false)}>
                         <div className="popup" onClick={(e) => e.stopPropagation()}>
-                            <h3 className="pb">{task.id} <span style={{color: TaskColor(task.status)}}>#{task.status}</span></h3>
+                            <h3 className="pb">{task.id} <span style={{ color: TaskColor(task.status) }}>#{task.status}</span></h3>
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>ชื่อ-นามสกุล</span>
-                                    <input type="text" name="email" className="def-input" disabled value={task.cName}/>
+                                    <input type="text" name="email" className="def-input" disabled value={task.cName} />
                                 </div>
                                 <div className="input-title">
                                     <span>เบอร์โทร</span>
-                                    <input type="text" name="idCard" id="" className="def-input" disabled value={task.cPhone}/>
+                                    <input type="text" name="idCard" id="" className="def-input" disabled value={task.cPhone} />
                                 </div>
                             </div>
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>อีเมล</span>
-                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.cEmail}/>
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.cEmail} />
                                 </div>
                                 <div className="input-title">
                                     <span>รหัสบัตรประชาชน</span>
-                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="19XXXXXXXXXXX" disabled value={task.idCard} />
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="19XXXXXXXXXXX" disabled value={task.idCard} />
                                 </div>
                             </div>
                             <div className="row pb">
@@ -96,16 +96,35 @@ export default function TaskItem({ task }: TaskItemProps) {
                                 </div>
                                 <div className="input-title">
                                     <span>Serial number</span>
-                                    <input type="text" name="idCard" id="" className="def-input"  placeholder="SNXXXXXXXXXXX" disabled value={task.sn} />
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="SNXXXXXXXXXXX" disabled value={task.sn} />
                                 </div>
                             </div>
                             <div className="row pb">
                                 <div className="input-title">
-                                    <span>Serial number</span>
-                                    <textarea name="idCard" id="" className="def-input note"  placeholder="SNXXXXXXXXXXX" disabled disabled value={task.sn}></textarea>
+                                    <span>อาการที่ลูกค้าแจ้ง</span>
+                                    <textarea name="idCard" id="" className="def-input note" placeholder="SNXXXXXXXXXXX" disabled value={task.report}></textarea>
                                 </div>
+                                {task.repairDetail &&
+                                    (
+                                        <div className="input-title">
+                                            <span>รายละเอียดการซ่อม</span>
+                                            <textarea name="idCard" id="" className="def-input note" placeholder="SNXXXXXXXXXXX" disabled value={task.repairDetail}></textarea>
+                                        </div>
+                                    )
+                                }
                             </div>
                             <button onClick={() => setIsFullView(false)}>ปิด</button>
+                        </div>
+                        <div className="img-popup">
+                            {
+                                task.image && task.image.length > 0 ? (
+                                    task.image.map((img, index) => (
+                                        <img src={img.name} alt={`task-img-${index}`} key={index} />
+                                    ))
+                                ) : (
+                                    <h5 className="tag">ไม่พบรูปภาพ</h5>
+                                )
+                            }
                         </div>
                     </div>
                 )

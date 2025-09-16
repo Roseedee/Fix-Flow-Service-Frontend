@@ -1,4 +1,8 @@
 import TaskStatus from "@model/task/TaskStatus"
+
+import imgTest1 from '@assets/images/test.jpg';
+import imgTest2 from '@assets/images/test1.jpg';
+import imgTest3 from '@assets/images/test2.jpg';
     
 export default interface Task {
     id: string
@@ -6,9 +10,9 @@ export default interface Task {
     date: string
     getter: string
     cName: string
+    cPhone: string
     cEmail?: string
     idCard?: string
-    cPhone: string
     taskType: string
     brand: string
     sn: string
@@ -16,6 +20,13 @@ export default interface Task {
     price: string
     repairer: string
     report: string
+    repairDetail?: string
+    notes?: string
+    accessories?: string
+    color?: string
+    password?: string
+    deposit?: number
+    image?: File[]
 }
 
 export const TaskDataEx: Task[] = [
@@ -33,6 +44,11 @@ export const TaskDataEx: Task[] = [
         price: "2430-3975",
         repairer: "ช่างเอก",
         report: "หน้าจอแตก ไม่สามารถซ่อมได้",
+        image: [
+            new File([''], imgTest1, { type: 'image/jpg' }),
+            new File([''], imgTest2, { type: 'image/jpg' }),
+            new File([''], imgTest3, { type: 'image/jpg' }),
+        ],
     },
     {
         id: "1254687702",
@@ -48,6 +64,7 @@ export const TaskDataEx: Task[] = [
         price: "1665-3155",
         repairer: "ช่างเอก",
         report: "เปลี่ยนแบตเตอรี่และตรวจสอบระบบเรียบร้อย",
+        repairDetail: "เปลี่ยนแบตเตอรี่ใหม่เรียบร้อยแล้ว ทดสอบระบบทุกอย่างปกติดี",
     },
     {
         id: "1254687703",
@@ -78,6 +95,7 @@ export const TaskDataEx: Task[] = [
         price: "1197-3983",
         repairer: "ช่างเอก",
         report: "มีเสียงดังผิดปกติจากพัดลม",
+        repairDetail: "ตรวจสอบระบบพัดลม พบฝุ่นอุดตัน จึงทำความสะอาดและทาน้ำมันหล่อลื่นเรียบร้อย",
     },
     {
         id: "1254687705",
@@ -138,6 +156,7 @@ export const TaskDataEx: Task[] = [
         price: "884-3309",
         repairer: "ช่างชัย",
         report: "มีเสียงดังผิดปกติจากพัดลม",
+        repairDetail: "ทำความสะอาดพัดลมและทาน้ำมันหล่อลื่นเรียบร้อย",
     },
     {
         id: "1254687709",
@@ -168,6 +187,7 @@ export const TaskDataEx: Task[] = [
         price: "1508-4833",
         repairer: "ไม่มี",
         report: "เปลี่ยนแบตเตอรี่และตรวจสอบระบบเรียบร้อย",
+        repairDetail: "เปลี่ยนแบตเตอรี่ใหม่เรียบร้อยแล้ว ทดสอบระบบทุกอย่างปกติดี",
     },
     {
         id: "1254687711",
@@ -213,6 +233,7 @@ export const TaskDataEx: Task[] = [
         price: "503-3448",
         repairer: "ช่างชัย",
         report: "หน้าจอแตก ไม่สามารถซ่อมได้",
+        repairDetail: "ตรวจสอบแล้วพบว่าหน้าจอแตกมาก ไม่สามารถซ่อมได้ แนะนำเปลี่ยนหน้าจอใหม่",
     },
     {
         id: "1254687714",
@@ -243,6 +264,7 @@ export const TaskDataEx: Task[] = [
         price: "1492-4374",
         repairer: "ช่างชัย",
         report: "เครื่องเปิดไม่ติด ต้องกดหลายครั้ง",
+        repairDetail: "ตรวจสอบระบบแล้วพบว่าเป็นที่ฮาร์ดดิสก์ จึงทำการเปลี่ยนฮาร์ดดิสก์ใหม่และติดตั้งระบบปฏิบัติการเรียบร้อย",
     },
     {
         id: "1254687716",
@@ -273,6 +295,7 @@ export const TaskDataEx: Task[] = [
         price: "1948-4672",
         repairer: "ช่างชัย",
         report: "Mainboard มีปัญหา เปิดติดบ้างไม่ติดบ้าง",
+        repairDetail: "ตรวจสอบระบบแล้วพบว่า Mainboard มีปัญหา จึงทำการเปลี่ยน Mainboard ใหม่เรียบร้อย",
     },
     {
         id: "1254687718",
@@ -318,6 +341,7 @@ export const TaskDataEx: Task[] = [
         price: "1545-3914",
         repairer: "ช่างเอก",
         report: "Microsoft Word ใช้งานไม่ได้",
+        repairDetail: "ติดตั้งโปรแกรม Microsoft Word ใหม่และอัปเดตระบบปฏิบัติการเรียบร้อย",
     },
     {
         id: "1254687721",
@@ -363,6 +387,7 @@ export const TaskDataEx: Task[] = [
         price: "1312-4368",
         repairer: "ช่างแดง",
         report: "เปลี่ยนแบตเตอรี่และตรวจสอบระบบเรียบร้อย",
+        repairDetail: "เปลี่ยนแบตเตอรี่ใหม่เรียบร้อยแล้ว ทดสอบระบบทุกอย่างปกติดี",
     },
     {
         id: "1254687724",
@@ -393,6 +418,7 @@ export const TaskDataEx: Task[] = [
         price: "2107-3511",
         repairer: "ช่างเอก",
         report: "Microsoft Word ใช้งานไม่ได้",
+        repairDetail: "ติดตั้งโปรแกรม Microsoft Word ใหม่และอัปเดตระบบปฏิบัติการเรียบร้อย",
     },
     {
         id: "1254687726",
@@ -438,6 +464,7 @@ export const TaskDataEx: Task[] = [
         price: "2949-4663",
         repairer: "ไม่มี",
         report: "Mainboard มีปัญหา เปิดติดบ้างไม่ติดบ้าง",
+        repairDetail: "ตรวจสอบระบบแล้วพบว่า Mainboard มีปัญหา จึงทำการเปลี่ยน Mainboard ใหม่เรียบร้อย",
     },
     {
         id: "1254687729",
@@ -528,6 +555,7 @@ export const TaskDataEx: Task[] = [
         price: "2617-4413",
         repairer: "ไม่มี",
         report: "Mainboard มีปัญหา เปิดติดบ้างไม่ติดบ้าง",
+        repairDetail: "ตรวจสอบระบบแล้วพบว่า Mainboard มีปัญหา จึงทำการเปลี่ยน Mainboard ใหม่เรียบร้อย",
     },
     {
         id: "1254687735",
@@ -543,6 +571,7 @@ export const TaskDataEx: Task[] = [
         price: "1329-4101",
         repairer: "ช่างแดง",
         report: "หน้าจอแตก ไม่สามารถซ่อมได้",
+        repairDetail: "ตรวจสอบแล้วพบว่าหน้าจอแตกมาก ไม่สามารถซ่อมได้ แนะนำเปลี่ยนหน้าจอใหม่",
     },
     {
         id: "1254687736",
@@ -603,6 +632,7 @@ export const TaskDataEx: Task[] = [
         price: "957-3374",
         repairer: "ช่างแดง",
         report: "หน้าจอแตก ไม่สามารถซ่อมได้",
+
     },
     {
         id: "1254687740",
