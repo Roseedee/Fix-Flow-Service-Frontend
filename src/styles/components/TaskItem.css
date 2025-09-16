@@ -269,7 +269,7 @@
     }
 }   
 
-div.task-type {
+/* div.task-type {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -277,9 +277,9 @@ div.task-type {
     & span {
         font-size: 0.9rem;
     }
-}
+} */
 
-div.task-type div {
+/* div.task-type div {
     cursor: default;
     resize: none;
     height: 45px;
@@ -290,9 +290,6 @@ div.task-type div {
     font-size: .9rem;
     transition: var(--def-transition);
     flex-grow: 1;
-/* 
-    &:not(select) {
-    } */
 
     &:hover,
     &:focus {
@@ -302,4 +299,4 @@ div.task-type div {
     &::placeholder {
         color: var(--color-text-placeholder);
     }
-}
+} */

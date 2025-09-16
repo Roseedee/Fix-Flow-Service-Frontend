@@ -86,13 +86,17 @@ export default function TaskItem({ task }: TaskItemProps) {
                                 </div>
                             </div>
                             <div className="row pb">
-                                <div className="task-type">
+                                <div className="input-title">
                                     <span>ประเภทงานซ่อม</span>
-                                    <div>{task.taskType}</div>
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.taskType} />
                                 </div>
                                 <div className="input-title">
                                     <span>ยี่ห้อ-รุ่น</span>
                                     <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.brand} />
+                                </div>
+                                <div className="input-title">
+                                    <span>Serial number</span>
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="SNXXXXXXXXXXX" disabled value={task.sn} />
                                 </div>
                                 <div className="input-title">
                                     <span>Serial number</span>
@@ -113,9 +117,15 @@ export default function TaskItem({ task }: TaskItemProps) {
                                     )
                                 }
                             </div>
+                            <div className="row pb">
+                                <div className="input-title">
+                                    <span>หมายเหตุ</span>
+                                    <textarea name="email" className="def-input note" disabled value={task.notes} />
+                                </div>
+                            </div>
                             <button onClick={() => setIsFullView(false)}>ปิด</button>
                         </div>
-                        <div className="img-popup">
+                        <div className="img-popup" onClick={(e) => e.stopPropagation()}>
                             {
                                 task.image && task.image.length > 0 ? (
                                     task.image.map((img, index) => (
