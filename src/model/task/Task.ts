@@ -48,6 +48,7 @@ export const TaskDataEx: Task[] = [
             new File([''], imgTest1, { type: 'image/jpg' }),
             new File([''], imgTest2, { type: 'image/jpg' }),
             new File([''], imgTest3, { type: 'image/jpg' }),
+            new File([''], imgTest3, { type: 'image/jpg' }),
         ],
     },
     {
