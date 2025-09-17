@@ -99,8 +99,8 @@ export default function TaskItem({ task }: TaskItemProps) {
                                     <input type="text" name="idCard" id="" className="def-input" placeholder="SNXXXXXXXXXXX" disabled value={task.sn} />
                                 </div>
                                 <div className="input-title">
-                                    <span>Serial number</span>
-                                    <input type="text" name="idCard" id="" className="def-input" placeholder="SNXXXXXXXXXXX" disabled value={task.sn} />
+                                    <span>Product number</span>
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="PXXXXXXXXXXX" disabled value={task.pn} />
                                 </div>
                             </div>
                             <div className="row pb">

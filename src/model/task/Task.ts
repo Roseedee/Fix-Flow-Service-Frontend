@@ -3,6 +3,9 @@ import TaskStatus from "@model/task/TaskStatus"
 import imgTest1 from '@assets/images/test.jpg';
 import imgTest2 from '@assets/images/test1.jpg';
 import imgTest3 from '@assets/images/test2.jpg';
+import imgTest5 from '@assets/images/test4.png';
+import imgTest6 from '@assets/images/test5.jpg';
+import imgTest7 from '@assets/images/test6.png';
     
 export default interface Task {
     id: string
@@ -66,6 +69,11 @@ export const TaskDataEx: Task[] = [
         repairer: "ช่างเอก",
         report: "เปลี่ยนแบตเตอรี่และตรวจสอบระบบเรียบร้อย",
         repairDetail: "เปลี่ยนแบตเตอรี่ใหม่เรียบร้อยแล้ว ทดสอบระบบทุกอย่างปกติดี",
+        image: [
+            new File([''], imgTest5, { type: 'image/png' }),
+            new File([''], imgTest6, { type: 'image/jpg' }),
+            new File([''], imgTest7, { type: 'image/png' }),
+        ],
     },
     {
         id: "1254687703",
@@ -112,6 +120,12 @@ export const TaskDataEx: Task[] = [
         price: "508-4930",
         repairer: "ช่างชัย",
         report: "มีเสียงดังผิดปกติจากพัดลม",
+        repairDetail: "ทำความสะอาดพัดลมและทาน้ำมันหล่อลื่นเรียบร้อย",
+        image: [
+            new File([''], imgTest1, { type: 'image/jpg' }),
+            new File([''], imgTest2, { type: 'image/jpg' }),
+            new File([''], imgTest3, { type: 'image/jpg' }),
+        ],
     },
     {
         id: "1254687706",
@@ -142,6 +156,11 @@ export const TaskDataEx: Task[] = [
         price: "2744-3837",
         repairer: "ไม่มี",
         report: "เครื่องเปิดไม่ติด ต้องกดหลายครั้ง",
+        repairDetail: "ตรวจสอบระบบแล้วพบว่าเป็นที่ฮาร์ดดิสก์ จึงทำการเปลี่ยนฮาร์ดดิสก์ใหม่และติดตั้งระบบปฏิบัติการเรียบร้อย",
+        image: [
+            new File([''], imgTest5, { type: 'image/png' }),
+            new File([''], imgTest6, { type: 'image/jpg' }),
+        ],
     },
     {
         id: "1254687708",

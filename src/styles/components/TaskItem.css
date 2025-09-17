@@ -253,22 +253,21 @@
 }
 
 .img-popup {
-    /* width: 300px; */
+    background: #F6F6F6;
     padding: 22px;
-    /* background-color: #f0f0f0; */
     border-radius: var(--radius-lg);
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 400px;
+    max-width: 350px;
     gap: 10px;
 
     & img {
-        width: 120px;
+        flex-grow: 1;
         border-radius: var(--radius-sm);
-        height: 180px;
+        max-height: 180px;
+        max-width: 300px;
         object-fit: cover;
     }
 }   
