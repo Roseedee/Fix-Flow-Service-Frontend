@@ -16,6 +16,7 @@ interface TaskItemProps {
 export default function TaskItem({ task }: TaskItemProps) {
 
     const [isFullView, setIsFullView] = React.useState<boolean>(false);
+    const [isEdit, setIsEdit] = React.useState<boolean>(false)
 
     return (
         <>
@@ -68,59 +69,77 @@ export default function TaskItem({ task }: TaskItemProps) {
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>ชื่อ-นามสกุล</span>
-                                    <input type="text" name="email" className="def-input" disabled value={task.cName} />
+                                    <input type="text" name="email" className="def-input" disabled={isEdit} value={task.cName} />
                                 </div>
                                 <div className="input-title">
                                     <span>เบอร์โทร</span>
-                                    <input type="text" name="idCard" id="" className="def-input" disabled value={task.cPhone} />
+                                    <input type="text" name="idCard" id="" className="def-input" disabled={isEdit} value={task.cPhone} />
                                 </div>
                             </div>
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>อีเมล</span>
-                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.cEmail} />
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled={isEdit} value={task.cEmail} />
                                 </div>
                                 <div className="input-title">
                                     <span>รหัสบัตรประชาชน</span>
-                                    <input type="text" name="idCard" id="" className="def-input" placeholder="19XXXXXXXXXXX" disabled value={task.idCard} />
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="19XXXXXXXXXXX" disabled={isEdit} value={task.idCard} />
                                 </div>
                             </div>
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>ประเภทงานซ่อม</span>
-                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.taskType} />
+                                    <input type="text" name="task-type" className="def-input" placeholder="example@gmail.com" disabled={isEdit} value={task.taskType} />
                                 </div>
                                 <div className="input-title">
                                     <span>ยี่ห้อ-รุ่น</span>
-                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled value={task.brand} />
+                                    <input type="text" name="email" className="def-input" placeholder="example@gmail.com" disabled={isEdit} value={task.brand} />
                                 </div>
                                 <div className="input-title">
                                     <span>Serial number</span>
-                                    <input type="text" name="idCard" id="" className="def-input" placeholder="SNXXXXXXXXXXX" disabled value={task.sn} />
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="SNXXXXXXXXXXX" disabled={isEdit} value={task.sn} />
                                 </div>
                                 <div className="input-title">
                                     <span>Product number</span>
-                                    <input type="text" name="idCard" id="" className="def-input" placeholder="PXXXXXXXXXXX" disabled value={task.pn} />
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="PXXXXXXXXXXX" disabled={isEdit} value={task.pn} />
                                 </div>
                             </div>
                             <div className="row pb">
                                 <div className="input-title">
                                     <span>อาการที่ลูกค้าแจ้ง</span>
-                                    <textarea name="idCard" id="" className="def-input note" placeholder="SNXXXXXXXXXXX" disabled value={task.report}></textarea>
+                                    <textarea name="idCard" id="" className="def-input note" placeholder="SNXXXXXXXXXXX" disabled={isEdit} value={task.report}></textarea>
                                 </div>
                                 {task.repairDetail &&
                                     (
                                         <div className="input-title">
                                             <span>รายละเอียดการซ่อม</span>
-                                            <textarea name="idCard" id="" className="def-input note" placeholder="SNXXXXXXXXXXX" disabled value={task.repairDetail}></textarea>
+                                            <textarea name="idCard" id="" className="def-input note" placeholder="SNXXXXXXXXXXX" disabled={isEdit} value={task.repairDetail}></textarea>
                                         </div>
                                     )
                                 }
                             </div>
                             <div className="row pb">
                                 <div className="input-title">
+                                    <span>รหัสผ่าน</span>
+                                    <input type="text" name="task-type" className="def-input" placeholder="123" disabled={isEdit} value={task.password} />
+                                </div>
+                                <div className="input-title">
+                                    <span>อุปกรณ์ที่ติดมาด้วย</span>
+                                    <input type="text" name="email" className="def-input" placeholder="สายชาร์จ กระเป๋า" disabled={isEdit} value={task.accessories} />
+                                </div>
+                                <div className="input-title">
+                                    <span>ตำหนิ</span>
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="จอมีรอย" disabled={isEdit} value={task.defects} />
+                                </div>
+                                <div className="input-title">
+                                    <span>สี</span>
+                                    <input type="text" name="idCard" id="" className="def-input" placeholder="ดำ" disabled={isEdit} value={task.color} />
+                                </div>
+                            </div>
+                            <div className="row pb">
+                                <div className="input-title">
                                     <span>หมายเหตุ</span>
-                                    <textarea name="email" className="def-input note" disabled value={task.notes} />
+                                    <textarea name="email" className="def-input" disabled value={task.notes} />
                                 </div>
                             </div>
                             <button onClick={() => setIsFullView(false)}>ปิด</button>

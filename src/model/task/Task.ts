@@ -26,6 +26,7 @@ export default interface Task {
     repairDetail?: string
     notes?: string
     accessories?: string
+    defects?: string
     color?: string
     password?: string
     deposit?: number

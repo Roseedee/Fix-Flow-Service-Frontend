@@ -250,9 +250,12 @@
     border-radius: var(--radius-lg);
     min-width: 450px;
     max-width: 1000px;
+    /* height: 1000px; */
 }
 
 .img-popup {
+    position: sticky;
+    top: 0px;
     background: #F6F6F6;
     padding: 22px;
     border-radius: var(--radius-lg);
