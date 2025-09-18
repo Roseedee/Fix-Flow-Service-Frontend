@@ -16,7 +16,7 @@ interface TaskItemProps {
 export default function TaskItem({ task }: TaskItemProps) {
 
     const [isFullView, setIsFullView] = React.useState<boolean>(false);
-    const [isEdit, setIsEdit] = React.useState<boolean>(false)
+    const [isEdit, setIsEdit] = React.useState<boolean>(true)
 
     return (
         <>
@@ -144,17 +144,17 @@ export default function TaskItem({ task }: TaskItemProps) {
                             </div>
                             <button onClick={() => setIsFullView(false)}>ปิด</button>
                         </div>
-                        <div className="img-popup" onClick={(e) => e.stopPropagation()}>
-                            {
-                                task.image && task.image.length > 0 ? (
-                                    task.image.map((img, index) => (
-                                        <img src={img.name} alt={`task-img-${index}`} key={index} />
-                                    ))
-                                ) : (
-                                    <h5 className="tag">ไม่พบรูปภาพ</h5>
-                                )
-                            }
-                        </div>
+                        {
+                            task.image && task.image.length > 0 ? (
+                                <div className="img-popup" onClick={(e) => e.stopPropagation()}>
+                                    {
+                                        task.image.map((img, index) => (
+                                            <img src={img.name} alt={`task-img-${index}`} key={index} />
+                                        ))
+                                    }
+                                </div>
+                            ) : (<></>)
+                        }
                     </div>
                 )
             }
