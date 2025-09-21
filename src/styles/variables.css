@@ -19,6 +19,7 @@
     --main-bg-color: #FEFEFE;
     --white: #FFFFFF;
     --black: #000000;
+    --color-black-50: rgba(0, 0, 0, 0.5);
     --color-black-05: rgba(0, 0, 0, 0.05);
     --color-black-03: rgba(0, 0, 0, 0.03);
     --color-text-placeholder: #C1C1C1;
